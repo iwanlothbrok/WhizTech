@@ -13,7 +13,6 @@ import Footer from '../home/Footer'
 const About = () => {
   return (
     <div>
-      <NavMenu />
       <Header />
       <ServiceSection />
       <Content />
