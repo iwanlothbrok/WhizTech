@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavMenu from './NavMenu';
 import Carousel from './Carousel';
 import ServiceSection from './ServiceSection';
 import Content from './Content';
