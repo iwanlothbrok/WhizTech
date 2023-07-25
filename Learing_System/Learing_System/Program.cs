@@ -1,11 +1,10 @@
-using System.Configuration;
-using System;
-using Learing_System.Data;
+using Learing_System.Services.Courses;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<ICourseService, CourseService>();
 
 var app = builder.Build();
 
