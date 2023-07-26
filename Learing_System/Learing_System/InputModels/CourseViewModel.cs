@@ -1,8 +1,7 @@
-﻿using Learing_System.Models;
-using System.ComponentModel.DataAnnotations;
-
-namespace Learing_System.InputModels
+﻿namespace Learing_System.InputModels
 {
+
+	using Learing_System.Models;
 	public class CourseViewModel
 	{
 		public int Id { get; set; }

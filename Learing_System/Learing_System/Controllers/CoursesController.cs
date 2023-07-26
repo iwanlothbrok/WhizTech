@@ -21,9 +21,9 @@
 
 		// GET api/courses	
 		[HttpGet]
-		public List<CourseViewModel> Get()
+		public ActionResult<List<CourseViewModel>> Get()
 		{
-			return this.courseService.Get();
+			return Ok(this.courseService.Get());
 		}
 
 		// GET api/courses/5

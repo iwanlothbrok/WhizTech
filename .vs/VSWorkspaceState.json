@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Learing_System",
-    "\\Learing_System\\Learing_System"
+    "\\Learing_System\\Learing_System",
+    "\\Learing_System\\Learing_System\\Services",
+    "\\Learing_System\\Learing_System\\Services\\Courses"
   ],
-  "SelectedNode": "\\Learing_System\\Learing_System\\Program.cs",
+  "SelectedNode": "\\Learing_System\\Learing_System\\Services\\Courses\\CourseService.cs",
   "PreviewInSolutionExplorer": false
 }

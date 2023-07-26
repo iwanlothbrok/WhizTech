@@ -7,8 +7,8 @@ import Home from './components/home/Home';
 import About from './components/about/About'
 import NavMenu from './components/home/NavMenu';
 import Courses from './components/courses/Courses';
-import ErrorPage from './components/ErrorPage'
-
+import ErrorPage from './components/ErrorPage';
+import Contact from './components/Contact'
 export default function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/404" element={<ErrorPage />} />
       </Routes>

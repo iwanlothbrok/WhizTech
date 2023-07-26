@@ -4,7 +4,6 @@ import '../../styles/custom.css';
 import '../../styles/bootstrap.min.css';
 
 import Header from './Header'
-import NavMenu from '../home/NavMenu'
 import ServiceSection from '../home/ServiceSection'
 import Content from '../home/Content'
 import OurTeam from '../home/OurTeam'

@@ -14,9 +14,6 @@ const NotFoundPage = () => {
                   <li className="breadcrumb-item">
                     <Link className="text-white" to="/">Home</Link>
                   </li>
-                  <li className="breadcrumb-item">
-                    <Link className="text-white" to="#">Pages</Link>
-                  </li>
                   <li className="breadcrumb-item text-white active" aria-current="page">404</li>
                 </ol>
               </nav>
@@ -25,7 +22,6 @@ const NotFoundPage = () => {
         </div>
       </div>
 
-      {/* 404 Start */}
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container text-center">
           <div className="row justify-content-center">
