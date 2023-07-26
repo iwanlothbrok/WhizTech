@@ -1,54 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const PopularCourses = () => {
+  const url = 'https://localhost:7089/api/courses/';
+  const [courses, setCourses] = useState([]);
+
+  // Fetch courses from the API using Axios
+  const fetchCoursesFromAPI = async () => {
+    try {
+      // Replace 'YOUR_API_ENDPOINT' with your actual API endpoint to fetch courses
+      const response = await axios.get(url);
+      console.log(response.data);
+      const data = response.data;
+      setCourses(data);
+    } catch (error) {
+      console.error('Error fetching courses:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCoursesFromAPI();
+  }, []);
+
   return (
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-          <h1 class="mb-5">Popular Courses</h1>
+    <div className="container-xxl py-5">
+      <div className="container">
+        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 className="section-title bg-white text-center text-primary px-3">Courses</h6>
+          <h1 className="mb-5">Newest Courses</h1>
         </div>
-        <div class="row g-4 justify-content-center">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="course-item bg-light">
-              <div class="position-relative overflow-hidden">
-                <img class="img-fluid" src="img/course-1.jpg" alt="" />
-                <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                  <Link to="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style={{ borderRadius: "30px 0 0 30px" }}>
-                    Read More
-                  </Link>
-                  <Link to="/join" class="flex-shrink-0 btn btn-sm btn-primary px-3" style={{ borderRadius: "0 30px 30px 0" }}>
-                    Join Now
-                  </Link>
+        <div className="row g-4 justify-content-center">
+          {courses.map((course) => (
+            <div key={course.Id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="course-item bg-light">
+                <div className="position-relative overflow-hidden">
+                  <img className="img-fluid" src="img/course-1.jpg" alt="" />
+                  <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <Link to={`/course/${course.id}`} className="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style={{ borderRadius: "30px 0 0 30px" }}>
+                      Read More
+                    </Link>
+                    <Link to={`/contact`} className="flex-shrink-0 btn btn-sm btn-primary px-3" style={{ borderRadius: "0 30px 30px 0" }}>
+                      Join Now
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div class="text-center p-4 pb-0">
-                <h3 class="mb-0">$149.00</h3>
-                <div class="mb-3">
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small>(123)</small>
+                <div className="text-center p-4 pb-0">
+                  <h3 className="mb-0">${course.Price}</h3>
+                  <div className="mb-3">
+                    <small className="fa fa-star text-primary"></small>
+                    <small className="fa fa-star text-primary"></small>
+                    <small className="fa fa-star text-primary"></small>
+                    <small className="fa fa-star text-primary"></small>
+                    <small className="fa fa-star text-primary"></small>
+                    {/* WHAT IS THIS!!!!! */}
+                    <small>({course.studentsCount})</small>
+                  </div>
+                  <h5 className="mb-4">{course.title}</h5>
                 </div>
-                <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-              </div>
-              <div class="d-flex border-top">
-                <small class="flex-fill text-center border-end py-2">
-                  <i class="fa fa-user-tie text-primary me-2"></i>John Doe
-                </small>
-                <small class="flex-fill text-center border-end py-2">
-                  <i class="fa fa-clock text-primary me-2"></i>1.49 Hrs
-                </small>
-                <small class="flex-fill text-center py-2">
-                  <i class="fa fa-user text-primary me-2"></i>30 Students
-                </small>
+                <div className="d-flex border-top">
+                  <small className="flex-fill text-center border-end py-2">
+                    <i className="fa fa-user-tie text-primary me-2"></i> {/*{course.Teacher.Id}*/}
+                  </small>
+                  <small className="flex-fill text-center border-end py-2">
+                    <i className="fa fa-clock text-primary me-2"></i>{course.totalCourseTime} Hrs
+                  </small>
+                  <small className="flex-fill text-center py-2">
+                    <i className="fa fa-user text-primary me-2"></i>{course.studentsCount} Students
+                  </small>
+                </div>
               </div>
             </div>
-          </div>
-          {/* Add two more course items with similar content and replace the "#" in the Link components with appropriate URLs */}
+          ))}
         </div>
       </div>
     </div>
