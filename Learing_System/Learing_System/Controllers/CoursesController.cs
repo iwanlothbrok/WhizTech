@@ -21,33 +21,35 @@
 			this.courseService = courseService;
 		}
 
-		// GET api/courses
+		// GET api/courses	
 		[HttpGet]
 		public List<CourseViewModel> Get()
 		{
-			return courseService.Get();
+			return this.courseService.Get();
 		}
 
 		// GET api/courses/5
 		[HttpGet("{id}")]
-		public ActionResult<Course> Get(int id)
+		public ActionResult<CourseViewModel> Get(int id)
 		{
-			var course = _dbContext.Courses.Find(id);
-			if (course == null)
+			CourseViewModel? course = this.courseService.GetById(id);
+
+			if (course is null)
 			{
-				return NotFound();
+				return BadRequest();
 			}
-			return course;
+
+			return Ok(course);
 		}
 
-		//// POST api/courses
-		//[HttpPost]
-		//public ActionResult<Course> Post([FromBody] Course course)
-		//{
-		//	_dbContext.Courses.Add(course);
-		//	_dbContext.SaveChanges();
-		//	return CreatedAtAction(nameof(Get), new { id = course.CourseId }, course);
-		//}
+		// POST api/courses
+		[HttpPost]
+		public async Task<ActionResult> PostAsync([FromBody] CourseViewModel course)
+		{
+			await this.courseService.AddAsync(course);
+			
+			return Ok();
+		}
 
 		//// PUT api/courses/5
 		//[HttpPut("{id}")]
