@@ -1,12 +1,10 @@
-﻿using AutoMapper;
-using Humanizer;
-using Learing_System.Data;
-using Learing_System.Extension;
-using Learing_System.InputModels;
-using Learing_System.Models;
-
-namespace Learing_System.Services.Courses
+﻿namespace Learing_System.Services.Courses
 {
+	using AutoMapper;
+	using Learing_System.Data;
+	using Learing_System.InputModels;
+	using Learing_System.Models;
+
 	public class CourseService : ICourseService
 	{
 		private readonly ApplicationDbContext data;
@@ -27,20 +25,38 @@ namespace Learing_System.Services.Courses
 			return true;
 		}
 
-		public bool Delete(int id)
+		public async Task<bool> DeleteAsync(int id)
 		{
-			throw new NotImplementedException();
+			Course? course = await this.data.Courses.FindAsync(id);
+
+			if (course is null)
+			{
+				return false;
+			}
+			this.data.Remove(course);
+			await this.data.SaveChangesAsync();
+
+			return true;
 		}
 
-		public bool Edit(CourseViewModel course)
+		public async Task<bool> EditAsync(int id,CourseViewModel course)
 		{
-			throw new NotImplementedException();
+			Course? existingCourse = await data.Courses.FindAsync(id);
+
+			if (existingCourse is null)
+			{
+				return false;
+			}
+
+			this.mapper.Map(course, existingCourse);
+			this.data.SaveChanges();
+
+			return true;
 		}
 
 		public List<CourseViewModel> Get()
 		{
 			List<Course> courses = this.data.Courses.ToList();
-
 			return (this.mapper.Map<List<CourseViewModel>>(courses));
 		}
 

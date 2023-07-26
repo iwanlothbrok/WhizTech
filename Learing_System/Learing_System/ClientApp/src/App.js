@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import About from './components/about/About'
 import NavMenu from './components/home/NavMenu';
 import Courses from './components/courses/Courses';
+import ErrorPage from './components/ErrorPage'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/404" element={<ErrorPage />} />
       </Routes>
     </div>
   );

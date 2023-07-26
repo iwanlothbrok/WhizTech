@@ -2,10 +2,8 @@
 {
 	using Learing_System.Data;
 	using Learing_System.InputModels;
-	using Learing_System.Models;
 	using Learing_System.Services.Courses;
 	using Microsoft.AspNetCore.Mvc;
-	using Microsoft.EntityFrameworkCore;
 	using System.Collections.Generic;
 
 	[Route("api/[controller]")]
@@ -47,40 +45,36 @@
 		public async Task<ActionResult> PostAsync([FromBody] CourseViewModel course)
 		{
 			await this.courseService.AddAsync(course);
-			
+
 			return Ok();
 		}
 
 		//// PUT api/courses/5
-		//[HttpPut("{id}")]
-		//public IActionResult Put(int id, [FromBody] Course course)
-		//{
-		//	if (id != course.CourseId)
-		//	{
-		//		return BadRequest();
-		//	}
+		[HttpPut("{id}")]
+		public async Task<IActionResult> EditAsync(int id, [FromBody] CourseViewModel course)
+		{
+			var isValid = await this.courseService.EditAsync(id, course);
 
-		//	_dbContext.Entry(course).State = EntityState.Modified;
-		//	_dbContext.SaveChanges();
+			if (isValid == false)
+			{
+				return BadRequest();
+			}
 
-		//	return NoContent();
-		//}
+			return Ok();
+		}
 
-		//// DELETE api/courses/5
-		//[HttpDelete("{id}")]
-		//public IActionResult Delete(int id)
-		//{
-		//	var course = _dbContext.Courses.Find(id);
-		//	if (course == null)
-		//	{
-		//		return NotFound();
-		//	}
+		// DELETE api/courses/5
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> DeleteAsync(int id)
+		{
+			bool isValid = await this.courseService.DeleteAsync(id);
 
-		//	_dbContext.Courses.Remove(course);
-		//	_dbContext.SaveChanges();
+			if (isValid == false)
+			{
+				return BadRequest();
+			}
 
-		//	return NoContent();
-		//}
+			return Ok();
+		}
 	}
-
 }
