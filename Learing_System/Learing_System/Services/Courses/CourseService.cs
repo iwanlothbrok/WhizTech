@@ -1,20 +1,30 @@
-﻿using Learing_System.Data;
+﻿using AutoMapper;
+using Humanizer;
+using Learing_System.Data;
+using Learing_System.Extension;
 using Learing_System.InputModels;
+using Learing_System.Models;
 
 namespace Learing_System.Services.Courses
 {
 	public class CourseService : ICourseService
 	{
 		private readonly ApplicationDbContext data;
-
-		public CourseService(ApplicationDbContext data)
+		private readonly IMapper mapper;
+		public CourseService(ApplicationDbContext data, IMapper mapper)
 		{
 			this.data = data;
+			this.mapper = mapper;
 		}
 
-		public bool Add(CourseViewModel course)
+		public async Task<bool> AddAsync(CourseViewModel course)
 		{
-			throw new NotImplementedException();
+			Course newestCourse = mapper.Map<Course>(course);
+
+			await this.data.AddAsync(newestCourse);
+			await this.data.SaveChangesAsync();
+
+			return true;
 		}
 
 		public bool Delete(int id)
@@ -29,19 +39,12 @@ namespace Learing_System.Services.Courses
 
 		public List<CourseViewModel> Get()
 		{
-			return this.data.Courses.Select(c => new CourseViewModel
-			{
-				LanguageId = c.LanguageId,
-				TeacherId = c.TeacherId,
-				Title = c.Title,
-				Description = c.Description,
-				Summary = c.Summary,
-				VideosCount = c.VideosCount,
-				ArticlesCount = c.ArticlesCount,
-				TotalCourseTime = c.TotalCourseTime,
-				ExercisesCount = c.ExercisesCount,
-				ScheduleProgram = c.ScheduleProgram.ToList() // Assuming ScheduleProgram is a collection navigation property
-			}).ToList();
+			List<Course> courses = this.data.Courses.ToList();
+
+			return (this.mapper.Map<List<CourseViewModel>>(courses));
 		}
+
+		public CourseViewModel? GetById(int id)
+		=> (this.mapper.Map<CourseViewModel>(this.data.Courses.Find(id)));
 	}
 }

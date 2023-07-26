@@ -6,7 +6,8 @@ namespace Learing_System.Services.Courses
 	public interface ICourseService
 	{
 		List<CourseViewModel> Get();
-		bool Add(CourseViewModel course);
+		CourseViewModel? GetById(int id);
+		Task<bool> AddAsync(CourseViewModel course);
 		bool Edit(CourseViewModel course);
 		bool Delete(int id);
 	}

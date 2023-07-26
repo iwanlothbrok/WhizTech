@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Learing_System"
+    "\\Learing_System",
+    "\\Learing_System\\Learing_System"
   ],
-  "SelectedNode": "\\Learing_System\\Learing_System.sln",
+  "SelectedNode": "\\Learing_System\\Learing_System\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

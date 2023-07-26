@@ -8,6 +8,7 @@ namespace Learing_System.Data
 
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
 		{
+			
 		}
 		public DbSet<Course> Courses { get; set; }
 		public DbSet<Teacher> Teachers { get; set; }
