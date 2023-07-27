@@ -22,10 +22,14 @@ namespace Learing_System.Models
 
 		public string Summary { get; set; } = null!;
 
+		//[]
+		public decimal Price { get; set; }
+
 		public int VideosCount { get; set; }
 		public int ArticlesCount { get; set; }
 		public double TotalCourseTime { get; set; }
 		public int ExercisesCount { get; set; }
+		public int StudentsCount { get; set; }
 
 		public List<Schedule> ScheduleProgram { get; set; } = new List<Schedule>();
 	}

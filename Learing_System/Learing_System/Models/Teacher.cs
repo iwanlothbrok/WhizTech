@@ -29,6 +29,7 @@ namespace Learing_System.Models
 		public string Qualified { get; set; } = null!;
 
 		public string? YouTubeUrl { get; set; }
+
 		public string? LinkedinUrl { get; set; }
 
 		public List<Course> Courses { get; set; } = new List<Course>();
