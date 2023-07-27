@@ -3,9 +3,10 @@
     "",
     "\\Learing_System",
     "\\Learing_System\\Learing_System",
+    "\\Learing_System\\Learing_System\\InputModels",
     "\\Learing_System\\Learing_System\\Services",
     "\\Learing_System\\Learing_System\\Services\\Courses"
   ],
-  "SelectedNode": "\\Learing_System\\Learing_System\\Services\\Courses\\CourseService.cs",
+  "SelectedNode": "\\Learing_System\\Learing_System\\InputModels\\CourseViewModel.cs",
   "PreviewInSolutionExplorer": false
 }
