@@ -4,9 +4,8 @@
     "\\Learing_System",
     "\\Learing_System\\Learing_System",
     "\\Learing_System\\Learing_System\\InputModels",
-    "\\Learing_System\\Learing_System\\Services",
-    "\\Learing_System\\Learing_System\\Services\\Courses"
+    "\\Learing_System\\Learing_System\\Services"
   ],
-  "SelectedNode": "\\Learing_System\\Learing_System\\InputModels\\CourseViewModel.cs",
+  "SelectedNode": "\\Learing_System\\Learing_System\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

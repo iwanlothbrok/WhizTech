@@ -17,6 +17,8 @@ namespace Learing_System.Models
 		[StringLength(100)]
 		public string Title { get; set; } = null!;
 
+		public byte[]? Photo { get; set; }
+
 		[Required]
 		public string Description { get; set; } = null!;
 

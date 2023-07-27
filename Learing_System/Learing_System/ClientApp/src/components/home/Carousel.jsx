@@ -27,11 +27,13 @@ function Carousel() {
             <div className="container">
               <div className="row justify-content-start">
                 <div className="col-sm-10 col-lg-8">
-                  <h5 className="text-primary text-uppercase mb-3 animated slideInDown">C# Courses for every age!</h5>
-                  <h1 className="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
-                  <p className="fs-5 text-white mb-4 pb-2">If you want to become programmer, you could join us!</p>
-                  <Link to="/read-more" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</Link>
-                  <Link to="/join-now" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</Link>
+                  <h5 className="text-primary text-uppercase mb-3 animated slideInDown"></h5>
+                  <h1 className="display-3 text-white animated slideInDown">Частни уроци по програмиране предназначени за всяка възраст</h1>
+                  <p className="fs-5 text-white mb-4 pb-2">Ако искате да добиете нужните умения за да станете софтуерени инженери сте на правилното място.</p>
+                  <Link to="/contact" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Контакти</Link>
+
+                  {/* SLOJI EVENT LISTENER ZA SMQNA NA VALUTO NA CLICK DA SLAGA NOMERA ZA WRYZKA */}
+                  <Link to="/join-now" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Номер за връзка</Link>
                 </div>
               </div>
             </div>
@@ -43,11 +45,14 @@ function Carousel() {
             <div className="container">
               <div className="row justify-content-start">
                 <div className="col-sm-10 col-lg-8">
-                  <h5 className="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
-                  <h1 className="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
-                  <p className="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                  <Link to="/read-more" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</Link>
-                  <Link to="/join-now" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</Link>
+                  <h5 className="text-primary text-uppercase mb-3 animated slideInDown"></h5>
+                  <h1 className="display-3 text-white animated slideInDown">Квалифицирани лектори, които работят с профисионализъм</h1>
+                  <p className="fs-5 text-white mb-4 pb-2">Нашите програмисти, които водят уроците са с много годишен опит в сферата
+                    на софтуерните технологии и имат не малък опит с преподаването.
+                    Изкарали са множество курсове с езиците C#, Java Script, C++, C, SQL и множество други технологии. </p>
+                  <Link to="/teachers" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Още информация</Link>
+                  {/* SLOJI EVENT LISTENER ZA SMQNA NA VALUTO NA CLICK DA SLAGA NOMERA ZA WRYZKA */}
+                  <Link to="/join-now" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Номер за връзка</Link>
                 </div>
               </div>
             </div>
