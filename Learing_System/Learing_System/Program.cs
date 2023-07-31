@@ -1,4 +1,5 @@
 using Learing_System.Data;
+using Learing_System.Services.Clients;
 using Learing_System.Services.Courses;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -23,6 +24,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseSqlServer(connectionString));
 builder.Services.AddTransient<ICourseService, CourseService>();
+builder.Services.AddTransient<IClientsService,	ClientsService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();

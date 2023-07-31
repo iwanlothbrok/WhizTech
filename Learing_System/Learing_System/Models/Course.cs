@@ -24,7 +24,6 @@ namespace Learing_System.Models
 
 		public string Summary { get; set; } = null!;
 
-		//[]
 		public decimal Price { get; set; }
 
 		public int VideosCount { get; set; }

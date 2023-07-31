@@ -18,14 +18,6 @@ namespace Learing_System.Models
 
 		public int Age { get; set; }
 
-		[StringLength(150)]
-		[Required]
-		public string Address { get; set; } = null!;
-
-		[StringLength(30)]
-		[Required]
-		public string City { get; set; } = null!;
-
 		[EmailAddress]
 		[Required]
 		public string Email { get; set; } = null!;
@@ -34,21 +26,11 @@ namespace Learing_System.Models
 		[Required]
 		public string Phone { get; set; } = null!;
 
+		// for visualize the response 
+		public string? PhotoUrl { get; set; }
+
+		public string? Information { get; set; }
+
 		public bool IsStudent { get; set; }
-		public bool IsForLessons { get; set; }
-		public bool IsForCourse { get; set; }
-
-		public Genders Gender { get; set; }
-
-		public int? CourseId { get; set; }
-		public Course Course { get; set; }
-		public List<Course> Courses { get; set; } = new List<Course>();
-
-		public enum Genders
-		{
-			Male,
-			Female,
-			Other
-		}
 	}
 }
