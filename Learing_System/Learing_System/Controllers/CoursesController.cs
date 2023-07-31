@@ -10,12 +10,10 @@
 	[ApiController]
 	public class CoursesController : ControllerBase
 	{
-		private readonly ApplicationDbContext _dbContext;
 		private readonly ICourseService courseService;
 
-		public CoursesController(ApplicationDbContext dbContext, ICourseService courseService)
+		public CoursesController(ICourseService courseService)
 		{
-			_dbContext = dbContext;
 			this.courseService = courseService;
 		}
 

@@ -14,7 +14,7 @@ import '../../styles/bootstrap.min.css';
 export default function Home() {
   return (
 
-    <>
+    <React.Fragment>
       <Carousel />
       <ServiceSection />
       <Content />
@@ -22,6 +22,6 @@ export default function Home() {
       <OurTeam />
       <Clients />
       <Footer />
-    </>
+    </React.Fragment>
   )
 }

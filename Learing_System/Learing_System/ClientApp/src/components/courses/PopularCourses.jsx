@@ -11,7 +11,6 @@ const PopularCourses = () => {
     try {
       // Replace 'YOUR_API_ENDPOINT' with your actual API endpoint to fetch courses
       const response = await axios.get(url);
-      console.log(response.data);
       const data = response.data;
       setCourses(data);
     } catch (error) {
