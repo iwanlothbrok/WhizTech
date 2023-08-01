@@ -1,5 +1,6 @@
 ﻿using Learing_System.Data;
 using Learing_System.InputModels;
+using Learing_System.Models;
 using Learing_System.Services.Clients;
 using Learing_System.Services.Courses;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,7 @@ namespace Learing_System.Controllers
 		[HttpGet]
 		public ActionResult<List<CourseViewModel>> Get()
 		{
-			var a = this.clients.GetLatestClients();
+			List<Student> a = this.clients.GetLatestClients();
 			return Ok(this.clients.GetLatestClients());
 		}
 	}

@@ -3,10 +3,11 @@
     "",
     "\\Learing_System",
     "\\Learing_System\\Learing_System",
+    "\\Learing_System\\Learing_System\\Controllers",
     "\\Learing_System\\Learing_System\\InputModels",
     "\\Learing_System\\Learing_System\\Models",
     "\\Learing_System\\Learing_System\\Services"
   ],
-  "SelectedNode": "\\Learing_System\\Learing_System\\Program.cs",
+  "SelectedNode": "\\Learing_System\\Learing_System\\Controllers\\CoursesController.cs",
   "PreviewInSolutionExplorer": false
 }
