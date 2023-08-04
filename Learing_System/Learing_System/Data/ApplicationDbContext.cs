@@ -15,5 +15,6 @@ namespace Learing_System.Data
 		public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
 		public DbSet<Schedule> Schedules { get; set; }
 		public DbSet<Student> Students { get; set; }
+		public DbSet<Contact> Contacts { get; set; }
 	}
 }

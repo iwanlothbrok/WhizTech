@@ -24,6 +24,11 @@ namespace Learing_System.Controllers
 		public ActionResult<List<CourseViewModel>> Get()
 		{
 			List<Student> a = this.clients.GetLatestClients();
+			
+			
+			
+			
+			
 			return Ok(this.clients.GetLatestClients());
 		}
 	}
