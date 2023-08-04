@@ -1,9 +1,9 @@
-﻿namespace Learing_System.Services.Courses
+﻿namespace Learning_System.Services.Courses
 {
 	using AutoMapper;
-	using Learing_System.Data;
-	using Learing_System.InputModels;
-	using Learing_System.Models;
+	using Learning_System.Data;
+	using Learning_System.InputModels;
+	using Learning_System.Models;
 
 	public class CourseService : ICourseService
 	{

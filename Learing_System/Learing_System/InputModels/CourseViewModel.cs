@@ -1,7 +1,7 @@
-﻿namespace Learing_System.InputModels
+﻿namespace Learning_System.InputModels
 {
 
-	using Learing_System.Models;
+	using Learning_System.Models;
 	public class CourseViewModel
 	{
 		public int Id { get; set; }

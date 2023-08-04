@@ -1,8 +1,8 @@
-﻿namespace Learing_System.Controllers
+﻿namespace Learning_System.Controllers
 {
-	using Learing_System.Data;
-	using Learing_System.InputModels;
-	using Learing_System.Services.Courses;
+	using Learning_System.Data;
+	using Learning_System.InputModels;
+	using Learning_System.Services.Courses;
 	using Microsoft.AspNetCore.Mvc;
 	using System.Collections.Generic;
 

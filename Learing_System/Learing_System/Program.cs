@@ -1,6 +1,6 @@
-using Learing_System.Data;
-using Learing_System.Services.Clients;
-using Learing_System.Services.Courses;
+using Learning_System.Data;
+using Learning_System.Services.Clients;
+using Learning_System.Services.Courses;
 using Microsoft.EntityFrameworkCore;
 using System;
 

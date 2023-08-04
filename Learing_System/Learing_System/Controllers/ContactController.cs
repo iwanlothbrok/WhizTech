@@ -1,9 +1,8 @@
-﻿using Learing_System.Data;
-using Microsoft.AspNetCore.Http;
+﻿using Learning_System.Data;
+using Learning_System.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
-namespace Learing_System.Controllers
+namespace Learning_System.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
@@ -16,18 +15,18 @@ namespace Learing_System.Controllers
 			this.data = data;
 		}
 
-		//[HttpPost]
-		//public async Task<IActionResult> Add([FromBody] DataModel data)
-		//{
-		//	if (!ModelState.IsValid)
-		//	{
-		//		return BadRequest(ModelState);
-		//	}
+		[HttpPost]
+		public async Task<IActionResult> Add([FromBody] Contact info)
+		{
+			if (!ModelState.IsValid)
+			{
+				return BadRequest(ModelState);
+			}
 
-		//	_context.Data.Add(data);
-		//	await _context.SaveChangesAsync();
+			this.data.Add(info);
+			await data.SaveChangesAsync();
 
-		//	return Ok();
-		//}
+			return Ok();
+		}
 	}
 }

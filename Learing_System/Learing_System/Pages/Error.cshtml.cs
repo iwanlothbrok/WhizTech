@@ -1,4 +1,4 @@
-namespace Learing_System.Pages
+namespace Learning_System.Pages
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;

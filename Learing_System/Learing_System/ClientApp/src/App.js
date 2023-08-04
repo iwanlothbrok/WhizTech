@@ -8,7 +8,7 @@ import About from './components/about/About'
 import NavMenu from './components/home/NavMenu';
 import Courses from './components/courses/Courses';
 import ErrorPage from './components/ErrorPage';
-import Contact from './components/Registration'
+import Contact from './components/Contact'
 import AddCourse from './components/courses/AddCourse';
 
 export default function App() {

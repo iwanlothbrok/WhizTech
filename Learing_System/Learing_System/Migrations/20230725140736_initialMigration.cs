@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Learing_System.Migrations
+namespace Learning_System.Migrations
 {
 	/// <inheritdoc />
 	public partial class initialMigration : Migration

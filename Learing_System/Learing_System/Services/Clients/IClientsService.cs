@@ -1,6 +1,6 @@
-﻿using Learing_System.Models;
+﻿using Learning_System.Models;
 
-namespace Learing_System.Services.Clients
+namespace Learning_System.Services.Clients
 {
 	public interface IClientsService
 	{

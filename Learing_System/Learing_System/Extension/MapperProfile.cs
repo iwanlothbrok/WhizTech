@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Learing_System.InputModels;
-using Learing_System.Models;
+using Learning_System.InputModels;
+using Learning_System.Models;
 
-namespace Learing_System.Extension
+namespace Learning_System.Extension
 {
 	public class MapperProfile : Profile
 	{

@@ -1,11 +1,11 @@
-﻿using Learing_System.Data;
-using Learing_System.InputModels;
-using Learing_System.Models;
-using Learing_System.Services.Clients;
-using Learing_System.Services.Courses;
+﻿using Learning_System.Data;
+using Learning_System.InputModels;
+using Learning_System.Models;
+using Learning_System.Services.Clients;
+using Learning_System.Services.Courses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Learing_System.Controllers
+namespace Learning_System.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]

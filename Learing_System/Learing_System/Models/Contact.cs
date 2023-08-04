@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 
-namespace Learing_System.Models
+namespace Learning_System.Models
 {
 	public class Contact
 	{

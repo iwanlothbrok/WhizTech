@@ -1,7 +1,7 @@
-﻿using Learing_System.Data;
-using Learing_System.Models;
+﻿using Learning_System.Data;
+using Learning_System.Models;
 
-namespace Learing_System.Services.Clients
+namespace Learning_System.Services.Clients
 {
 	public class ClientsService : IClientsService
 	{

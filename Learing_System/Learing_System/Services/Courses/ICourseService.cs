@@ -1,6 +1,6 @@
-﻿namespace Learing_System.Services.Courses
+﻿namespace Learning_System.Services.Courses
 {
-	using Learing_System.InputModels;
+	using Learning_System.InputModels;
 	public interface ICourseService
 	{
 		List<CourseViewModel> Get();

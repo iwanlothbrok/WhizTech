@@ -1,7 +1,7 @@
-﻿using Learing_System.Models;
+﻿using Learning_System.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Learing_System.Data
+namespace Learning_System.Data
 {
 	public class ApplicationDbContext : DbContext
 	{
