@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavMenu() {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  const toggleContent = () => {
+    setIsContentVisible(!isContentVisible);
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -14,10 +19,11 @@ function NavMenu() {
         className="navbar-toggler me-4"
         data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse"
+        onClick={toggleContent}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarCollapse">
+      <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">
           <Link to="/" className="nav-item nav-link active">
             Home
@@ -47,11 +53,11 @@ function NavMenu() {
           <Link to="/contact" className="nav-item nav-link">
             Contact
           </Link>
+          <Link to="" className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+            Join Now
+            <i className="fa fa-arrow-right ms-3"></i>
+          </Link>
         </div>
-        <Link to="" className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-          Join Now
-          <i className="fa fa-arrow-right ms-3"></i>
-        </Link>
       </div>
     </nav>
   );

@@ -6,6 +6,8 @@ import Categories from './Categories';
 import OurTeam from './OurTeam';
 import Clients from './Clients';
 import Footer from './Footer';
+import Contact from '../Contact';
+
 import '../../styles/style.css';
 import '../../styles/custom.css';
 import '../../styles/bootstrap.min.css';
@@ -21,6 +23,7 @@ export default function Home() {
       <Categories />
       <OurTeam />
       <Clients />
+      <Contact />
       <Footer />
     </React.Fragment>
   )
