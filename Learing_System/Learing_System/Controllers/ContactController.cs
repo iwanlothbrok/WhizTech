@@ -16,14 +16,14 @@ namespace Learning_System.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> Add([FromBody] Contact info)
+		public async Task<IActionResult> Post([FromBody] Contact formData)
 		{
 			if (!ModelState.IsValid)
 			{
 				return BadRequest(ModelState);
 			}
 
-			this.data.Add(info);
+			this.data.Add(formData);
 			await data.SaveChangesAsync();
 
 			return Ok();

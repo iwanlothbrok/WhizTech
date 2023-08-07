@@ -3,39 +3,32 @@ import axios from 'axios';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    FullName: 'gogo',
-    Email: '12312312',
-    PhoneNumber: 'gogo@abg.bg',
-    Description: 'helloooo!!'
+    FullName: '',
+    Email: '',
+    PhoneNumber: '',
+    Description: ''
   });
 
-  const handleSubmit = async () => {
-    try {
-      const response = await axios.post(
-        'https://localhost:7089/api/contact/',
-        formData,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      if (response.status === 200) {
-        console.log('Data saved successfully!');
-        setFormData({
-          FullName: '',
-          Email: '',
-          PhoneNumber: '',
-          Description: ''
-        });
-      } else {
-        console.error('Failed to save data');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('https://localhost:5001/api/contact/', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
       }
-    } catch (error) {
-      console.error('Error:', error);
-      console.log(formData);
-    }
-  };
+    });
+    const result = await response.json();
+
+    setFormData({
+      FullName: '',
+      Email: '',
+      PhoneNumber: '',
+      Description: ''
+    });
+    console.log(result);
+  }
 
   return (
     <section className="h-100 vh-100 gradient-custom-2">
@@ -47,20 +40,42 @@ const Contact = () => {
             <div className="mb-4 pb-2">
               <div className="form-outline form-white">
                 <label className="form-label" htmlFor="form3Examplea2">Две имена: </label>
-                <input type="text" id="form3Examplea2" className="form-control form-control-lg" />
+                <input
+                  type="text" id="name"
+                  className="form-control form-control-lg"
+                  value={formData.FullName}
+                  onChange={(e) => setFormData({ ...formData, FullName: e.target.value })} />
               </div>
             </div>
 
             <div className="col-md-7 mb-4 pb-2">
               <div className="form-outline form-white">
                 <label className="form-label" htmlFor="form3Examplea8">Телефон за връзка:</label>
-                <input type="text" id="form3Examplea8" className="form-control form-control-lg" />
+                <input
+                  type="text" id="phone"
+                  className="form-control form-control-lg"
+                  value={formData.PhoneNumber}
+                  onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })} />
               </div>
             </div>
             <div className="mb-4 pb-2">
               <div className="form-outline form-white">
-                <label className="form-label" htmlFor="form3Examplea3">e-mail:</label>
-                <input type="text" id="form3Examplea3" className="form-control form-control-lg" />
+                <label className="form-label" htmlFor="form3Examplea3">Email:</label>
+                <input
+                  type="text" id="email"
+                  className="form-control form-control-lg"
+                  value={formData.Email}
+                  onChange={(e) => setFormData({ ...formData, Email: e.target.value })} />
+              </div>
+            </div>
+            <div className="mb-4 pb-2">
+              <div className="form-outline form-white">
+                <label className="form-label" htmlFor="form3Examplea3">Запитване:</label>
+                <input
+                  type="text" id="description"
+                  className="form-control form-control-lg"
+                  value={formData.Description}
+                  onChange={(e) => setFormData({ ...formData, Description: e.target.value })} />
               </div>
             </div>
           </div>
