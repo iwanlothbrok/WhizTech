@@ -11,6 +11,7 @@ import Contact from '../Contact';
 import '../../styles/style.css';
 import '../../styles/custom.css';
 import '../../styles/bootstrap.min.css';
+import SmallContact from '../SmallContact';
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <OurTeam />
       <Clients />
       <Contact />
+      <SmallContact />
       <Footer />
     </React.Fragment>
   )

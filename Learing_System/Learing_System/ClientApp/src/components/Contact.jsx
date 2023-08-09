@@ -30,10 +30,13 @@ const Contact = () => {
     console.log(result);
   }
 
+  const sectionStyle = {
+    background: 'white',
+  }
   return (
-    <section className="h-100 vh-100 gradient-custom-2">
+    <section className="h-100 vh-100 gradient-custom-2" style={sectionStyle}>
       <div className="d-flex justify-content-center align-items-center h-100">
-        <div className="col-lg-6 bg-indigo text-white">
+        <div className="col-lg-6 bg-indigo text-white border-10px-inclined"> {/* Added the 'border-10px-inclined' class */}
           <div className="p-5">
             <h3 className="fw-normal mb-5">Свържете се с нас</h3>
 
@@ -84,7 +87,7 @@ const Contact = () => {
               type="button"
               className="btn btn-light btn-lg btn-block"
               data-mdb-ripple-color="dark"
-              onClick={handleSubmit} // Call the handleSubmit function when the button is clicked
+              onClick={handleSubmit}
             >
               Изпрати
             </button>
@@ -93,6 +96,6 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Contact;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavMenu() {
-  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [isContentVisible, setIsContentVisible] = useState(true);
 
   const toggleContent = () => {
     setIsContentVisible(!isContentVisible);
