@@ -10,6 +10,7 @@ import Courses from './components/courses/Courses';
 import ErrorPage from './components/ErrorPage';
 import Contact from './components/Contact'
 import AddCourse from './components/courses/AddCourse';
+import Footer from './components/home/Footer';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/404" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

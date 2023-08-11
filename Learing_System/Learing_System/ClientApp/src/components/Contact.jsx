@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Contact = () => {
+  // state of the form 
   const [formData, setFormData] = useState({
     FullName: '',
     Email: '',
@@ -9,32 +10,56 @@ const Contact = () => {
     Description: ''
   });
 
+  // state for success message
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
+  // func for click event 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData);
 
+    // fetch to the api 
     const response = await fetch('https://localhost:5001/api/contact/', {
       method: 'POST',
+      // !!!!!!!!! FOR EVERY POST,PUT
       body: JSON.stringify(formData),
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    const result = await response.json();
 
+    // FOR SUCC MESSAGE
+    if (response.ok) {
+      console.log('Form submitted successfully');
+      setSuccessMessageVisible(true); // Show the success message
+    } else {
+      console.log('Form submission failed');
+    }
+
+    // CLEARING THE STATE
     setFormData({
       FullName: '',
       Email: '',
       PhoneNumber: '',
       Description: ''
     });
-    console.log(result);
+
+    // IF YOU WANT TO RELOAD THE PAGE
+    //window.location.reload();
   }
 
   const sectionStyle = {
     background: 'white',
   }
   return (
+
     <section className="h-100 vh-100 gradient-custom-2" style={sectionStyle}>
+      {successMessageVisible && (
+        <div className="alert alert-success" role="alert">
+          Form submitted successfully!
+        </div>
+      )}
+
       <div className="d-flex justify-content-center align-items-center h-100">
         <div className="col-lg-6 bg-indigo text-white border-10px-inclined"> {/* Added the 'border-10px-inclined' class */}
           <div className="p-5">
