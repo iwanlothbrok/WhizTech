@@ -1,7 +1,9 @@
-﻿namespace Learing_System.Services.Contact
+﻿using Learing_System.InputModels;
+
+namespace Learing_System.Services.Contact
 {
 	public interface IContactService
 	{
-		bool Add()
+		void AddAsync(ContactFormModel model);
 	}
 }

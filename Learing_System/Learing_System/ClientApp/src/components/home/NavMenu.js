@@ -57,9 +57,14 @@ function NavMenu() {
           <Link to="/contact" className="nav-item nav-link">
             Contact
           </Link>
-          <Link to="" className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+          <Link
+            to=""
+            className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+            style={{
+              textAlign: "center", /* Center the text within the link */
+            }}
+          >
             Join Now
-            <i className="fa fa-arrow-right ms-3"></i>
           </Link>
         </div>
       </div>

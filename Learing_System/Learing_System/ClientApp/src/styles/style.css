@@ -1,4 +1,13 @@
 /********** Template CSS **********/
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    nav a {
+        /* Your adjustments for Chrome */
+        width: 110%; /* Increase the width to match desired look */
+        /* Add any other adjustments to spacing, padding, margins, etc. */
+    }
+}
+
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;

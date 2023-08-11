@@ -19,7 +19,7 @@ const Contact = () => {
     console.log(formData);
 
     // fetch to the api 
-    const response = await fetch('https://localhost:5001/api/contact/', {
+    const response = await fetch('https://localhost:7089/api/contact/', {
       method: 'POST',
       // !!!!!!!!! FOR EVERY POST,PUT
       body: JSON.stringify(formData),

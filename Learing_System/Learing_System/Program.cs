@@ -1,3 +1,4 @@
+using Learing_System.Services.Contact;
 using Learning_System.Data;
 using Learning_System.Services.Clients;
 using Learning_System.Services.Courses;
@@ -24,7 +25,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseSqlServer(connectionString));
 builder.Services.AddTransient<ICourseService, CourseService>();
-builder.Services.AddTransient<IClientsService,	ClientsService>();
+builder.Services.AddTransient<IClientsService, ClientsService>();
+builder.Services.AddTransient<IContactService, ContactService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
