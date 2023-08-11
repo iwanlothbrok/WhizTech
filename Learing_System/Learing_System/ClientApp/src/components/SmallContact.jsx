@@ -1,20 +1,52 @@
-import React from 'react'
+import React from 'react';
 
 export default function SmallContact() {
     return (
         <>
-            <h1>Elegant Contact Form</h1>
-            <form className="cf">
-                <div className="half left cf">
-                    <input type="text" id="input-name" placeholder="Name" />
-                    <input type="email" id="input-email" placeholder="Email address" />
-                    <input type="text" id="input-subject" placeholder="Subject" />
+            <h1 className="text-center text-muted">Elegant Contact Form</h1>
+            <form className="container">
+                <div className="row">
+                    <div className="col-md-6 mb-3">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="input-name"
+                            placeholder="Name"
+                        />
+                    </div>
+                    <div className="col-md-6 mb-3">
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="input-email"
+                            placeholder="Email address"
+                        />
+                    </div>
                 </div>
-                <div className="half right cf">
-                    <textarea name="message" id="input-message" placeholder="Message"></textarea>
+                <div className="mb-3">
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="input-subject"
+                        placeholder="Subject"
+                    />
                 </div>
-                <input type="submit" value="Submit" id="input-submit" />
+                <div className="mb-3">
+                    <textarea
+                        className="form-control"
+                        id="input-message"
+                        placeholder="Message"
+                        rows="5"
+                    ></textarea>
+                </div>
+                <button
+                    type="submit"
+                    className="btn btn-primary"
+                    id="input-submit"
+                >
+                    Submit
+                </button>
             </form>
         </>
-    )
+    );
 }

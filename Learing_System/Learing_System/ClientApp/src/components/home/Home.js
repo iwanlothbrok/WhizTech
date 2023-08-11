@@ -24,7 +24,6 @@ export default function Home() {
       <Categories />
       <OurTeam />
       <Clients />
-      <Contact />
       <SmallContact />
       <Footer />
     </React.Fragment>
