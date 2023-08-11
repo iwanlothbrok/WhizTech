@@ -59,7 +59,7 @@ function NavMenu() {
           </Link>
           <Link
             to=""
-            className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+            className="btn btn-primary py-4 px-lg-5 d-none d-lg-block m-0"
             style={{
               textAlign: "center", /* Center the text within the link */
             }}
