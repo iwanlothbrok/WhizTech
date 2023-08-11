@@ -25,7 +25,6 @@ export default function Home() {
       <OurTeam />
       <Clients />
       <SmallContact />
-      <Footer />
     </React.Fragment>
   )
 }

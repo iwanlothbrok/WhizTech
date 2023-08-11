@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavMenu() {
   const [isContentVisible, setIsContentVisible] = useState(true);
 
+
   const toggleContent = () => {
     setIsContentVisible(!isContentVisible);
   };
   return (
-    <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <h2 className="m-0 text-primary">
           <i className="fa fa-book me-3"></i>eLEARNING
@@ -36,17 +37,20 @@ function NavMenu() {
           </Link>
           <div className="nav-item dropdown">
             <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-              Pages
+              Exercises
             </Link>
             <div className="dropdown-menu fade-down m-0">
               <Link to="/team" className="dropdown-item">
-                Our Team
+                C#
               </Link>
               <Link to="/testimonial" className="dropdown-item">
-                Testimonial
+                C++
               </Link>
               <Link to="/404" className="dropdown-item">
-                404 Page
+                JavaScript
+              </Link>
+              <Link to="/404" className="dropdown-item">
+                SQL
               </Link>
             </div>
           </div>

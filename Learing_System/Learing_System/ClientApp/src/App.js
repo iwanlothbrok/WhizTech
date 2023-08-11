@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './styles/style.css';
 import './styles/custom.css';
 import './styles/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
 import About from './components/about/About'
 import NavMenu from './components/home/NavMenu';
