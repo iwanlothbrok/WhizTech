@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import backgroundImage from '../background.jpg'; // Adjust the path based on your file structure
+import backgroundImage from '../styles/background2.jpg.avif'; // Adjust the path based on your file structure
 
 const Contact = () => {
   // state of the form 
@@ -16,7 +16,12 @@ const Contact = () => {
     backgroundPosition: 'center', // Adjust this according to your preference
     width: '100vw',  // Make the section cover the full viewport width
     height: '100vh'
+  };
 
+  const formStyle = {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the opacity and color as needed
+    padding: '20px', // Add padding to the form to separate it from the background
+    borderRadius: '10px', // Add rounded corners for a better look
   };
 
   // state for success message
@@ -70,7 +75,7 @@ const Contact = () => {
       )}
 
       <div className="d-flex justify-content-center align-items-center h-100">
-        <div className="col-lg-6 bg-indigo text-white border-10px-inclined"> {/* Added the 'border-10px-inclined' class */}
+        <div className="col-lg-6 bg-indigo text-white border-10px-inclined" style={formStyle}>
           <div className="p-5">
             <h3 className="fw-normal mb-5">Свържете се с нас</h3>
 

@@ -39,13 +39,15 @@ export default function SmallContact() {
                         rows="5"
                     ></textarea>
                 </div>
-                <button
-                    type="submit"
-                    className="btn btn-primary"
-                    id="input-submit"
-                >
-                    Submit
-                </button>
+                <div className="d-flex justify-content-center">
+                    <button
+                        type="submit"
+                        className="btn btn-primary py-3 px-5 mt-2 mx-auto"
+                        id="input-submit"
+                    >
+                        Submit
+                    </button>
+                </div>
             </form>
         </>
     );
