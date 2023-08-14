@@ -27,7 +27,6 @@ export default function App() {
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/exer" element={<Exercise />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

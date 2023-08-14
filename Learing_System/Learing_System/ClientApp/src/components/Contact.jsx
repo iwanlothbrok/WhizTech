@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import backgroundImage from '../background.jpg'; // Adjust the path based on your file structure
 
 const Contact = () => {
   // state of the form 
@@ -9,6 +10,14 @@ const Contact = () => {
     PhoneNumber: '',
     Description: ''
   });
+  const sectionStyle = {
+    backgroundImage: `url(${backgroundImage})`, // Use the imported background image
+    backgroundSize: 'cover', // Adjust this according to your preference
+    backgroundPosition: 'center', // Adjust this according to your preference
+    width: '100vw',  // Make the section cover the full viewport width
+    height: '100vh'
+
+  };
 
   // state for success message
   const [successMessageVisible, setSuccessMessageVisible] = useState(false);
@@ -48,9 +57,9 @@ const Contact = () => {
     //window.location.reload();
   }
 
-  const sectionStyle = {
-    background: 'white',
-  }
+
+
+
   return (
 
     <section className="h-100 vh-100 gradient-custom-2" style={sectionStyle}>

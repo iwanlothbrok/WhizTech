@@ -8,6 +8,17 @@ function NavMenu() {
   const toggleContent = () => {
     setIsContentVisible(!isContentVisible);
   };
+
+  const handleNavClick = (targetId) => {
+    const target = document.querySelector(targetId);
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -26,10 +37,10 @@ function NavMenu() {
       </button>
       <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">
-          <Link to="/" className="nav-item nav-link active">
+          <Link to="/" className="nav-item nav-link active" onClick={() => handleNavClick('#home')}>
             Home
           </Link>
-          <Link to="/about" className="nav-item nav-link">
+          <Link to="/about" className="nav-item nav-link" onClick={() => handleNavClick('#about')}>
             About
           </Link>
           <Link to="/courses" className="nav-item nav-link">
@@ -58,7 +69,7 @@ function NavMenu() {
             Contact
           </Link>
           <Link
-            to=""
+            to="/contact"
             className="btn btn-primary py-4 px-lg-5 d-none d-lg-block m-0"
             style={{
               textAlign: "center", /* Center the text within the link */

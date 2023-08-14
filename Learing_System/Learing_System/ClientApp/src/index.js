@@ -10,6 +10,7 @@ import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'wowjs/dist/wow.min.js';
 import 'owl.carousel/dist/owl.carousel.min.js';
+import Footer from './components/home/Footer';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -17,6 +18,7 @@ const root = createRoot(rootElement);
 root.render(
   <BrowserRouter>
     <App />
+    <Footer />
   </BrowserRouter>);
 
 

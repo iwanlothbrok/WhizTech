@@ -3,7 +3,7 @@ import React from 'react';
 export default function SmallContact() {
     return (
         <>
-            <h1 className="text-center text-muted">Elegant Contact Form</h1>
+            <h1 className="mb-5 text-center">Elegant Contact Form</h1>
             <form className="container">
                 <div className="row">
                     <div className="col-md-6 mb-3">
