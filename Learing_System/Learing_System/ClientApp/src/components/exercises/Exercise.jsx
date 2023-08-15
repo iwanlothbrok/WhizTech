@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import backgroundImage from '../styles/c#.jpg.avif'; // Adjust the path based on your file structure
 
 const Exercise = () => {
     //   const [exercises, setExercises] = useState([]);
@@ -14,6 +15,13 @@ const Exercise = () => {
     //         console.error('Error fetching exercises:', error);
     //       });
     //   }, []);
+    const sectionStyle = {
+        backgroundImage: `url(${backgroundImage})`, // Use the imported background image
+        backgroundSize: 'cover', // Adjust this according to your preference
+        backgroundPosition: 'center', // Adjust this according to your preference
+        width: '100vw',  // Make the section cover the full viewport width
+        height: '100vh'
+    };
 
     const exercise = {
         id: '5',
@@ -30,29 +38,25 @@ const Exercise = () => {
                 <div key={exercise.id} className="list-group-item mb-3">
                     <h2>{exercise.title}</h2>
                     <p>{exercise.description}</p>
-                    <div className="form-check">
-                        <input type="radio" className="form-check-input" name={`exercise_${exercise.id}`} id={`option1_${exercise.id}`} value="option1" />
-                        <label className="form-check-label" htmlFor={`option1_${exercise.id}`}>
-                            Option 1
-                        </label>
+                    <div >
+                        <p>
+                            01. Option 1
+                        </p>
                     </div>
-                    <div className="form-check">
-                        <input type="radio" className="form-check-input" name={`exercise_${exercise.id}`} id={`option2_${exercise.id}`} value="option2" />
-                        <label className="form-check-label" htmlFor={`option2_${exercise.id}`}>
-                            Option 2
-                        </label>
+                    <div >
+                        <p>
+                            02. Option 2
+                        </p>
                     </div>
-                    <div className="form-check">
-                        <input type="radio" className="form-check-input" name={`exercise_${exercise.id}`} id={`option3_${exercise.id}`} value="option3" />
-                        <label className="form-check-label" htmlFor={`option3_${exercise.id}`}>
-                            Option 3
-                        </label>
+                    <div >
+                        <p>
+                            03. Option 3
+                        </p>
                     </div>
-                    <div className="form-check">
-                        <input type="radio" className="form-check-input" name={`exercise_${exercise.id}`} id={`option4_${exercise.id}`} value="option4" />
-                        <label className="form-check-label" htmlFor={`option4_${exercise.id}`}>
-                            Option 4
-                        </label>
+                    <div >
+                        <p>
+                            04. Option 4
+                        </p>
                     </div>
                 </div>
                 {/* ))} */}

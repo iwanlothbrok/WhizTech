@@ -9,7 +9,6 @@ const Courses = () => {
             <CourseHeader />
             <Categories />
             <PopularCourses />
-            <Footer />
         </div>
     )
 }

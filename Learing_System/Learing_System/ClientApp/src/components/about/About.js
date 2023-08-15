@@ -16,7 +16,6 @@ const About = () => {
       <ServiceSection />
       <Content />
       <OurTeam />
-      <Footer />
     </div>
   )
 }

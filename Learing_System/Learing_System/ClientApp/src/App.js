@@ -17,7 +17,6 @@ import Exercise from './components/exercises/Exercise';
 export default function App() {
   return (
     <div className="App">
-      <NavMenu />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

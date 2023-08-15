@@ -6,17 +6,18 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'owl.carousel/dist/assets/owl.carousel.css';
 
-import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'wowjs/dist/wow.min.js';
 import 'owl.carousel/dist/owl.carousel.min.js';
 import Footer from './components/home/Footer';
+import NavMenu from './components/home/NavMenu';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
   <BrowserRouter>
+    <NavMenu />
     <App />
     <Footer />
   </BrowserRouter>);
