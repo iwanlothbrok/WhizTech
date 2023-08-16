@@ -16,7 +16,7 @@ namespace Learing_System.Services.Contact
 			this.data = data;
 		}
 
-		public async void AddAsync(ContactFormModel model)
+		public async Task AddAsync(ContactFormModel model)
 		{
 			var contact = this.mapper.Map<Learning_System.Models.Contact>(model);
 
