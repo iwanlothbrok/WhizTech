@@ -51,16 +51,16 @@ function NavMenu() {
               Exercises
             </Link>
             <div className="dropdown-menu fade-down m-0">
-              <Link to="/team" className="dropdown-item">
+              <Link to="/exer/cshar" language={'C#'} className="dropdown-item">
                 C#
               </Link>
-              <Link to="/testimonial" className="dropdown-item">
+              <Link to="/exer/cplus" language={'C++'} className="dropdown-item">
                 C++
               </Link>
-              <Link to="/404" className="dropdown-item">
+              <Link to="/exer/js" language={'JavaScript'} className="dropdown-item">
                 JavaScript
               </Link>
-              <Link to="/404" className="dropdown-item">
+              <Link to="/exer/sql" language={'SQL'} className="dropdown-item">
                 SQL
               </Link>
             </div>
