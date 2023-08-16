@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import backgroundImage from '../styles/background2.jpg.avif'; // Adjust the path based on your file structure
 
@@ -10,6 +10,7 @@ const Contact = () => {
     PhoneNumber: '',
     Description: ''
   });
+
   const sectionStyle = {
     backgroundImage: `url(${backgroundImage})`, // Use the imported background image
     backgroundSize: 'cover', // Adjust this according to your preference
@@ -26,6 +27,18 @@ const Contact = () => {
 
   // state for success message
   const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
+
+  useEffect(() => {
+    if (successMessageVisible) {
+
+      setTimeout(() => {
+        setSuccessMessageVisible(false);
+      }, 5000);
+    }
+  }, [successMessageVisible]);
+
+
 
   // func for click event 
   const handleSubmit = async (e) => {
@@ -113,10 +126,11 @@ const Contact = () => {
             <div className="mb-4 pb-2">
               <div className="form-outline form-white">
                 <label className="form-label" htmlFor="form3Examplea3">Запитване:</label>
-                <input
+                <textarea
                   type="text" id="description"
                   className="form-control form-control-lg"
                   value={formData.Description}
+                  rows={4}
                   onChange={(e) => setFormData({ ...formData, Description: e.target.value })} />
               </div>
             </div>
