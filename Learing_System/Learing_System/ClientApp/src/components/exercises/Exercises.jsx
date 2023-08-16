@@ -28,6 +28,7 @@ const Exercise = () => {
     // };
 
     const { language } = useParams();
+    console.log(language);
     const exercise = [{
         id: '5',
         title: 'Zadacha 1.',
@@ -46,8 +47,7 @@ const Exercise = () => {
         description: 'imame 5 qbylki i izqjdame 3, kolko imame',
         answers: ['2', '4', '1', '3']
     }]
-
-
+    console.log(exercise);
     return (
         <div className="container mt-5" style={sectionStyle}>
             <h1 className="text-center mb-4" style={h1Style}>C# Exercises</h1>

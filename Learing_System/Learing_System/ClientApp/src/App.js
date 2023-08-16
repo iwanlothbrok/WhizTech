@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/404" element={<ErrorPage />} />
-        <Route path="/exer/:lang?" element={<Exercise />} />
+        <Route path="/exer/:lang" element={<Exercise />} />
       </Routes>
     </div>
   );

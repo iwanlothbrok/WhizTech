@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations;
-
-namespace Learning_System.Models
+﻿namespace Learning_System.Models
 {
+
+	using System.ComponentModel.DataAnnotations;
 	public class Teacher
 	{
 		public int Id { get; set; }
@@ -31,7 +30,5 @@ namespace Learning_System.Models
 		public string? YouTubeUrl { get; set; }
 
 		public string? LinkedinUrl { get; set; }
-
-		public List<Course> Courses { get; set; } = new List<Course>();
 	}
 }

@@ -55,7 +55,7 @@ export default function SmallContact() {
                 </div>
             )}
             <h1 className="mb-5 text-center">Elegant Contact Form</h1>
-            <form className="conDtainer">
+            <form className="conDtainer m-5">
                 <div className="row">
                     <div className="col-md-6 mb-3">
                         <input

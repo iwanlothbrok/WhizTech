@@ -3,8 +3,9 @@ import React from 'react';
 
 
 const SingleExercise = ({ language, exercises }) => {
-
-   
+    console.log('in');
+    console.log(language);
+    console.log(exercises);
 
     return (
         <div className="accordion mt-3" id="accordionPanelsStayOpenExample">

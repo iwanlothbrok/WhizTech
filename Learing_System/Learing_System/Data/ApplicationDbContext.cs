@@ -1,4 +1,5 @@
-﻿using Learning_System.Models;
+﻿using Learing_System.Models;
+using Learning_System.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Learning_System.Data
@@ -10,11 +11,23 @@ namespace Learning_System.Data
 		{
 
 		}
-		public DbSet<Course> Courses { get; set; }
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			modelBuilder.Entity<Answer>()
+						.HasOne(a => a.Exercise)
+						.WithMany(e => e.Answers)
+						.HasForeignKey(a => a.ExerciseId);
+
+			modelBuilder.Entity<Exercise>()
+						.HasOne(e => e.ProgrammingLanguage)
+						.WithMany()
+						.HasForeignKey(e => e.ProgrammingLanguageId);
+
+		}
 		public DbSet<Teacher> Teachers { get; set; }
 		public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
-		public DbSet<Schedule> Schedules { get; set; }
-		public DbSet<Student> Students { get; set; }
 		public DbSet<Contact> Contacts { get; set; }
+		public DbSet<Exercise> Exercises { get; set; }
+		public DbSet<Answer> Answers { get; set; }
 	}
 }

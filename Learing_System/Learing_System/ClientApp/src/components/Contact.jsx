@@ -75,12 +75,12 @@ const Contact = () => {
     //window.location.reload();
   }
 
-
+  
 
 
   return (
 
-    <section className="h-100 vh-100 gradient-custom-2" style={sectionStyle}>
+    <section className="h-100 vh-100 mt-1 mb-0 gradient-custom-2" style={sectionStyle}>
       {successMessageVisible && (
         <div className="alert alert-success" role="alert">
           Form submitted successfully!

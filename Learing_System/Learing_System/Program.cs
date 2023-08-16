@@ -1,9 +1,6 @@
 using Learing_System.Services.Contact;
 using Learning_System.Data;
-using Learning_System.Services.Clients;
-using Learning_System.Services.Courses;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,8 +21,6 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseSqlServer(connectionString));
-builder.Services.AddTransient<ICourseService, CourseService>();
-builder.Services.AddTransient<IClientsService, ClientsService>();
 builder.Services.AddTransient<IContactService, ContactService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
