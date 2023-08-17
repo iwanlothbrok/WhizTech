@@ -3,7 +3,8 @@
     "",
     "\\Learing_System",
     "\\Learing_System\\Learing_System",
-    "\\Learing_System\\Learing_System\\Services"
+    "\\Learing_System\\Learing_System\\Data",
+    "\\Learing_System\\Learing_System\\Models"
   ],
   "SelectedNode": "\\Learing_System\\Learing_System.sln",
   "PreviewInSolutionExplorer": false

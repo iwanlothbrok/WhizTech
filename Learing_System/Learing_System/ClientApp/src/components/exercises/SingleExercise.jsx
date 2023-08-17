@@ -2,14 +2,12 @@ import React from 'react';
 
 
 
-const SingleExercise = ({ language, exercises }) => {
+const SingleExercise = ({ exercises }) => {
     console.log('in');
-    console.log(language);
     console.log(exercises);
 
     return (
         <div className="accordion mt-3" id="accordionPanelsStayOpenExample">
-            <h1>{language}</h1>
             {exercises.map((exercise, index) => (
                 <div className="accordion-item mt-2 mb-2" key={exercise.id}>
                     <h2 className="accordion-header" id={`heading-${exercise.id}`}>
