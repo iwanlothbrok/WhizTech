@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from "react-scroll";
 
 function NavMenu() {
   const [isContentVisible, setIsContentVisible] = useState(true);
@@ -19,6 +20,8 @@ function NavMenu() {
     }
   };
 
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -37,10 +40,10 @@ function NavMenu() {
       </button>
       <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">
-          <Link to="/" className="nav-item nav-link active" onClick={() => handleNavClick('#home')}>
+          <Link to="/" className="nav-item nav-link active" onClick={() => scroll.scrollToTop({ duration: 200 })}>
             Home
           </Link>
-          <Link to="/about" className="nav-item nav-link" onClick={() => handleNavClick('#about')}>
+          <Link to="/about" className="nav-item nav-link" onClick={() => scroll.scrollToTop({ duration: 200 })}>
             About
           </Link>
           <Link to="/courses" className="nav-item nav-link">
@@ -51,28 +54,29 @@ function NavMenu() {
               Exercises
             </Link>
             <div className="dropdown-menu fade-down m-0">
-              <Link to="/exer/cshar" language={'C#'} className="dropdown-item">
+              <Link to="/exer/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C#'} className="dropdown-item">
                 C#
               </Link>
-              <Link to="/exer/cplus" language={'C++'} className="dropdown-item">
+              <Link to="/exer/CPlus" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C++'} className="dropdown-item">
                 C++
               </Link>
-              <Link to="/exer/js" language={'JavaScript'} className="dropdown-item">
+              <Link to="/exer/JavaScript" onClick={() => scroll.scrollToTop({ duration: 200 })} smooth={true} language={'JavaScript'} className="dropdown-item">
                 JavaScript
               </Link>
-              <Link to="/exer/sql" language={'SQL'} className="dropdown-item">
+              <Link to="/exer/SQL" onClick={() => scroll.scrollToTop({ duration: 200 })} smooth={true} language={'SQL'} className="dropdown-item">
                 SQL
               </Link>
             </div>
           </div>
-          <Link to="/contact" className="nav-item nav-link">
+          <Link to="/contact" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
             Contact
           </Link>
           <Link
             to="/contact"
             className="btn btn-primary py-4 px-lg-5 d-none d-lg-block m-0"
             style={{
-              textAlign: "center", /* Center the text within the link */
+              justifyContent: "center",
+ /* Center the text within the link */
             }}
           >
             Join Now
