@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using Learing_System.InputModels;
-using Learing_System.Services.Contact;
+using Learning_System.Data.Models;
+using Learning_System.InputModels;
+using Learning_System.Services.Contact;
 using Learning_System.Data;
-using Learning_System.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Learning_System.Controllers
 {
-	[Route("api/[controller]")]
+    [Route("api/[controller]")]
 	[ApiController]
 	public class ContactController : ControllerBase
 	{

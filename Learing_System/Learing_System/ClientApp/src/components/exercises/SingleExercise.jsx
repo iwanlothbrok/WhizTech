@@ -1,12 +1,9 @@
 import React from 'react';
 
-
-
 const SingleExercise = ({ exercises }) => {
-    console.log('in');
-    console.log(exercises);
 
     return (
+
         <div className="accordion mt-3" id="accordionPanelsStayOpenExample">
             {exercises.map((exercise, index) => (
                 <div className="accordion-item mt-2 mb-2" key={exercise.id}>

@@ -76,7 +76,6 @@ function NavMenu() {
             className="btn btn-primary py-4 px-lg-5 d-none d-lg-block m-0"
             style={{
               justifyContent: "center",
- /* Center the text within the link */
             }}
           >
             Join Now
