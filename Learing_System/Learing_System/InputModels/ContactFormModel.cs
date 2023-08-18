@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Learing_System.InputModels
+namespace Learning_System.InputModels
 {
 	public class ContactFormModel
 	{

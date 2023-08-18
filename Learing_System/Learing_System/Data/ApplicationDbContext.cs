@@ -1,10 +1,9 @@
-﻿using Learing_System.Models;
-using Learning_System.Models;
+﻿using Learning_System.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Learning_System.Data
 {
-	public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
 	{
 
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
