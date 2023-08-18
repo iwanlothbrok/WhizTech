@@ -1,6 +1,6 @@
-﻿using Learing_System.InputModels;
+﻿using Learning_System.InputModels;
 
-namespace Learing_System.Services.Contact
+namespace Learning_System.Services.Contact
 {
 	public interface IContactService
 	{
