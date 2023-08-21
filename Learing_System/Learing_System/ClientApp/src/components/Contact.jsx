@@ -75,7 +75,7 @@ const Contact = () => {
     //window.location.reload();
   }
 
-  
+
 
 
   return (
@@ -94,8 +94,8 @@ const Contact = () => {
 
             <div className="mb-4 pb-2">
               <div className="form-outline form-white">
-                <label className="form-label" htmlFor="form3Examplea2">Две имена: </label>
                 <input
+                  placeholder='Две имена'
                   type="text" id="name"
                   className="form-control form-control-lg"
                   value={formData.FullName}
@@ -105,9 +105,9 @@ const Contact = () => {
 
             <div className="col-md-7 mb-4 pb-2">
               <div className="form-outline form-white">
-                <label className="form-label" htmlFor="form3Examplea8">Телефон за връзка:</label>
                 <input
                   type="text" id="phone"
+                  placeholder='Телефонен номер'
                   className="form-control form-control-lg"
                   value={formData.PhoneNumber}
                   onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })} />
@@ -115,8 +115,8 @@ const Contact = () => {
             </div>
             <div className="mb-4 pb-2">
               <div className="form-outline form-white">
-                <label className="form-label" htmlFor="form3Examplea3">Email:</label>
                 <input
+                  placeholder='Email'
                   type="text" id="email"
                   className="form-control form-control-lg"
                   value={formData.Email}
@@ -125,8 +125,8 @@ const Contact = () => {
             </div>
             <div className="mb-4 pb-2">
               <div className="form-outline form-white">
-                <label className="form-label" htmlFor="form3Examplea3">Запитване:</label>
                 <textarea
+                  placeholder='Запитване'
                   type="text" id="description"
                   className="form-control form-control-lg"
                   value={formData.Description}
