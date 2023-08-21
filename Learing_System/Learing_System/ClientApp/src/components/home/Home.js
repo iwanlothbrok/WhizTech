@@ -5,8 +5,7 @@ import Content from './Content';
 import Categories from './Categories';
 import OurTeam from './OurTeam';
 import Clients from './Clients';
-import Footer from './Footer';
-import Contact from '../Contact';
+
 
 import '../../styles/style.css';
 import '../../styles/custom.css';

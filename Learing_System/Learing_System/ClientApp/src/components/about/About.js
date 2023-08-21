@@ -7,12 +7,13 @@ import Header from './Header'
 import ServiceSection from '../home/ServiceSection'
 import Content from '../home/Content'
 import OurTeam from '../home/OurTeam'
-import Footer from '../home/Footer'
+import Information from './Information';
 
 const About = () => {
   return (
     <div>
       <Header />
+      <Information />
       <ServiceSection />
       <Content />
       <OurTeam />
