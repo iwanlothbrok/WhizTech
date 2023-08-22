@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Learning_System.Controllers
 {
-    [Route("api/[controller]")]
+	[Route("api/[controller]")]
 	[ApiController]
 	public class ContactController : ControllerBase
 	{
@@ -21,7 +21,7 @@ namespace Learning_System.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Post([FromBody] Contact formData)
+		public async Task<IActionResult> PostAsync([FromBody] Contact formData)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -29,7 +29,7 @@ namespace Learning_System.Controllers
 			}
 
 			ContactFormModel form = mapper.Map<ContactFormModel>(formData);
-			this.contactService.AddAsync(form);
+			await this.contactService.AddAsync(form);
 
 			return Ok();
 		}
