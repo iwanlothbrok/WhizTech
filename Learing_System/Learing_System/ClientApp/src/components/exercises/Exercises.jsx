@@ -6,7 +6,7 @@ import SingleExercise from './SingleExercise';
 
 const Exercise = () => {
     const { lang } = useParams();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
     const [exercise, setExercises] = useState([]);
 
     const sectionStyle = {
@@ -37,6 +37,8 @@ const Exercise = () => {
             setExercises(response.data);
         } catch (error) {
             console.error('Error fetching exercises:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -46,14 +48,19 @@ const Exercise = () => {
 
     return (
         <div className="container mt-5" style={sectionStyle}>
-            <h1 className="text-center mb-4" style={h1Style}>{lang}</h1>
-            {exercise.length === 0 ? (
-                <div className="text-center mt-5" style={{ fontSize: '48px' }}>
-                    There are no exercises for this language.
-                </div>) : (
-                <SingleExercise exercises={exercise} />
-            )}
-        </div>
+        <h1 className="text-center mb-4" style={h1Style}>{lang}</h1>
+        {isLoading ? (
+            <div className="text-center mt-5" style={{ fontSize: '48px' }}>
+                Loading...
+            </div>
+        ) : exercise.length === 0 ? (
+            <div className="text-center mt-5" style={{ fontSize: '48px' }}>
+                There are no exercises for this language.
+            </div>
+        ) : (
+            <SingleExercise exercises={exercise} />
+        )}
+    </div>
     );
 };
 

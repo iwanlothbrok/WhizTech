@@ -2,8 +2,7 @@ import React from 'react';
 
 const Content = () => {
     return (
-        <div className="elementor-section elementor-top-section elementor-element elementor-element-aed028e elementor-section-full_width elementor-section-height-default elementor-section-height-default overlay-container position-relative"
-            style={{ backgroundImage: 'linear-gradient(to right, #808080, #00ff00)' }}>
+        <div>
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-5">

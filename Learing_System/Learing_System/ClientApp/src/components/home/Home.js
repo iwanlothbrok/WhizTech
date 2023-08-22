@@ -16,7 +16,8 @@ import SmallContact from '../SmallContact';
 export default function Home() {
   return (
 
-    <React.Fragment>
+    <div className="elementor-section elementor-top-section elementor-element elementor-element-aed028e elementor-section-full_width elementor-section-height-default elementor-section-height-default overlay-container position-relative">
+
       <Carousel />
       <ServiceSection />
       <Content />
@@ -24,6 +25,6 @@ export default function Home() {
       <OurTeam />
       <Clients />
       <SmallContact />
-    </React.Fragment>
+    </div>
   )
 }

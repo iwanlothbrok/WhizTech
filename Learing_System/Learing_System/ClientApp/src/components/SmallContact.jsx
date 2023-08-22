@@ -49,13 +49,16 @@ export default function SmallContact() {
     }
     return (
         <>
+            <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 className="section-title bg-white text-center text-primary px-3">Contact Form</h6>
+                <h1 className="mb-5">Contact us</h1>
+            </div>
             {successMessageVisible && (
                 <div className="alert alert-success" role="alert">
                     Form submitted successfully!
                 </div>
             )}
-            <h1 className="mb-5 text-center">Elegant Contact Form</h1>
-            <form className="conDtainer m-5">
+            <form style={{ marginLeft: '40px', marginRight: '40px' }} className="conDtainer">
                 <div className="row">
                     <div className="col-md-6 mb-3">
                         <input
@@ -98,7 +101,7 @@ export default function SmallContact() {
                         onChange={(e) => setFormData({ ...formData, Description: e.target.value })}
                     ></textarea>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center mb-2">
                     <button
                         type="submit"
                         className="btn btn-primary py-3 px-5 mt-2 mx-auto"
