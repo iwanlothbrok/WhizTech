@@ -1,8 +1,8 @@
 import React from 'react';
-import Carousel from './Carousel';
+import Carousel from '../layout/Carousel';
 import ServiceSection from './ServiceSection';
 import Content from './Content';
-import Categories from './Categories';
+import Categories from '../courses/Categories';
 import OurTeam from './OurTeam';
 import Clients from './Clients';
 
@@ -16,7 +16,7 @@ import SmallContact from '../SmallContact';
 export default function Home() {
   return (
 
-    <div className="elementor-section elementor-top-section elementor-element elementor-element-aed028e elementor-section-full_width elementor-section-height-default elementor-section-height-default overlay-container position-relative">
+    <div>
 
       <Carousel />
       <ServiceSection />
