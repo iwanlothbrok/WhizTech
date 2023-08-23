@@ -2,18 +2,18 @@ import React from 'react';
 
 const Information = () => {
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 text-white">
             <section className="mission-section">
                 <h2 className="mb-4">What is our mission?</h2>
                 <p>
-                    Hey there, fellow future code maestro! At [Your Website Name], our mission is to make coding feel like unlocking a treasure chest of digital wonders. We're on a quest to turn "What's a variable?" into "Check out my awesome app!" With languages like C#, JavaScript, C++, SQL, and more in our teaching toolkit, we're here to guide you through the coding jungle and help you emerge victorious.
+                    Hey there, fellow future code maestro! At WhizTech, our mission is to make coding feel like unlocking a treasure chest of digital wonders. We're on a quest to turn "What's a variable?" into "Check out my awesome app!" With languages like C#, JavaScript, C++, SQL, and more in our teaching toolkit, we're here to guide you through the coding jungle and help you emerge victorious.
                 </p>
             </section>
 
             <section className="who-we-are-section mt-5">
                 <h2 className="mb-4">Who are we?</h2>
                 <p>
-                    Meet the [Your Website Name] crew—your friendly neighborhood code mentors! We're the kind of folks who'd have a coding contest over a pizza party. But don't worry, we won't challenge you to a debugging duel (unless you're up for it!). We're a bunch of programming pros and enthusiasts, ready to share our love for code and help you reach those "Aha!" moments.
+                    Meet the WhizTech crew—your friendly neighborhood code mentors! We're the kind of folks who'd have a coding contest over a pizza party. But don't worry, we won't challenge you to a debugging duel (unless you're up for it!). We're a bunch of programming pros and enthusiasts, ready to share our love for code and help you reach those "Aha!" moments.
                 </p>
             </section>
 

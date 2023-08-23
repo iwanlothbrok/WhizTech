@@ -57,7 +57,7 @@ function NavMenu() {
               <Link to="/exer/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C#'} className="dropdown-item">
                 C#
               </Link>
-              <Link to="/exer/CPlus" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C++'} className="dropdown-item">
+              <Link to="/exer/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C++'} className="dropdown-item">
                 C++
               </Link>
               <Link to="/exer/JavaScript" onClick={() => scroll.scrollToTop({ duration: 200 })} smooth={true} language={'JavaScript'} className="dropdown-item">

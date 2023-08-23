@@ -50,8 +50,7 @@ export default function SmallContact() {
     return (
         <>
             <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 className="section-title bg-white text-center text-primary px-3">Contact Form</h6>
-                <h1 className="mb-5">Contact us</h1>
+                <h3 className="mb-5 text-white">Contact us</h3>
             </div>
             {successMessageVisible && (
                 <div className="alert alert-success" role="alert">
@@ -104,7 +103,7 @@ export default function SmallContact() {
                 <div className="d-flex justify-content-center mb-2">
                     <button
                         type="submit"
-                        className="btn btn-primary py-3 px-5 mt-2 mx-auto"
+                        className="btn btn-warning py-3 px-5 mt-2 mx-auto"
                         id="input-submit"
                         onClick={handleSubmit}
                     >

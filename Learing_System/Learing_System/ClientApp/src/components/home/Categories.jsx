@@ -3,11 +3,10 @@ import React from 'react';
 
 const Categories = () => {
     return (
-        <div className="container-xxl py-5 category">
+        <div className="container-xxl py-5 category text-white">
             <div className="container">
                 <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 className="section-title bg-white text-center text-primary px-3">Categories</h6>
-                    <h1 className="mb-5">Courses Categories</h1>
+                    <h3 className="mb-5">Courses Categories</h3>
                 </div>
                 <div className="row g-3">
                     <div className="col-lg-7 col-md-6">
