@@ -11,6 +11,7 @@ import ErrorPage from './components/ErrorPage';
 import Contact from './components/Contact'
 import AddCourse from './components/courses/AddCourse';
 import Exercise from './components/exercises/Exercises';
+import Calendar from './components/calendar/Calendar';
 
 export default function App() {
   return (
@@ -23,6 +24,8 @@ export default function App() {
         <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />
+        <Route path="/cal" element={<Calendar />} />
+
       </Routes>
     </div>
   );
