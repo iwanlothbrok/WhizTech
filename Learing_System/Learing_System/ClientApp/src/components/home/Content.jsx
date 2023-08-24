@@ -9,32 +9,32 @@ const Content = () => {
                         <h3 className="mb-5">About us</h3>
                     </div>
                     <div className="row g-5">
-                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style={{ minHeight: '400px' }}>
+                        <div className="col-12 col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style={{ minHeight: '400px' }}>
                             <div className="position-relative h-100">
                                 <img className="img-fluid position-absolute w-100 h-100" src="/img/about.jpg" alt="" style={{ objectFit: 'cover' }} />
                             </div>
                         </div>
-                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div className="col-12 col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <h1 className="mb-4">Добре дошли в ЕУРОЦИ</h1>
                             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
                             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                             <div className="row gy-2 gx-4 mb-4">
-                                <div className="col-sm-6">
+                                <div className="col-12 col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Skilled Instructors</p>
                                 </div>
-                                <div className="col-sm-6">
+                                <div className="col-12 col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Online Classes</p>
                                 </div>
-                                <div className="col-sm-6">
+                                <div className="col-12 col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>International Certificate</p>
                                 </div>
-                                <div className="col-sm-6">
+                                <div className="col-12 col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Skilled Instructors</p>
                                 </div>
-                                <div className="col-sm-6">
+                                <div className="col-12 col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Online Classes</p>
                                 </div>
-                                <div className="col-sm-6">
+                                <div className="col-12 col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>International Certificate</p>
                                 </div>
                             </div>

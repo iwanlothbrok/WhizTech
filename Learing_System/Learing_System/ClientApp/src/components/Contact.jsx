@@ -12,11 +12,11 @@ const Contact = () => {
   });
 
   const sectionStyle = {
-    backgroundImage: `url(${backgroundImage})`, // Use the imported background image
-    backgroundSize: 'cover', // Adjust this according to your preference
-    backgroundPosition: 'center', // Adjust this according to your preference
-    width: '100vw',  // Make the section cover the full viewport width
-    height: '100vh'
+    // backgroundImage: `url(${backgroundImage})`, // Use the imported background image
+    // backgroundSize: 'cover', // Adjust this according to your preference
+    // backgroundPosition: 'center', // Adjust this according to your preference
+    // width: '100vw',  // Make the section cover the full viewport width
+    // height: '100vh'
   };
 
   const formStyle = {
@@ -97,9 +97,14 @@ const Contact = () => {
                 <input
                   placeholder='Две имена'
                   type="text" id="name"
-                  className="form-control form-control-lg"
+                  className={`form-control form-control-lg ${formData.FullName ? 'is-valid' : 'is-invalid'}`}
                   value={formData.FullName}
-                  onChange={(e) => setFormData({ ...formData, FullName: e.target.value })} />
+                  onChange={(e) => setFormData({ ...formData, FullName: e.target.value })}
+                  required
+                />
+                <div className={formData.FullName ? 'valid-feedback' : 'invalid-feedback'}>
+                  {formData.FullName ? 'Looks good!' : 'Please choose a username.'}
+                </div>
               </div>
             </div>
 
