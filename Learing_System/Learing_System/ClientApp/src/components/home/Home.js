@@ -11,19 +11,13 @@ import '../../styles/style.css';
 import '../../styles/custom.css';
 import '../../styles/bootstrap.min.css';
 import SmallContact from '../SmallContact';
-
+import HomePage from './HomePage';
 
 export default function Home() {
   return (
 
     <div>
-
-      <Carousel />
-      <ServiceSection />
-      <Content />
-      <Categories />
-      <OurTeam />
-      <Clients />
+      <HomePage />
       <SmallContact />
     </div>
   )
