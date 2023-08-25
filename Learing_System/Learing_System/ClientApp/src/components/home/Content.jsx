@@ -2,7 +2,7 @@ import React from 'react';
 
 const Content = () => {
     return (
-        <div className='text-white'>
+        <div className='text-black'>
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -20,25 +20,25 @@ const Content = () => {
                             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                             <div className="row gy-2 gx-4 mb-4">
                                 <div className="col-12 col-sm-6">
-                                    <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Skilled Instructors</p>
+                                    <p className="mb-0"><i className="fa fa-arrow-right text-alert me-2"></i>Skilled Instructors</p>
                                 </div>
                                 <div className="col-12 col-sm-6">
-                                    <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Online Classes</p>
+                                    <p className="mb-0"><i className="fa fa-arrow-right text-alert me-2"></i>Online Classes</p>
                                 </div>
                                 <div className="col-12 col-sm-6">
-                                    <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>International Certificate</p>
+                                    <p className="mb-0"><i className="fa fa-arrow-right text-alert me-2"></i>International Certificate</p>
                                 </div>
                                 <div className="col-12 col-sm-6">
-                                    <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Skilled Instructors</p>
+                                    <p className="mb-0"><i className="fa fa-arrow-right text-alert me-2"></i>Skilled Instructors</p>
                                 </div>
                                 <div className="col-12 col-sm-6">
-                                    <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>Online Classes</p>
+                                    <p className="mb-0"><i className="fa fa-arrow-right text-alert me-2"></i>Online Classes</p>
                                 </div>
                                 <div className="col-12 col-sm-6">
-                                    <p className="mb-0"><i className="fa fa-arrow-right text-warning me-2"></i>International Certificate</p>
+                                    <p className="mb-0"><i className="fa fa-arrow-right text-alert me-2"></i>International Certificate</p>
                                 </div>
                             </div>
-                            <a className="btn btn-warning py-3 px-5 mt-2" href="">Read More</a>
+                            <a className="btn bg-black text-white py-3 px-5 mt-2" href="">Read More</a>
                         </div>
                     </div>
                 </div>

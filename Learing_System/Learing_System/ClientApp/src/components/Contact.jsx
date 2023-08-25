@@ -12,11 +12,11 @@ const Contact = () => {
   });
 
   const sectionStyle = {
-    // backgroundImage: `url(${backgroundImage})`, // Use the imported background image
-    // backgroundSize: 'cover', // Adjust this according to your preference
-    // backgroundPosition: 'center', // Adjust this according to your preference
-    // width: '100vw',  // Make the section cover the full viewport width
-    // height: '100vh'
+    backgroundImage: `url(${backgroundImage})`, // Use the imported background image
+    backgroundSize: 'cover', // Adjust this according to your preference
+    backgroundPosition: 'center', // Adjust this according to your preference
+    width: '100vw',  // Make the section cover the full viewport width
+    height: '100vh'
   };
 
   const formStyle = {
