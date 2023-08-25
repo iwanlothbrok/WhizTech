@@ -48,8 +48,7 @@ export default function SmallContact() {
         });
     }
     return (
-        <div style={{ backgroundColor: '#232323' }}>
-            <div></div>
+        <div className="container-fluid" style={{ backgroundColor: '#232323' }}>
             <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h3 className="mb-5 text-white">Contact us</h3>
             </div>
@@ -58,12 +57,12 @@ export default function SmallContact() {
                     Form submitted successfully!
                 </div>
             )}
-            <form style={{ marginLeft: '40px', marginRight: '40px' }} className="conDtainer">
+            <form className="mx-md-5">
                 <div className="row">
                     <div className="col-md-6 mb-3">
                         <input
                             type="text"
-                            className="form-control form-control-sm"
+                            className="form-control"
                             id="input-name"
                             placeholder="Name"
                             value={formData.FullName}
@@ -73,7 +72,7 @@ export default function SmallContact() {
                     <div className="col-md-6 mb-3">
                         <input
                             type="email"
-                            className="form-control form-control-sm"
+                            className="form-control"
                             id="input-email"
                             placeholder="Email address"
                             value={formData.Email}
@@ -84,7 +83,7 @@ export default function SmallContact() {
                 <div className="mb-3">
                     <input
                         type="text"
-                        className="form-control form-control-sm"
+                        className="form-control"
                         id="input-subject"
                         placeholder="Phone"
                         value={formData.PhoneNumber}
@@ -93,7 +92,7 @@ export default function SmallContact() {
                 </div>
                 <div className="mb-3">
                     <textarea
-                        className="form-control form-control-sm"
+                        className="form-control"
                         id="input-message"
                         placeholder="Message"
                         rows="5"
@@ -102,19 +101,19 @@ export default function SmallContact() {
                     ></textarea>
                 </div>
 
-                <div className="d-flex justify-content-center">
+                <div className="text-center">
                     <button
                         type="submit"
-                        className="btn btn-outline-secondary text-white p-5 px-5 mt-2 mx-auto"
+                        className="btn btn-outline-secondary text-white p-4 px-5 mt-2 mx-auto"
                         id="input-submit"
                         onClick={handleSubmit}
-                        style={{ borderRadius: '30px' }}
+                        style={{ borderRadius: '20px' }}
                     >
                         Submit
                     </button>
-
                 </div>
             </form>
         </div>
+
     );
 }
