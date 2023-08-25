@@ -11,6 +11,11 @@ const Contact = () => {
     Description: ''
   });
 
+  const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
+
+  // style
   const sectionStyle = {
     backgroundImage: `url(${backgroundImage})`, // Use the imported background image
     backgroundSize: 'cover', // Adjust this according to your preference
@@ -18,15 +23,11 @@ const Contact = () => {
     width: '100vw',  // Make the section cover the full viewport width
     height: '100vh'
   };
-
   const formStyle = {
     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the opacity and color as needed
     padding: '20px', // Add padding to the form to separate it from the background
     borderRadius: '10px', // Add rounded corners for a better look
   };
-
-  // state for success message
-  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
 
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+    setSubmitButtonClicked(true);
 
     // fetch to the api 
     const response = await fetch('https://localhost:7089/api/contact/', {
@@ -76,8 +78,6 @@ const Contact = () => {
   }
 
 
-
-
   return (
 
     <section className="h-100 vh-100 mt-1 mb-0 gradient-custom-2" style={sectionStyle}>
@@ -97,13 +97,13 @@ const Contact = () => {
                 <input
                   placeholder='Две имена'
                   type="text" id="name"
-                  className={`form-control form-control-lg ${formData.FullName ? 'is-valid' : 'is-invalid'}`}
+                  className={`form-control form-control-lg ${submitButtonClicked && formData.FullName ? 'is-valid' : (submitButtonClicked ? 'is-invalid' : '')}`}
                   value={formData.FullName}
                   onChange={(e) => setFormData({ ...formData, FullName: e.target.value })}
                   required
                 />
-                <div className={formData.FullName ? 'valid-feedback' : 'invalid-feedback'}>
-                  {formData.FullName ? 'Looks good!' : 'Please choose a username.'}
+                <div style={{ fontSize: '1f.5rem' }} className={submitButtonClicked && formData.FullName ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
+                  {submitButtonClicked && formDFata.FullName ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
                 </div>
               </div>
             </div>
@@ -146,6 +146,7 @@ const Contact = () => {
               className="btn btn-light btn-lg btn-block"
               data-mdb-ripple-color="dark"
               onClick={handleSubmit}
+
             >
               Изпрати
             </button>
