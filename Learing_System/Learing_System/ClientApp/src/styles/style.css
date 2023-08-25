@@ -3,15 +3,16 @@
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     nav a {
         /* Your adjustments for Chrome */
-        width: 110%; /* Increase the width to match desired look */
+        width: 110%;
+        /* Increase the width to match desired look */
         /* Add any other adjustments to spacing, padding, margins, etc. */
     }
 }
 
 :root {
-    --primary: #06BBCC;
-    --light: #F0FBFC;
+    --primary: #000000;
     --dark: #181d38;
+    --light: #F0FBFC;
 }
 
 .fw-medium {
@@ -116,7 +117,7 @@
     }
 
     .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
+        border-top: 1px solid #000000;
     }
 }
 
