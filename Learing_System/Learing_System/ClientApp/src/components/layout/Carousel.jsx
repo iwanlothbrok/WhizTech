@@ -48,10 +48,11 @@ function Carousel() {
               <div className="row justify-content-start">
                 <div className="col-sm-10 col-lg-8 position-relative z-index-1">
                   <h5 className="text-primary text-uppercase mb-3 animated slideInDown mt-5"></h5>
-                  <h1 className="display-3 text-white animated slideInDown">Частни уроци по програмиране предназначени за всяка възраст</h1>
+                  <h1 className="display-3 text-white animated slideInDown">Станете магьосник на код с нашите персонални уроци по програмиране!</h1>
                   {isPhone >= 768 ? (
                     <React.Fragment>
-                      <p className="fs-5 text-white mb-4 pb-2">Ако искате да добиете нужните умения за да станете софтуерени инженери сте на правилното място.</p>
+                      <p className="fs-5 text-white mb-4 pb-2">Изживейте омагьосано кодиращо пътешествие с нашите персонализирани уроци!
+                        Превърнете се в добросъвестни кодови магьосници, независимо дали сте магьосник на синтаксиса или магьосник на алгоритми. </p>
                       <Link to="/contact" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Контакти</Link>
                       <Link to='/' onClick={onClickNumber} className="btn btn-light py-md-3 px-md-5 animated slideInRight">{number}</Link>
                     </React.Fragment>
@@ -69,12 +70,12 @@ function Carousel() {
               <div className="row justify-content-start">
                 <div className="col-sm-10 col-lg-8 position-relative z-index-1">
                   <h5 className="text-primary text-uppercase mb-3 animated slideInDown"></h5>
-                  <h1 className="display-3 text-white animated slideInDown">Квалифицирани лектори, които работят с профисионализъм</h1>
+                  <h1 className="display-3 text-white animated slideInDown">Овладейте занаята на кодирането с C#, C++, SQL и JavaScript!</h1>
                   {isPhone >= 768 ? (
                     <React.Fragment>
-                      <p className="fs-5 text-white mb-4 pb-2">Нашите програмисти, които водят уроците са с много годишен опит в сферата
-                        на софтуерните технологии и имат не малък опит с преподаването.
-                        Изкарали са множество курсове с езиците C#, Java Script, C++, C, SQL и множество други технологии.</p>
+                      <p className="fs-5 text-white mb-4 pb-2">Впуснете се в кодиращо пътешествие, което обхваща най-важното от C#, C++, SQL и JavaScript.
+                       От изработване на елегантни решения с C# до навлизане в света на динамичната уеб разработка с JavaScript, нашите уроци ви дават възможност да създавате стабилни софтуерни системи,
+                       да изследвате манипулирането на данни с SQL и да отключите потенциала на езиците за програмиране, които движат иновациите.</p>
                       <Link to="/teachers" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Още информация</Link>
                       <Link to='/' onClick={onClickNumber} className="btn btn-light py-md-3 px-md-5 animated slideInRight">{number}</Link>
                     </React.Fragment>
