@@ -103,7 +103,7 @@ const Contact = () => {
                   required
                 />
                 <div style={{ fontSize: '1f.5rem' }} className={submitButtonClicked && formData.FullName ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
-                  {submitButtonClicked && formDFata.FullName ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
+                  {submitButtonClicked && formData.FullName ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
                 </div>
               </div>
             </div>

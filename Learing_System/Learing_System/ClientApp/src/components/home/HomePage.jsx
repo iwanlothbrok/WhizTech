@@ -20,13 +20,15 @@ export default function HomePage() {
 
 
             <div className="photo-container d-flex flex-column justify-content-center align-items-center">
-                <div className="centered-text text-center p-4 bg-black bg-opacity-25">
-                    <h2 className="display-4 mb-0 font-family-roboto text-white">Индивидуални уроци по програмиране</h2>
+                <div className="centered-text text-center p-4 bg-black bg-opacity-75" style={{ borderRadius: '30px' }}>
+                    <h2 className="display-2 mb-0 font-family-roboto text-white" ><strong>Индивидуални уроци по програмиране</strong></h2>
+                    <h3 className="mb-0 font-family-roboto" style={{ color: '#71F483' }}>С първи безплатен урок</h3>
                 </div>
 
                 <div className="button-container m-5 text-center p-2">
                     <button className="btn btn-outline-secondary m-2 p-5 btn-lg flex-fill text-white" style={{ borderRadius: '30px' }} >Услуги</button>
                     <button className="btn btn-outline-secondary p-5 btn-lg flex-fill text-white" style={{ borderRadius: '30px' }} >Контакти</button>
+
                 </div>
             </div>
         </section>

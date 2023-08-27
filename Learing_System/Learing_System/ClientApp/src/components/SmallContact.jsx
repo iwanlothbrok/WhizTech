@@ -48,7 +48,7 @@ export default function SmallContact() {
         });
     }
     return (
-        <div className="container-fluid" style={{ backgroundColor: '#232323' }}>
+        <div className="container-fluid  justify-content-center align-items-center" style={{ backgroundColor: '#232323' }}>
             <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h3 className="mb-5 text-white">Contact us</h3>
             </div>
@@ -59,20 +59,20 @@ export default function SmallContact() {
             )}
             <form className="mx-md-5">
                 <div className="row">
-                    <div className="col-md-6 mb-3">
+                    <div className="col-md-3 mb-1 pb-2">
                         <input
                             type="text"
-                            className="form-control"
+                            className="form-control half-width"
                             id="input-name"
                             placeholder="Name"
                             value={formData.FullName}
                             onChange={(e) => setFormData({ ...formData, FullName: e.target.value })}
                         />
                     </div>
-                    <div className="col-md-6 mb-3">
+                    <div className="col-md-4 mb-1 pb-3">
                         <input
                             type="email"
-                            className="form-control"
+                            className="form-control half-width"
                             id="input-email"
                             placeholder="Email address"
                             value={formData.Email}
@@ -80,27 +80,28 @@ export default function SmallContact() {
                         />
                     </div>
                 </div>
-                <div className="mb-3">
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="input-subject"
-                        placeholder="Phone"
-                        value={formData.PhoneNumber}
-                        onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })}
-                    />
+                <div className="row">
+                    <div className="col-md-7 mb-4 pb-2">
+                        <input
+                            type="text"
+                            className="form-control half-width"
+                            id="input-subject"
+                            placeholder="Phone"
+                            value={formData.PhoneNumber}
+                            onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })}
+                        />
+                    </div>
+                    <div className="col-md-7 mb-4 pb-2">
+                        <textarea
+                            className="form-control half-width"
+                            id="input-message"
+                            placeholder="Message"
+                            rows="5"
+                            value={formData.Description}
+                            onChange={(e) => setFormData({ ...formData, Description: e.target.value })}
+                        ></textarea>
+                    </div>
                 </div>
-                <div className="mb-3">
-                    <textarea
-                        className="form-control"
-                        id="input-message"
-                        placeholder="Message"
-                        rows="5"
-                        value={formData.Description}
-                        onChange={(e) => setFormData({ ...formData, Description: e.target.value })}
-                    ></textarea>
-                </div>
-
                 <div className="text-center">
                     <button
                         type="submit"
@@ -114,6 +115,5 @@ export default function SmallContact() {
                 </div>
             </form>
         </div>
-
     );
 }

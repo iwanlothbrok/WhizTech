@@ -18,6 +18,7 @@ export default function Home() {
 
     <div>
       <HomePage />
+      <ServiceSection/>
       <SmallContact />
     </div>
   )
