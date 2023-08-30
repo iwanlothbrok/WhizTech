@@ -54,9 +54,7 @@ export default function SmallContact() {
             <div className="container">
 
                 <div className="row container-fluid  justify-content-center align-items-center" style={{ backgroundColor: '#232323' }}>
-                    <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h3 className="mb-5 text-white">Contact us</h3>
-                    </div>
+
                     {successMessageVisible && (
                         <div className="alert alert-success" role="alert">
                             Form submitted successfully!
@@ -64,14 +62,16 @@ export default function SmallContact() {
                     )}
 
                     <div class="col">
+                        <h3 className="mb-4 mt-md-4 display-4 text-center" style={{ color: '#71F483' }}>Запитване</h3> {/* Use Bootstrap display-4 class for bigger text */}
                         <form className="mx-md-5">
+
                             <div className="row">
                                 <div className="col-md-5 mb-1 pb-2">
                                     <input
                                         type="text"
-                                        className="form-control half-width"
+                                        className="form-control form-control-lg"
                                         id="input-name"
-                                        placeholder="Name"
+                                        placeholder="Име"
                                         value={formData.FullName}
                                         onChange={(e) => setFormData({ ...formData, FullName: e.target.value })}
                                     />
@@ -79,9 +79,9 @@ export default function SmallContact() {
                                 <div className="col-md-7 mb-1 pb-3">
                                     <input
                                         type="email"
-                                        className="form-control half-width"
+                                        className="form-control form-control-lg"
                                         id="input-email"
-                                        placeholder="Email address"
+                                        placeholder="Email"
                                         value={formData.Email}
                                         onChange={(e) => setFormData({ ...formData, Email: e.target.value })}
                                     />
@@ -91,33 +91,34 @@ export default function SmallContact() {
                                 <div className="col-md-13 mb-4 pb-2">
                                     <input
                                         type="text"
-                                        className="form-control "
+                                        className="form-control form-control-lg"
                                         id="input-subject"
-                                        placeholder="Phone"
+                                        placeholder="Телефон"
                                         value={formData.PhoneNumber}
                                         onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })}
                                     />
                                 </div>
-                                <div className="col-md-13 mb-4 pb-2">
-                                    <textarea
-                                        className="form-control half-width"
-                                        id="input-message"
-                                        placeholder="Message"
-                                        rows="7"
-                                        value={formData.Description}
-                                        onChange={(e) => setFormData({ ...formData, Description: e.target.value })}
-                                    ></textarea>
-                                </div>
+                            </div>
+
+                            <div className="col-md-13 mb-4 pb-2">
+                                <textarea
+                                    className="form-control form-control-lg"
+                                    id="input-message"
+                                    placeholder="Запитване"
+                                    rows="7"
+                                    value={formData.Description}
+                                    onChange={(e) => setFormData({ ...formData, Description: e.target.value })}
+                                ></textarea>
                             </div>
                             <div className="text-center">
                                 <button
                                     type="submit"
-                                    className="btn btn-outline-secondary text-white p-4 px-5 mt-2 mx-auto"
+                                    className="btn btn-outline-secondary btn-lg text-white p-4 px-5 mt-2 mx-auto"
                                     id="input-submit"
                                     onClick={handleSubmit}
                                     style={{ borderRadius: '20px' }}
                                 >
-                                    Submit
+                                    Изпрати
                                 </button>
                             </div>
 
@@ -125,49 +126,9 @@ export default function SmallContact() {
                     </div>
 
                     {/* information */}
-                    <div class="col-6" style={{ backgroundColor: '#71F483' }}>
-                        {/* <div className="col-md-5 d-flex align-items-stretch"> */}
-                        <div className="info-wrap w-100 p-lg-5 p-4">
-                            <h3 className="mb-4 mt-md-4">Contact us</h3>
-                            <div className="dbox w-100 d-flex align-items-start">
-                                <div className="icon d-flex align-items-center justify-content-center">
-                                    <span className="fa fa-map-marker"></span>
-                                </div>
-                                <div className="text pl-3">
-                                    <p>
-                                        <span>Address:</span> 198 West 21th Street, Suite 721 New York NY
-                                        10016
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="dbox w-100 d-flex align-items-start">
-                                <div className="icon d-flex align-items-center justify-content-center">
-                                    <span className="fa fa-map-marker"></span>
-                                </div>
-                                <div className="text pl-3">
-                                    <p>
-                                        <span>Phone:</span> 198 West 21th Street, Suite 721 New York NY
-                                        10016
-                                    </p>
-                                </div>
-                            </div> <div className="dbox w-100 d-flex align-items-start">
-                                <div className="icon d-flex align-items-center justify-content-center">
-                                    <span className="fa fa-map-marker"></span>
-                                </div>
-                                <div className="text pl-3">
-                                    <p>
-                                        <span>Email:</span> 198 West 21th Street, Suite 721 New York NY
-                                        10016
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* </div> */}
-                        </div>
-                    </div>
-
+                   <ContactInfoSection/>
                 </div>
-            </div >
+            </div>
         </div>
 
     );

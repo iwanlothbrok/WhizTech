@@ -3,8 +3,10 @@ import React from 'react';
 function ServiceSection() {
   return (
     <div style={{ backgroundColor: '#232323' }}>
-
       <div className="container-xxl py-5">
+        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h3 className="mb-5 text-white">За кого са предназначени уроците</h3>
+        </div>
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
