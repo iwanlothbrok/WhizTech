@@ -2,7 +2,7 @@ import React from 'react';
 
 const Information = () => {
     return (
-        <div className="container mt-5 text-black">
+        <div className="container mt-5 text-white">
             <section className="mission-section">
                 <h2 className="mb-4">What is our mission?</h2>
                 <p>
