@@ -125,8 +125,7 @@ export default function SmallContact() {
                         </form>
                     </div>
 
-                    {/* information */}
-                   <ContactInfoSection/>
+                    <ContactInfoSection />
                 </div>
             </div>
         </div>

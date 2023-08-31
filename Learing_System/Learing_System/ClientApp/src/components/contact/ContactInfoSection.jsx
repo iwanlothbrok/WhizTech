@@ -6,20 +6,6 @@ const ContactInfoSection = () => {
             <div className="col-md-5 d-flex align-items-stretch">
                 <div className="info-wrap w-100 p-lg-5 p-4">
                     <h3 className="mb-4 mt-md-4 display-4">Контакти</h3> {/* Use Bootstrap display-4 class for bigger text */}
-                    {/* address */}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-map-marker fa-2x"></span> {/* Use fa-2x class for bigger icon */}
-                                </div>
-                                <div class="d-flex flex-column flex-md-row align-items-center">
-                                    <span className='p-2 p-md-4 h4'>Адрес: </span> {/* Use h4 class for bigger text */}
-                                    <p class="p-2 p-md-4 h4">Пловдив, България</p> {/* Use h4 class for bigger text */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     {/* phone */}
                     <div class="row">
