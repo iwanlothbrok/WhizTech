@@ -8,6 +8,7 @@ import ServiceSection from '../home/ServiceSection'
 import Content from '../home/Content'
 import OurTeam from '../home/OurTeam'
 import Information from './Information';
+import AskedQuestions from '../questions/AskedQuestions';
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
       <ServiceSection />
       <Content />
       <OurTeam />
+      <AskedQuestions />
     </div>
   )
 }
