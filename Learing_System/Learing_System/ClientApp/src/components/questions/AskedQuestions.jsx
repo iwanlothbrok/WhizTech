@@ -8,37 +8,43 @@ import { faPaperPlane as farPaperPlane } from '@fortawesome/free-regular-svg-ico
 export default function AskedQuestions() {
 
     const questionStyle = {
-        color: '#71F483'
+        color: '#71F483',
+        fontSize: '25px',
+
     }
 
+    const divStyle = {
+        margin: '10px'
+    }
     const answerStyle = {
-        color: 'white'
+        color: 'white',
+        fontSize: '20px'
     }
 
     return (
-        <section className='m-4'>
-            <h3 className="text-center mb-4 pb-2 fw-bold" style={questionStyle}>FAQ</h3>
+        <section className='m-5'>
+            <h3 className="text-center mb-5 pb-2 fw-bold" style={questionStyle}>FAQ</h3>
             <p className="text-center mb-5" style={questionStyle}>
                 Find the answers for the most frequently asked questions below
             </p>
 
             <div className="row">
-                <div className="col-md-6 col-lg-4 mb-4">
+                <div className="col-md-6 col-lg-4 mb-5">
                     <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={farPaperPlane} style={questionStyle} className="pe-2" /> A simple question?</h6>
                     <p style={answerStyle}>
                         <strong><u>Absolutely!</u></strong> We work with top payment companies which guarantees your safety and security. All billing information is stored on our payment processing partner.
                     </p>
                 </div>
 
-                <div className="col-md-6 col-lg-4 mb-4">
+                <div className="col-md-6 col-lg-4 mb-5">
                     <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPenAlt} className="pe-2" style={questionStyle} /> A question that is longer than the previous one?</h6>
                     <p style={answerStyle}>
                         <strong><u>Yes, it is possible!</u></strong> You can cancel your subscription anytime in your account. Once the subscription is cancelled, you will not be charged next month.
                     </p>
                 </div>
 
-                <div className="col-md-6 col-lg-4 mb-4">
-                    <h6 className="mb-3" style={{ color: '#71F483' }}><FontAwesomeIcon style={{ color: '#71F483' }} icon={faUser} className="pe-2" /> A simple question?</h6>
+                <div className="col-md-6 col-lg-4 mb-5">
+                    <h6 className="mb-3" style={questionStyle} ><FontAwesomeIcon style={questionStyle} icon={faUser} className="pe-2" /> A simple question?</h6>
                     <p style={answerStyle}>
                         Currently, we only offer monthly subscription. You can upgrade or cancel your monthly account at any time with no further obligation.
                     </p>
@@ -63,6 +69,6 @@ export default function AskedQuestions() {
                     </p>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
