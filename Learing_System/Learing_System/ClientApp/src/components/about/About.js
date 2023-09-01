@@ -15,8 +15,8 @@ const About = () => {
   return (
     <div>
       <Header />
-      <Information />
       <Technologies />
+      <Information />
       <Content />
       <OurTeam />
       <AskedQuestions />
