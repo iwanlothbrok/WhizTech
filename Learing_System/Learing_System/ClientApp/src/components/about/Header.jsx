@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import img from '../../styles/aboutPh.jpg'; // Adjust the path based on your file structure
+{/* <img src={img} alt="About photo" className="img-fluid mb-3" /> */ }
 
 export default function Header() {
     const location = useLocation();
-
     return (
         <div>
             <div className="container-fluid bg-primary py-5 mb-5 page-header">
@@ -24,4 +25,5 @@ export default function Header() {
             </div>
         </div>
     );
+
 }

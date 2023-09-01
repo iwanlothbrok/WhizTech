@@ -9,13 +9,14 @@ import Content from '../home/Content'
 import OurTeam from '../home/OurTeam'
 import Information from './Information';
 import AskedQuestions from '../questions/AskedQuestions';
+import Technologies from './Technologies';
 
 const About = () => {
   return (
     <div>
       <Header />
       <Information />
-      <ServiceSection />
+      <Technologies />
       <Content />
       <OurTeam />
       <AskedQuestions />
