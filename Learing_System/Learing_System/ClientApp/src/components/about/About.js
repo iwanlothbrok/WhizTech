@@ -10,7 +10,7 @@ import OurTeam from '../home/OurTeam'
 import Information from './Information';
 import AskedQuestions from '../questions/AskedQuestions';
 import Technologies from './Technologies';
-
+import BlogList from '../blog/BlogList';
 const About = () => {
   return (
     <div>
@@ -20,6 +20,7 @@ const About = () => {
       <Content />
       <OurTeam />
       <AskedQuestions />
+      <BlogList />
     </div>
   )
 }
