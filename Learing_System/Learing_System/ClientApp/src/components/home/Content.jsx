@@ -2,7 +2,7 @@ import React from 'react';
 
 const Content = () => {
     return (
-        <div className='text-black'>
+        <div className='text-white'>
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
