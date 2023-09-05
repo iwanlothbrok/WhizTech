@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ContactInfoSection from './contact/ContactInfoSection'
+import { contactSubmitHandle } from '../firebaseConfig'
+
 export default function SmallContact() {
+    const [successMessageVisible, setSuccessMessageVisible] = useState(false);
 
     const [formData, setFormData] = useState({
         FullName: '',
@@ -8,7 +11,7 @@ export default function SmallContact() {
         PhoneNumber: '',
         Description: ''
     });
-    const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
 
     useEffect(() => {
         if (successMessageVisible) {
@@ -22,31 +25,34 @@ export default function SmallContact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
 
-        const response = await fetch('https://localhost:7089/api/contact/', {
-            method: 'POST',
-            body: JSON.stringify(formData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        console.log('Before contactSubmitHandle');
+        const result = await contactSubmitHandle(formData);
+        console.log('After contactSubmitHandle');
 
-        if (response.ok) {
+        console.log(result);
+        console.log('Before setFormData');
+
+        if (result.success) {
             console.log('Form submitted successfully');
+
+            // CLEARING THE STATE
+            setFormData({
+                FullName: '',
+                Email: '',
+                PhoneNumber: '',
+                Description: ''
+            });
+
             setSuccessMessageVisible(true); // Show the success message
         } else {
             console.log('Form submission failed');
         }
 
-        // CLEARING THE STATE
-        setFormData({
-            FullName: '',
-            Email: '',
-            PhoneNumber: '',
-            Description: ''
-        });
-    }
+        console.log('After setFormData');
+    };
+
+    
     return (
         //             <div className="row justify-content-center">
         <div style={{ backgroundColor: '#232323' }}>
