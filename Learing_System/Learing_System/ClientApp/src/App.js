@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './styles/style.css';
-import './styles/custom.css';
-import './styles/bootstrap.min.css';
+import './styles/css/custom.css';
+import './styles/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
 import About from './components/about/About'
@@ -26,8 +26,7 @@ export default function App() {
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />
         <Route path="/cal" element={<Calendar />} />
-        <Route path="/blog" element={<BlogList   />} />
-
+        <Route path="/blog" element={<BlogList />} />
       </Routes>
     </div>
   );

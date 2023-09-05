@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../../styles/contact.css'
+import '../../styles/css/contact.css'
 
 export default function AddCourse() {
     return (

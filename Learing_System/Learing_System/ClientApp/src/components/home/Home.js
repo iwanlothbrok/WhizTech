@@ -1,8 +1,8 @@
 import React from 'react';
 import ServiceSection from './ServiceSection';
 import '../../styles/style.css';
-import '../../styles/custom.css';
-import '../../styles/bootstrap.min.css';
+import '../../styles/css/custom.css';
+import '../../styles/css/bootstrap.min.css';
 import SmallContact from '../SmallContact';
 import HomePage from './HomePage';
 

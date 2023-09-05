@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/blog.css'
+import '../../styles/css/blog.css'
 import Pages from "./Pages";
 export default function BlogList() {
     return (

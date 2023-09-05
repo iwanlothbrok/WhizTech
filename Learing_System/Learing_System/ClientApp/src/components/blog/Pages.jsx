@@ -1,4 +1,4 @@
-import '../../styles/blog.css'
+import '../../styles/css/blog.css'
 
 export default function Pages() {
     return (
