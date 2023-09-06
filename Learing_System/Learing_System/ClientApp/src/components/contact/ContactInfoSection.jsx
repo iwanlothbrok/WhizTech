@@ -2,59 +2,54 @@ import React from 'react';
 
 const ContactInfoSection = () => {
     return (
-        <div class="col-6" style={{ backgroundColor: '#71F483' }}>
-            <div className="col-md-5 d-flex align-items-stretch">
-                <div className="info-wrap w-100 p-lg-5 p-4">
-                    <h3 className="mb-4 mt-md-4 display-4">Контакти</h3> {/* Use Bootstrap display-4 class for bigger text */}
-
+        <div className='col-6 text-white' style={{ marginLeft: '40px' }}>
+            <div className='col-md-5 d-flex align-items-center justify-content-center'>
+                <div className='info-wrap w-100 p-lg-5 p-4'>
                     {/* phone */}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-phone fa-2x"></span> {/* Use fa-2x class for bigger icon */}
+                    <div className='row m-4'>
+                        <div className='col-md-12'>
+                            <div className='d-flex flex-column flex-md-row align-items-center'>
+                                <div className='icon d-flex align-items-center justify-content-center'>
+                                    <span className='fa fa-phone fa-2x'></span>
                                 </div>
-                                <div class="d-flex flex-column flex-md-row align-items-center">
-                                    <span className='p-2 p-md-4 h4'>Телефон: </span> {/* Use h4 class for bigger text */}
-                                    <a href="tel:+08891013123" class="p-2 p-md-4 h4" style={{ fontSize: '1.5rem' }}>0889044614</a>
+                                <div className='d-flex flex-column flex-md-row align-items-center'>
+                                    <span className='p-2 p-md-4 h1'>Телефон: </span>
+                                    <a href='tel:+08891013123' className='p-2 p-md-4 h3' style={{ fontSize: '2rem' }}>0889044614</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {/* email */}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-paper-plane fa-2x"></span> {/* Use fa-2x class for bigger icon */}
+                    <div className='row m-4'>
+                        <div className='col-md-12'>
+                            <div className='d-flex flex-column flex-md-row align-items-center'>
+                                <div className='icon d-flex align-items-center justify-content-center'>
+                                    <span className='fa fa-paper-plane fa-2x'></span>
                                 </div>
-                                <div class="d-flex flex-column flex-md-row align-items-center">
-                                    <span className='p-2 p-md-4 h4'>Email: </span> {/* Use h4 class for bigger text */}
-                                    <a href="mailto:info@yoursite.com" class="p-2 p-md-4 h5">whiztech@gmail.com</a> {/* Use h4 class for bigger text */}
+                                <div className='d-flex flex-column flex-md-row align-items-center'>
+                                    <span className='p-2 p-md-4 h1'>Email: </span>
+                                    <a href='mailto:info@yoursite.com' className='p-2 p-md-4 h5' style={{ fontSize: '1.7rem', marginLeft: '22px' }}>whiztech@gmail.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {/* site */}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-globe fa-2x"></span> {/* Use fa-2x class for bigger icon */}
+                    <div className='row m-4'>
+                        <div className='col-md-12'>
+                            <div className='d-flex flex-column flex-md-row align-items-center'>
+                                <div className='icon d-flex align-items-center justify-content-center'>
+                                    <span className='fa fa-globe fa-2x'></span>
                                 </div>
-                                <div class="d-flex flex-column flex-md-row align-items-center">
-                                    <span className='p-2 p-md-4 h4'>Website: </span> {/* Use h4 class for bigger text */}
-                                    <a href="#" class="p-2 p-md-4 h4">WhizTech.bg</a> {/* Use h4 class for bigger text */}
+                                <div className='d-flex flex-column flex-md-row align-items-center'>
+                                    <span className='p-2 p-md-4 h1'>Website: </span>
+                                    <a href='#' className='p-2 p-md-4 h2'>WhizTech.bg</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
-        </div >
+        </div>
     );
 };
 
