@@ -28,8 +28,8 @@ export default function HomePage() {
                 </div>
 
                 <div className="button-container m-5 text-center p-2">
-                    <button className="btn btn-outline-secondary m-2 p-5 btn-lg flex-fill" style={{ borderRadius: '30px', backgroundColor: '#232323', color: '#71F483', borderColor: 'black' }} >Услуги</button>
-                    <button className="btn btn-outline-secondary p-5 btn-lg flex-fill" style={{ borderRadius: '30px', backgroundColor: '#232323', color: '#71F483', borderColor: 'black' }} >Контакти</button>
+                    <button className="btn btn-outline-secondary m-2 p-5 btn-lg flex-fill custom-button">Услуги</button>
+                    <button className="btn btn-outline-secondary p-5 btn-lg flex-fill custom-button">Контакти</button>
                 </div>
             </div>
         </section>

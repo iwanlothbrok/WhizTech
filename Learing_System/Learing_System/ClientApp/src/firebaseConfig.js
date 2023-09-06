@@ -13,6 +13,7 @@ const firebaseConfig = {
 
 // Initialize Firestore
 const firebaseApp = initializeApp(firebaseConfig);
+
 const db = getFirestore(firebaseApp);
 
 const contactFormsCollection = collection(db, 'contactForms');
