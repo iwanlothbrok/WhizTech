@@ -1,5 +1,5 @@
 import React from 'react';
-
+import img from '../../styles/favicon.png'
 const Content = () => {
     return (
         <div className='text-white'>
@@ -8,7 +8,7 @@ const Content = () => {
                     <div className="row g-5">
                         <div className="col-12 col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style={{ minHeight: '400px' }}>
                             <div className="position-relative h-100">
-                                <img className="img-fluid position-absolute w-100 h-100" src="/img/about.jpg" alt="" style={{ objectFit: 'cover' }} />
+                                <img className="img-fluid position-absolute w-100 h-100" src={img} alt="LOGO" style={{ objectFit: 'cover' }} />
                             </div>
                         </div>
                         <div className="col-12 col-lg-6 wow fadeInUp" data-wow-delay="0.3s">

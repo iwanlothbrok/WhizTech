@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ContactInfoSection from './contact/ContactInfoSection'
 import { contactSubmitHandle } from '../firebaseConfig'
+import '../styles/css/btn.css';
 
 export default function SmallContact() {
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
@@ -26,15 +27,9 @@ export default function SmallContact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log('Before contactSubmitHandle');
         const result = await contactSubmitHandle(formData);
-        console.log('After contactSubmitHandle');
-
-        console.log(result);
-        console.log('Before setFormData');
 
         if (result.success) {
-            console.log('Form submitted successfully');
 
             // CLEARING THE STATE
             setFormData({
@@ -52,9 +47,8 @@ export default function SmallContact() {
         console.log('After setFormData');
     };
 
-    
+
     return (
-        //             <div className="row justify-content-center">
         <div style={{ backgroundColor: '#232323' }}>
 
             <div className="container">
@@ -119,7 +113,7 @@ export default function SmallContact() {
                             <div className="text-center">
                                 <button
                                     type="submit"
-                                    className="btn btn-outline-secondary btn-lg text-white p-4 px-5 mt-2 mx-auto"
+                                    className="btn btn-outline-secondary btn-lg text-white p-4 px-5 mt-2 mb-4 mx-auto"
                                     id="input-submit"
                                     onClick={handleSubmit}
                                     style={{ borderRadius: '20px' }}

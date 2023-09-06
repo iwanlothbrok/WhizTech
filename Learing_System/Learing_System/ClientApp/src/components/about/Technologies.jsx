@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router for navigation
+import { Link } from 'react-router-dom'; 
 import js from '../../styles/js-logo.png';
 import csharp from '../../styles/Csharp_Logo.png';
 import cpp from '../../styles/ISO_C++_Logo.svg.png';
@@ -29,7 +29,7 @@ function Technologies() {
                             <img src={cpp} alt="C++" style={{ width: '70px' }} className="logo m-1" />
                         </Link>
                         <Link to="/java">
-                            <img src={java} alt="Java" style={{ width: '50px' }} className="logo m-3" />
+                            <img src={java} alt="Java" style={{ width: '60px' }} className="logo m-3" />
                         </Link>
                     </div>
                 </div>

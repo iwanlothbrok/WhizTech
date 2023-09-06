@@ -50,11 +50,11 @@ const Exercise = () => {
         <div className="container mt-5" style={sectionStyle}>
             <h1 className="text-center mb-4" style={h1Style}>{lang === 'CSharp' ? 'C# or C++' : lang}</h1>
             {isLoading ? (
-                <div className="text-center mt-5" style={{ fontSize: '48px' }}>
+                <div className="text-center mt-5 text-white" style={{ fontSize: '48px' }}>
                     Loading...
                 </div>
             ) : exercise.length === 0 ? (
-                <div className="text-center mt-5" style={{ fontSize: '48px' }}>
+                <div className="text-center mt-5 text-white" style={{ fontSize: '48px' }}>
                     There are no exercises for this language.
                 </div>
             ) : (

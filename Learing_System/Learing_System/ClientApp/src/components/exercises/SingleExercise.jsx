@@ -4,7 +4,7 @@ const SingleExercise = ({ exercises }) => {
 
     return (
 
-        <div className="accordion mt-3" id="accordionPanelsStayOpenExample">
+        <div className="accordion mt-3 text-white" id="accordionPanelsStayOpenExample">
             {exercises.map((exercise, index) => (
                 <div className="accordion-item mt-2 mb-2" key={exercise.id}>
                     <h2 className="accordion-header" id={`heading-${exercise.id}`}>
