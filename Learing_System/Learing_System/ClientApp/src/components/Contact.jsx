@@ -40,7 +40,6 @@ const Contact = () => {
   }, [successMessageVisible]);
 
 
-
   // func for click event 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -102,8 +101,8 @@ const Contact = () => {
                   onChange={(e) => setFormData({ ...formData, FullName: e.target.value })}
                   required
                 />
-                <div style={{ fontSize: '1f.5rem' }} className={submitButtonClicked && formData.FullName ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
-                  {submitButtonClicked && formData.FullName ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
+                <div style={{ fontSize: '1.5rem' }} className={submitButtonClicked && formData.FullName ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
+                  {submitButtonClicked && formData.FullName ? 'Валиден вход!' : (submitButtonClicked ? 'Полето е задължително!' : '')}
                 </div>
               </div>
             </div>
@@ -113,9 +112,13 @@ const Contact = () => {
                 <input
                   type="text" id="phone"
                   placeholder='Телефонен номер'
-                  className="form-control form-control-lg"
+                  className={`form-control form-control-lg ${submitButtonClicked && formData.PhoneNumber ? 'is-valid' : (submitButtonClicked ? 'is-invalid' : '')}`}
                   value={formData.PhoneNumber}
-                  onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })} />
+                  onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })}
+                  required />
+                <div style={{ fontSize: '1.5rem' }} className={submitButtonClicked && formData.PhoneNumber ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
+                  {submitButtonClicked && formData.PhoneNumber ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
+                </div>
               </div>
             </div>
             <div className="mb-4 pb-2">
@@ -123,9 +126,12 @@ const Contact = () => {
                 <input
                   placeholder='Email'
                   type="text" id="email"
-                  className="form-control form-control-lg"
+                  className={`form-control form-control-lg ${submitButtonClicked && formData.Email ? 'is-valid' : (submitButtonClicked ? 'is-invalid' : '')}`}
                   value={formData.Email}
-                  onChange={(e) => setFormData({ ...formData, Email: e.target.value })} />
+                  onChange={(e) => setFormData({ ...formData, Email: e.target.value })} required />
+                <div style={{ fontSize: '1.5rem' }} className={submitButtonClicked && formData.Email ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
+                  {submitButtonClicked && formData.Email ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
+                </div>
               </div>
             </div>
             <div className="mb-4 pb-2">
@@ -133,10 +139,13 @@ const Contact = () => {
                 <textarea
                   placeholder='Запитване'
                   type="text" id="description"
-                  className="form-control form-control-lg"
+                  className={`form-control form-control-lg ${submitButtonClicked && formData.Description ? 'is-valid' : (submitButtonClicked ? 'is-invalid' : '')}`}
                   value={formData.Description}
                   rows={4}
-                  onChange={(e) => setFormData({ ...formData, Description: e.target.value })} />
+                  onChange={(e) => setFormData({ ...formData, Description: e.target.value })} required />
+                <div style={{ fontSize: '1.5rem' }} className={submitButtonClicked && formData.Description ? 'valid-feedback' : (submitButtonClicked ? 'invalid-feedback' : '')}>
+                  {submitButtonClicked && formData.Description ? 'Looks good!' : (submitButtonClicked ? 'Please choose a username.' : '')}
+                </div>
               </div>
             </div>
           </div>
