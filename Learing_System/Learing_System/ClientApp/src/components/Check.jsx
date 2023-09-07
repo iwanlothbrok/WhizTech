@@ -11,7 +11,7 @@ export default function Check() {
                 <SmallContact />
             </div>
             <div className="col-md-6" style={{ backgroundColor: '#71F483' }}>
-                <h2 className='mb-4 mt-md-4 display-4 text-center color-white'>Kontakti</h2>
+                <h2 className='mb-4 mt-md-4 display-4 text-center color-white'>info</h2>
 
                 <ContactInfoSection />
             </div>
