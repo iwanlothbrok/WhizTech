@@ -13,6 +13,7 @@ import AddCourse from './components/courses/AddCourse';
 import Exercise from './components/exercises/Exercises';
 import Calendar from './components/calendar/Calendar';
 import BlogList from './components/blog/BlogList';
+import Language from './components/languages/Language';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />
+        <Route path="/study/:lang" element={<Language lang={'java'} />} />
         <Route path="/cal" element={<Calendar />} />
         <Route path="/blog" element={<BlogList />} />
       </Routes>
