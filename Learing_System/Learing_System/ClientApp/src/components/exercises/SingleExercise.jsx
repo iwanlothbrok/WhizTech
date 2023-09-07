@@ -1,38 +1,26 @@
 import React from 'react';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const SingleExercise = ({ exercises }) => {
 
     return (
-
-        <div className="accordion mt-3 text-white" id="accordionPanelsStayOpenExample">
+        <div className="exercise-list">
             {exercises.map((exercise, index) => (
-                <div className="accordion-item mt-2 mb-2" key={exercise.id}>
-                    <h2 className="accordion-header" id={`heading-${exercise.id}`}>
-                        <button
-                            className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target={`#exercise-collapse-${exercise.id}`}
-                            aria-expanded={index === 0 ? 'true' : 'false'}
-                            aria-controls={`exercise-collapse-${exercise.id}`}
-                        >
-                            {exercise.title}
-                        </button>
-                    </h2>
-                    <div
-                        id={`exercise-collapse-${exercise.id}`}
-                        className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-                        aria-labelledby={`heading-${exercise.id}`}
-                        data-bs-parent="#accordionPanelsStayOpenExample"
-                    >
-                        <div className="accordion-body">
-                            <strong>{exercise.description}</strong>
-                            {exercise.answers.map((answer, answerIndex) => (
-                                <p key={answerIndex}>{answer}</p>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                <Card key={exercise.id} className="mb-3">
+                    <Card.Body>
+                        <Card.Title>Exercise {exercise.id}</Card.Title>
+                        <Card.Text>{exercise.question}</Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                        {exercise.answers.map((answer, answerIndex) => (
+                            <ListGroupItem
+                                key={answerIndex}
+                            >
+                                {answer}
+                            </ListGroupItem>
+                        ))}
+                    </ListGroup>
+                </Card>
             ))}
         </div>
     );

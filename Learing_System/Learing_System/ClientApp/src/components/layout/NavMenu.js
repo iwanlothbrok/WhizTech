@@ -71,6 +71,9 @@ function NavMenu() {
           <Link to="/contact" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
             Contact
           </Link>
+          <Link to="/study/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
+            Contact
+          </Link>
           <Link
             to="/contact"
             className="btn bg-black text-white  px-lg-5 d-none d-lg-block m-0"
