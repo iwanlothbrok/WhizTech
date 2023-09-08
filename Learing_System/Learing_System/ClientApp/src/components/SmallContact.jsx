@@ -68,7 +68,7 @@ export default function SmallContact() {
                 <div className="row container-fluid justify-content-center align-items-center" style={{ backgroundColor: '#232323' }}>
                     {submitButtonClicked && (
                         <div className="alert alert-success" role="alert">
-                            Form submitted successfully!
+                            Успешно изпратено запитване!
                         </div>
                     )}
 
@@ -102,19 +102,19 @@ export default function SmallContact() {
                                         required
                                     />
                                     {submitButtonClicked && !formData.Email && (
-                                        <div className="invalid-feedback">Please choose a username.</div>
+                                        <div className="invalid-feedback">Полето е задължително!</div>
                                     )}
                                 </div>
                             </div>
 
                             <div className="row">
                                 <div className="col-md-12 mb-4 pb-2">
-                                    <label htmlFor="input-subject" className="form-label">Телефон</label>
+                                    <label htmlFor="input-subject" className="form-label"> </label>
                                     <input
                                         type="text"
                                         className={`form-control form-control-lg ${submitButtonClicked && !formData.PhoneNumber ? 'is-invalid' : ''}`}
                                         id="input-subject"
-                                        placeholder="Телефон"
+                                        placeholder="Телефонен номер"
                                         value={formData.PhoneNumber}
                                         onChange={(e) => setFormData({ ...formData, PhoneNumber: e.target.value })}
                                         required

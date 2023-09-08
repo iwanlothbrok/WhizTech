@@ -5,7 +5,7 @@ import '../../styles/css/custom.css';
 import '../../styles/css/bootstrap.min.css';
 import SmallContact from '../SmallContact';
 import HomePage from './HomePage';
-import Check from '../Check';
+import ContactWithInformation from '../ContactWithInformation';
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <HomePage />
       <ServiceSection />
-      <Check />
+      <ContactWithInformation/>
     </div>
   )
 }
