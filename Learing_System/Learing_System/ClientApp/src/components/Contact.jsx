@@ -125,7 +125,7 @@ const Contact = () => {
               <div className="form-outline form-white">
                 <input
                   placeholder='Email'
-                  type="text" id="email"
+                  type="email" id="email"
                   className={`form-control form-control-lg ${submitButtonClicked && formData.Email ? 'is-valid' : (submitButtonClicked ? 'is-invalid' : '')}`}
                   value={formData.Email}
                   onChange={(e) => setFormData({ ...formData, Email: e.target.value })} required />

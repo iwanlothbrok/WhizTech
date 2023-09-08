@@ -4,24 +4,16 @@ import { animateScroll as scroll } from "react-scroll";
 
 function NavMenu() {
   const [isContentVisible, setIsContentVisible] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   const toggleContent = () => {
     setIsContentVisible(!isContentVisible);
   };
-
-  const handleNavClick = (targetId) => {
-    const target = document.querySelector(targetId);
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-
-
+  let forUs = "za nas"
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -41,45 +33,81 @@ function NavMenu() {
       <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">
           <Link to="/" className="nav-item nav-link active" onClick={() => scroll.scrollToTop({ duration: 200 })}>
-            Home
+            Начало
           </Link>
-          <Link to="/about" className="nav-item nav-link" onClick={() => scroll.scrollToTop({ duration: 200 })}>
-            About
-          </Link>
-          <Link to="/courses" className="nav-item nav-link">
-            Courses
+          <Link to="/about"
+            className="nav-item nav-link"
+            onClick={() => scroll.scrollToTop({ duration: 200 })}
+            style={{ whiteSpace: 'nowrap' }}>
+            За Нас
           </Link>
           <div className="nav-item dropdown">
-            <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-              Exercises
+            <Link
+              to="#"
+              className="nav-link dropdown-toggle"
+              onClick={toggleDropdown}
+            >
+              Уроци
             </Link>
-            <div className="dropdown-menu fade-down m-0">
-              <Link to="/exer/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C#'} className="dropdown-item">
+            <div
+              className={`dropdown-menu fade-down m-0 ${isOpen ? 'show' : ''}`}
+              onClick={toggleDropdown} // Close the dropdown when an item is clicked
+            >
+              <Link to="/study/CSharp" className="dropdown-item">
                 C#
               </Link>
-              <Link to="/exer/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} language={'C++'} className="dropdown-item">
+              <Link to="/study/CSharp" className="dropdown-item">
                 C++
               </Link>
-              <Link to="/exer/JavaScript" onClick={() => scroll.scrollToTop({ duration: 200 })} smooth={true} language={'JavaScript'} className="dropdown-item">
+              <Link to="/study/JavaScript" className="dropdown-item">
                 JavaScript
               </Link>
-              <Link to="/exer/SQL" onClick={() => scroll.scrollToTop({ duration: 200 })} smooth={true} language={'SQL'} className="dropdown-item">
+              <Link to="/study/Java" className="dropdown-item">
+                Java
+              </Link>
+              <Link to="/study/SQL" className="dropdown-item">
                 SQL
               </Link>
             </div>
           </div>
-          <Link to="/contact" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
-            Contact
+          <div className="nav-item dropdown">
+            <Link
+              to="#"
+              className="nav-link dropdown-toggle"
+              onClick={toggleDropdown}
+            >
+              Задачи
+            </Link>
+            <div
+              className={`dropdown-menu fade-down m-0 ${isOpen ? 'show' : ''}`}
+              onClick={toggleDropdown} // Close the dropdown when an item is clicked
+            >
+              <Link to="/exer/csharp" className="dropdown-item">
+                C#
+              </Link>
+              <Link to="/exer/csharp" className="dropdown-item">
+                C++
+              </Link>
+              <Link to="/exer/javascript" className="dropdown-item">
+                JavaScript
+              </Link>
+              <Link to="/exer/java" className="dropdown-item">
+                Java
+              </Link>
+              <Link to="/exer/sql" className="dropdown-item">
+                SQL
+              </Link>
+            </div>
+          </div>
+          <Link to="/blog" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
+            Блог
           </Link>
-          <Link to="/study/CSharp" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
-            Contact
+          <Link to="/contact" onClick={() => scroll.scrollToTop({ duration: 200 })} className="nav-item nav-link">
+            Контакти
           </Link>
           <Link
             to="/contact"
-            className="btn bg-black text-white  px-lg-5 d-none d-lg-block m-0"
-          // style={{
-          //   justifyContent: "center",
-          // }}
+            className="btn bg-black text-white px-lg-5 d-none d-lg-block m-2"
           >
             Join Now
           </Link>
