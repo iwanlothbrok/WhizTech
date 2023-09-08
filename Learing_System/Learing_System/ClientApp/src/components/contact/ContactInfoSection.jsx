@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactInfoSection = () => {
     return (
-        <div className='col-6 text-white' style={{ marginLeft: '40px' }}>
+        <div className='col-6 text-black' style={{ marginLeft: '40px' }}>
             <div className='col-md-5 d-flex align-items-center justify-content-center'>
                 <div className='info-wrap w-100 p-lg-5 p-4'>
                     {/* phone */}
