@@ -8,7 +8,7 @@ import Content from '../home/Content'
 import OurTeam from '../home/OurTeam'
 import Information from './Information';
 import Technologies from './Technologies';
-import LanguageInformation from '../languages/LanguageInformation';
+import ContactWithInformation from '../ContactWithInformation';
 const About = () => {
   return (
     <div>
@@ -17,7 +17,9 @@ const About = () => {
       <Technologies />
       <Information />
       <OurTeam />
+      <ContactWithInformation />
     </div>
+
   )
 }
 
