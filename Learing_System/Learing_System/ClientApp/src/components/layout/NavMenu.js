@@ -7,7 +7,8 @@ function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
 
-  const toggleDropdown = () => {
+  const toggleDropdown = (e) => {
+    e.preventDefault();
     setIsOpen(!isOpen);
   };
   const toggleContent = () => {

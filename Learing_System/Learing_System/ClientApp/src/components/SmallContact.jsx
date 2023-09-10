@@ -28,7 +28,7 @@ export default function SmallContact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmitButtonClicked(true);
-
+        console.log('out');
         // Check if all fields are completed
         if (
             formData.FullName &&
@@ -37,7 +37,8 @@ export default function SmallContact() {
             formData.Description
         ) {
             const result = await contactSubmitHandle(formData);
-
+            console.log(result);
+            console.log('in if');
             if (result.success) {
                 // CLEARING THE STATE
                 setFormData({
@@ -48,6 +49,8 @@ export default function SmallContact() {
                 });
 
                 setSuccessMessageVisible(true); // Show the success message
+                // setSubmitButtonClicked(false);
+
             } else {
                 console.log('Form submission failed');
             }
@@ -66,7 +69,7 @@ export default function SmallContact() {
         <div style={{ backgroundColor: '#232323' }}>
             <div className="container">
                 <div className="row container-fluid justify-content-center align-items-center" style={{ backgroundColor: '#232323' }}>
-                    {submitButtonClicked && (
+                    {successMessageVisible && (
                         <div className="alert alert-success" role="alert">
                             Успешно изпратено запитване!
                         </div>

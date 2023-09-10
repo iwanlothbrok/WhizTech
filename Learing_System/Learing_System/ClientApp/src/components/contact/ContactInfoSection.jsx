@@ -14,7 +14,7 @@ const ContactInfoSection = () => {
                                 </div>
                                 <div className='d-flex flex-column flex-md-row align-items-center'>
                                     <span className='p-2 p-md-4 h1'>Телефон: </span>
-                                    <a href='tel:+08891013123' className='p-2 p-md-4 h3' style={{ fontSize: '2rem' }}>0889044614</a>
+                                    <a href='tel:+359889044614' className='p-2 p-md-4 h3' style={{ fontSize: '2rem', whiteSpace: 'nowrap' }}>+359 88 904 4614</a>
                                 </div>
                             </div>
                         </div>
