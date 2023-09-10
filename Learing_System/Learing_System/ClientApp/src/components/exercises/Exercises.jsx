@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import backgroundImage from '../../styles/background2.jpg.avif';
+import { useParams, Link } from 'react-router-dom';
 import SingleExercise from './SingleExercise';
 import csharpExercises from './exerDb/csharpExercises'
 
@@ -9,20 +7,6 @@ const Exercise = () => {
     const { lang } = useParams();
     const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
     const [exercise, setExercises] = useState([]);
-
-    const sectionStyle = {
-        backgroundImage: exercise.length === 0 ? 'none' : `url(${backgroundImage})`,
-        backgroundPosition: 'center',
-        backgroundSize: exercise.length === 0 ? 'auto' : 'cover', // Adjust the background size based on the condition
-        width: '100vw',
-        height: '100vh'
-    };
-    const h1Style = {
-        color: 'white',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        padding: '20px',
-        borderRadius: '10px',
-    };
 
     // const fetchExercisesFromAPI = async () => {
     //     try {
@@ -62,8 +46,10 @@ const Exercise = () => {
 
     return (
         <div className="container mt-5">
-            <h1 className="text-center mb-4" style={h1Style}>Zadachi za {lang}</h1>
-            {isLoading ? (
+            <h1 className="text-center mb-4 text-white">
+                Примерни задачи, можете да намерите още{' '}
+                <Link to="/sample-tasks" className="link" style={{ color: '#71F483' }}>ТУК</Link>
+            </h1>            {isLoading ? (
                 <div className="text-center mt-5 text-white" style={{ fontSize: '48px' }}>
                     Loading...
                 </div>
