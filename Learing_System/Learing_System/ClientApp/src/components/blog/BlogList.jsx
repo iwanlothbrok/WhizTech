@@ -81,9 +81,13 @@ export default function BlogList() {
     };
 
     return (
-        <div className="container m-5">
-            <div className="row mt-n5">
-                {currentBlogData.map((blog, index) => <BlogPost key={index} blog={blog} />)}
+        <div className="container mt-5">
+            <div className="row">
+                {currentBlogData.map((blog, index) => (
+                    <div key={index} className="col-10 col-md-6 mt-5">
+                        <BlogPost blog={blog} />
+                    </div>
+                ))}
             </div>
             <Pages
                 currentPage={currentPage}
@@ -91,6 +95,7 @@ export default function BlogList() {
                 onPageChange={handlePageChange}
             />
         </div>
+
 
     );
 }
