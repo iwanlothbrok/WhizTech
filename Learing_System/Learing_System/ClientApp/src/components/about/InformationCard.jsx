@@ -1,6 +1,7 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 
-function InformationCard({ quest}) {
+function InformationCard({ quest }) {
     return (
         <div className="col-md-4">
             <div className="card mb-4">
