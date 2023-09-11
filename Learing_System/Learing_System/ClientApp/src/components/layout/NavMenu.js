@@ -54,19 +54,19 @@ function NavMenu() {
               className={`dropdown-menu fade-down m-0 ${isOpen ? 'show' : ''}`}
               onClick={toggleDropdown} // Close the dropdown when an item is clicked
             >
-              <Link to="/study/CSharp" className="dropdown-item">
+              <Link to="/study/csharp" className="dropdown-item">
                 C#
               </Link>
-              <Link to="/study/CSharp" className="dropdown-item">
+              <Link to="/study/cplus" className="dropdown-item">
                 C++
               </Link>
-              <Link to="/study/JavaScript" className="dropdown-item">
+              <Link to="/study/javascript" className="dropdown-item">
                 JavaScript
               </Link>
-              <Link to="/study/Java" className="dropdown-item">
+              <Link to="/study/java" className="dropdown-item">
                 Java
               </Link>
-              <Link to="/study/SQL" className="dropdown-item">
+              <Link to="/study/sql" className="dropdown-item">
                 SQL
               </Link>
             </div>

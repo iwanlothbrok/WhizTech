@@ -3,7 +3,7 @@ import LanguageInformation from './LanguageInformation'
 import Exercise from '../exercises/Exercises'
 import FunFacts from './FunFacts'
 import QAList from './QAList'
-
+import ContactWithInformation from '../ContactWithInformation'
 export default function ({ lang }) {
     return (
         <div>
@@ -13,6 +13,8 @@ export default function ({ lang }) {
             {/* <FunFacts /> */}
             <QAList />
             <Exercise />
+            <div><p></p></div>
+            <ContactWithInformation />
         </div>
     )
 }
