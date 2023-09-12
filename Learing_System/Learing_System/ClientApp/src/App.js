@@ -26,7 +26,7 @@ export default function App() {
         <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />
-        <Route path="/study/:lang" element={<Language lang={'java'} />} />
+        <Route path="/study/:lang" element={<Language />} />
         <Route path="/cal" element={<Calendar />} />
         <Route path="/blog" element={<BlogList />} />
       </Routes>

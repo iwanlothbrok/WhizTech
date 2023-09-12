@@ -1,20 +1,58 @@
-import React from 'react'
-import LanguageInformation from './LanguageInformation'
-import Exercise from '../exercises/Exercises'
-import FunFacts from './FunFacts'
-import QAList from './QAList'
-import ContactWithInformation from '../ContactWithInformation'
-export default function ({ lang }) {
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+
+import LanguageInformation from './LanguageInformation';
+import Exercise from '../exercises/Exercises';
+import QAList from './QAList';
+import ContactWithInformation from '../ContactWithInformation';
+import cplus from './langDb/cplus'
+import sql from './langDb/sql'
+import csharp from './langDb/csharp'
+import java from './langDb/java'
+import JavaScript from './langDb/javascript'
+
+
+export default function Language() {
+    const { lang } = useParams();
+    const [languageParams, setLanguageParams] = useState(JavaScript);
+    useEffect(() => {
+        if (lang === 'csharp') {
+            setLanguageParams(csharp);
+        } else if (lang === 'sql') {
+            setLanguageParams(sql);
+        } else if (lang === 'javascript') {
+            setLanguageParams(JavaScript);
+        } else if (lang === 'java') {
+            setLanguageParams(java);
+        } else if (lang === 'cplus') {
+            setLanguageParams(cplus);
+        }
+    }, [lang]);
+
+    console.log(languageParams);
+    const pathExercises = `/exer/${lang}`;
     return (
-        <div>
-            <div style={{ backgroundColor: '#71F483' }}>
-                <LanguageInformation lang={lang} />
+        <>
+            <div className="container">
+                <div className="row">
+                    <div className="col-xl-12" style={{ backgroundColor: '#71F483' }}>
+                        <LanguageInformation lang={languageParams} />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-12 mt-3 mb-2">
+                        <QAList lang={lang}/>
+                    </div>
+                    <div className="col-lg-12 mt-5">
+                        <h1 className="text-center mb-4 text-white">
+                            Можете да намерите още, {' '}
+                            <Link to={pathExercises} className="link" style={{ color: '#71F483' }}>ТУК</Link>
+                        </h1>
+                        <Exercise />
+                    </div>
+                </div>
             </div>
-            {/* <FunFacts /> */}
-            <QAList />
-            <Exercise />
-            <div><p></p></div>
             <ContactWithInformation />
-        </div>
-    )
+        </>
+    );
 }
