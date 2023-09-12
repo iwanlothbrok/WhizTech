@@ -1,14 +1,13 @@
 import React from 'react';
 
 const QAComponent = ({ question }) => {
-    console.log(question);
     return (
         <div className="container mt-5 text-white">
             <div className="row">
                 <div className="col-md-6">
-                    <div className="question" style={{marginRight:'25px'}}>
+                    <div className="question" style={{ marginRight: '25px' }}>
                         <h3>Question:</h3>
-                        <h2 style={{marginRight:'25px'}}>Какво представлява програмният език C#?</h2>
+                        <h2 style={{ marginRight: '25px' }}>Какво представлява програмният език C#?</h2>
                     </div>
                 </div>
                 <div className="col-md-6">
