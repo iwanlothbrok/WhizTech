@@ -14,6 +14,7 @@ import Exercise from './components/exercises/Exercises';
 import Calendar from './components/calendar/Calendar';
 import BlogList from './components/blog/BlogList';
 import Language from './components/languages/Language';
+import $ from 'jquery'; // Import jQuery
 
 export default function App() {
   return (
