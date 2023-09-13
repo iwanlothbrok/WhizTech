@@ -29,7 +29,6 @@ export default function Language() {
         }
     }, [lang]);
 
-    console.log(languageParams);
     const pathExercises = `/exer/${lang}`;
     return (
         <>
@@ -41,14 +40,15 @@ export default function Language() {
                 </div>
                 <div className="row">
                     <div className="col-lg-12 mt-3 mb-2">
-                        <QAList lang={lang}/>
+                        <QAList lang={lang} />
                     </div>
                     <div className="col-lg-12 mt-5">
+                        <h1 className='text-center m-4' style={{ color: '#71F483' }}>Примерни задачи</h1>
+                        <Exercise />
                         <h1 className="text-center mb-4 text-white">
-                            Можете да намерите още, {' '}
+                            Можете да намерите още задачи, {' '}
                             <Link to={pathExercises} className="link" style={{ color: '#71F483' }}>ТУК</Link>
                         </h1>
-                        <Exercise />
                     </div>
                 </div>
             </div>
