@@ -6,16 +6,12 @@ const QAComponent = ({ question }) => {
             <div className="row">
                 <div className="col-md-6">
                     <div className="question" style={{ marginRight: '25px' }}>
-                        <h3>Question:</h3>
-                        <h2 style={{ marginRight: '25px' }}>Какво представлява програмният език C#?</h2>
+                        <h2 style={{ marginRight: '25px', color: '#71F483' }}>{question.question}</h2>
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div className="answer">
-                        <h3>Answer:</h3>
-                        <h4>C# е програмен език, който е разработен в Microsoft от Андерс Хейлсберг през 2000 г. Характерно за него
-                            е, че е структурен, мулти-парадигмен, строго-типизиран, декларативен, императивен
-                            , функционален, обектно-ориентиран, компонентно-ориентиран програмен език с общо предназначение.</h4>
+                        <h5>{question.answer}</h5>
                     </div>
                 </div>
             </div>

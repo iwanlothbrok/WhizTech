@@ -1,34 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import QAComponent from './QAComponent'
+import cppQuestions from './questionsDb/cplus'
+import sqlQuestions from './questionsDb/sql'
+import csharp from './questionsDb/csharp'
+import javaQuestions from './questionsDb/java'
+import jsQuestions from './questionsDb/javascript'
 
 export default function ({ lang }) {
 
     const [questions, setQuestions] = useState([]);
 
-    // useEffect(() => {
-    //     // if (lang === 'csharp') {
-    //     //     setQuestions(csharp);
-    //     // } else if (lang === 'sql') {
-    //     //     setQuestions(sql);
-    //     // } else if (lang === 'javascript') {
-    //     //     setQuestions(JavaScript);
-    //     // } else if (lang === 'java') {
-    //     //     setQuestions(java);
-    //     // } else if (lang === 'cplus') {
-    //     //     setQuestions(cplus);
-    //     }
-    // }, [lang]);
+    useEffect(() => {
+        if (lang === 'csharp') {
+            setQuestions(csharp);
+        } else if (lang === 'sql') {
+            setQuestions(sqlQuestions);
+        } else if (lang === 'javascript') {
+            setQuestions(jsQuestions);
+        } else if (lang === 'java') {
+            setQuestions(javaQuestions);
+        } else if (lang === 'cplus') {
+            setQuestions(cppQuestions);
+        }
+    }, [lang]);
 
-    const question = [
-        {
-            question: 'Какво представлява програмният език C#?',
-            answer: `C# е програмен език, който е разработен в Microsoft от Андерс Хейлсберг през 2000 г. Характерно за него
-            е, че е структурен, мулти-парадигмен, строго-типизиран, декларативен, императивен
-            , функционален, обектно-ориентиран, компонентно-ориентиран програмен език с общо предназначение.`
-        },]
     return (
         <div>
-            {questions.map((question, index) => <QAComponent />)}
+            {questions.map((question, index) => <QAComponent question={question} />)}
         </div>
     )
 }
