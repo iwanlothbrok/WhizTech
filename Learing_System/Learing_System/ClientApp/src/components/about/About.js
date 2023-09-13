@@ -9,6 +9,7 @@ import OurTeam from '../home/OurTeam'
 import Information from './Information';
 import Technologies from './Technologies';
 import ContactWithInformation from '../ContactWithInformation';
+import Clients from '../home/Clients'
 const About = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const About = () => {
       <Technologies />
       <Information />
       <OurTeam />
+      <Clients />
       <ContactWithInformation />
     </div>
 
