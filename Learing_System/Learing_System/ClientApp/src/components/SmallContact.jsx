@@ -94,12 +94,12 @@ export default function SmallContact() {
                                     )}
                                 </div>
                                 <div className="col-md-7 mb-1 pb-3">
-                                    <label htmlFor="input-email" className="form-label">Email</label>
+                                    <label htmlFor="input-email" className="form-label">Имейл</label>
                                     <input
                                         type="email"
                                         className={`form-control form-control-lg ${submitButtonClicked && !formData.Email ? 'is-invalid' : ''}`}
                                         id="input-email"
-                                        placeholder="Email"
+                                        placeholder="Имейл"
                                         value={formData.Email}
                                         onChange={(e) => setFormData({ ...formData, Email: e.target.value })}
                                         required

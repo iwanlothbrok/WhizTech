@@ -15,15 +15,14 @@ import Calendar from './components/calendar/Calendar';
 import BlogList from './components/blog/BlogList';
 import Language from './components/languages/Language';
 import $ from 'jquery'; // Import jQuery
-
+import ContactWithInformation from './components/ContactWithInformation'
 export default function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/contact" element={<ContactWithInformation />} />
         <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />

@@ -3,8 +3,6 @@
 .custom-button {
     background-color: #fdfdfd !important; /* Use !important to override default styles */
     color: black;
-    border-color: black;
-    border-radius: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a text shadow */
 
   }
