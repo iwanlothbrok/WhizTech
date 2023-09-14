@@ -40,8 +40,8 @@ function ServiceSection() {
               <div className="service-item text-center pt-3">
                 <div className="p-4">
                   <i className="fa fa-3x fa-book-open text-alert mb-4"></i>
-                  <h5 className="mb-3">Online Videos and Resourses</h5>
-                  <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                  <h5 className="mb-3">Ентусиасти</h5>
+                  <p>които обичат предизвикателствата и искат да разширят своите знания и умения в програмирането.</p>
                 </div>
               </div>
             </div>

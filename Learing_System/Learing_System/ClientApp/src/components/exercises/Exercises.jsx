@@ -15,9 +15,9 @@ const Exercise = () => {
         if (lang !== 'csharp') {
             setTimeout(() => {
                 setIsLoading(false);
+                setExercises(csharpExercises);
             }, 1000); // Simulated loading delay
         } else {
-            setExercises(csharpExercises);
             setIsLoading(false);
         }
     }, [lang]);
