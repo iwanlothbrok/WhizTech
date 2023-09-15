@@ -1,69 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../../styles/css/blog.css'
 import Pages from "./Pages";
 import BlogPost from "./BlogPost";
+import blogData from "./blogDb/blogData";
 export default function BlogList() {
-
-    const blogData = [
-        {
-            title: "1",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "2Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "3Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "4Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "5Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "6Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "7Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        {
-            title: "8Business tool for your customer",
-            imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
-            content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-            date: `10 Jul, ${new Date().getFullYear()}`,
-            author: "User",
-        },
-        // Add more blog data objects for other blog posts
-    ];
-
 
     const itemsPerPage = 6; // Number of blog posts per page
     const [currentPage, setCurrentPage] = useState(1);

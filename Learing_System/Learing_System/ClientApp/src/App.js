@@ -14,8 +14,8 @@ import Exercise from './components/exercises/Exercises';
 import Calendar from './components/calendar/Calendar';
 import BlogList from './components/blog/BlogList';
 import Language from './components/languages/Language';
-import $ from 'jquery'; // Import jQuery
 import ContactWithInformation from './components/ContactWithInformation'
+import SelectedBlog from './components/blog/SelectedBlog';
 export default function App() {
   return (
     <div className="App">
@@ -29,6 +29,8 @@ export default function App() {
         <Route path="/study/:lang" element={<Language />} />
         <Route path="/cal" element={<Calendar />} />
         <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:blogId" element={<SelectedBlog />} />
+
       </Routes>
     </div>
   );

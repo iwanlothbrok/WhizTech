@@ -2,28 +2,95 @@
 
 const csharpExercises = [
     {
-        id: 1,
-        question: "Write a C# program to print 'Hello, World!'",
-        answers: [
-            "using System; class Program { static void Main() { Console.WriteLine('Hello, World!'); } }",
-            "class HelloWorld { public static void Main() { Console.WriteLine('Hello, World!'); } }",
-            "public class Hello { public static void Main() { Console.WriteLine('Hello, World!'); } }",
-            "class Print { public static void Main() { Console.WriteLine('Hi, there!'); } }",
-        ],
-        correctOption: 0, // Index of the correct option in the 'options' array
+        "id": 1,
+        "question": "Каква е целта на ключовата дума 'using' в C#?",
+        "answers": [
+            "За да дефинира клас",
+            "За да обяви променлива",
+            "За да импортира пространство от имена"
+        ]
     },
     {
-        id: 2,
-        question: "What is a namespace in C#?",
-        answers: [
-            "A namespace is a way to organize code into logical groups.",
-            "A namespace is a type in C#.",
-            "A namespace is used to define classes.",
-            "A namespace is used for mathematical calculations.",
-        ],
-        correctOption: 0, // Index of the correct option in the 'options' array
+        "id": 2,
+        "question": "Как се декларира променлива в C# с изричен тип?",
+        "answers": [
+            "var myVar = 10;",
+            "int myVar = 10;",
+            "myVar = 10;"
+        ]
     },
-    // Add more C# exercises with 4 options here
+    {
+        "id": 3,
+        "question": "Какво е наследяването в C#?",
+        "answers": [
+            "Процес на прехвърляне на данни от един обект на друг",
+            "Механизъм, при който един клас може да наследи свойствата и методите на друг клас",
+            "Възможността на обект да променя своите данни"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Каква е разликата между '==' и '.Equals()' при сравнение на обекти в C#?",
+        "answers": [
+            "Няма разлика",
+            "'==' сравнива референциите, '.Equals()' сравнива съдържанието",
+            "'.Equals()' сравнива референциите, '==' сравнива съдържанието"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Какво е конструктор в C#?",
+        "answers": [
+            "Метод, използван за математически изчисления",
+            "Специален метод, използван за инициализация на обекти",
+            "Ключова дума за деклариране на променливи"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Как се дефинира клас в C#?",
+        "answers": [
+            "С помощта на ключовата дума 'new'",
+            "С помощта на ключовата дума 'class'",
+            "С помощта на ключовата дума 'define'"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Каква е целта на модификатора на достъп 'public' в C#?",
+        "answers": [
+            "За ограничаване на достъпа до членовете на класа",
+            "За направата на клас недостъпен отвън",
+            "За позволяване на достъпа до членовете на класа отвън на класа"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Каква е разликата между 'var' и указването на тип данни при деклариране на променлива в C#?",
+        "answers": [
+            "'var' се използва за константи, указването на тип данни е за променливи",
+            "'var' се използва за параметри на методи, указването на тип данни е за членове на класа",
+            "'var' позволява на компилатора да извлече типа данни, указването на тип данни явно го дефинира"
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Какво представлява статичен метод в C#?",
+        "answers": [
+            "Метод, който не може да бъде извикан",
+            "Метод, който може да бъде извикан върху самия клас, а не върху инстанция на класа",
+            "Метод, който може да бъде презаписван от подкласовете"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Какво е интерфейс в C#?",
+        "answers": [
+            "Потребителски интерфейс за C# приложение",
+            "Начин за дефиниране на множество конструктори за клас",
+            "Договор, който дефинира набор от методи и свойства, които клас трябва да имплементира"
+        ]
+    }
 ];
 
 export default csharpExercises;
