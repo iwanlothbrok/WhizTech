@@ -25,8 +25,6 @@ export default function HomePage() {
 
     return (
         <section className="h-100 vh-100 mb-0 gradient-custom-2" style={sectionStyle}>
-
-
             <div className="photo-container d-flex flex-column justify-content-center align-items-center">
                 <div className="centered-text text-center p-4 bg-black bg-opacity-75" style={{ borderRadius: '30px' }}>
                     <h2 className="display-2 mb-0 font-family-roboto text-white" ><strong>Индивидуални уроци по програмиране</strong></h2>

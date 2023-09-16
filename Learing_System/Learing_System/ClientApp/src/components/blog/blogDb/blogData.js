@@ -4,8 +4,20 @@ const blogData = [
         title: "Business tool for your customer",
         imageSrc: "https://www.bootdey.com/image/480x480/00FFFF/000000",
         content: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+        totalInformation:
+        {
+            firstTitle: 'first title',
+            firstParagraph: 'first paragraph',
+
+            secondTitle: 'first title',
+            secondParagraph: 'first paragraph',
+
+            thirdTitle: 'first title',
+            thirdParagraph: 'first paragraph',
+        },
         date: `10 Jul, ${new Date().getFullYear()}`,
         author: "User",
+
     },
     {
         id: 2,

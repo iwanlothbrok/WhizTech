@@ -8,20 +8,20 @@ const Exercise = () => {
     const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
     const [exercise, setExercises] = useState([]);
 
-
     useEffect(() => {
         setIsLoading(true);
-
-        if (lang !== 'csharp') {
-            setTimeout(() => {
-                setIsLoading(false);
-                setExercises(csharpExercises);
-            }, 1000); // Simulated loading delay
-        } else {
-            setIsLoading(false);
+        if (lang === 'csharp') {
+            setExercises(csharpExercises);
+        } else if (lang === 'sql') {
+            setExercises(csharpExercises);
+        } else if (lang === 'javascript') {
+            setExercises(csharpExercises);
+        } else if (lang === 'java') {
+            setExercises(csharpExercises);
+        } else if (lang === 'cplus') {
+            setExercises(csharpExercises);
         }
     }, [lang]);
-
 
     return (
         <div className="container mt-5">

@@ -19,7 +19,7 @@ export default function BlogList() {
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
-
+   
     return (
         <div className="container mt-5">
             <div className="row">

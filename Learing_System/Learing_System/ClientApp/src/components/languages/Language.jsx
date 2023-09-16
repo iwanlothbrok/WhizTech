@@ -14,7 +14,7 @@ import JavaScript from './langDb/javascript'
 
 export default function Language() {
     const { lang } = useParams();
-    const [languageParams, setLanguageParams] = useState(JavaScript);
+    const [languageParams, setLanguageParams] = useState();
     useEffect(() => {
         if (lang === 'csharp') {
             setLanguageParams(csharp);

@@ -5,7 +5,10 @@ import 'owl.carousel'; // Import Owl Carousel
 import 'animate.css/animate.min.css';
 
 const Clients = () => {
+    const carouselStyle = {
+        boxShadow: '5px 5px 10px rgba(255, 0, 0, 0.5);' /* Change the color here */
 
+    }
     useEffect(() => {
         if (window.$) {
             window.$('.testimonial-carousel').owlCarousel({
@@ -15,6 +18,7 @@ const Clients = () => {
                 dots: true,
                 autoplay: true,
                 autoplayTimeout: 4000,
+
                 responsive: {
                     0: {
                         items: 1
@@ -32,9 +36,9 @@ const Clients = () => {
 
 
     return (
-        <div className="container-xxl py-5 wow fadeInUp " data-wow-delay="0.1s">
+        <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div className="container">
-                <div className="owl-carousel testimonial-carousel position-relative" >
+                <div className="owl-carousel testimonial-carousel position-relative" style={carouselStyle}  >
                     <div className="testimonial-item text-center bg-black" >
                         <img className="border rounded-circle p-2 mx-auto mb-3" src={client} style={{ width: '80px', height: '80px' }} alt="Client 1" />
                         <h5 className="mb-0 text-white ">Николай Желев</h5>
