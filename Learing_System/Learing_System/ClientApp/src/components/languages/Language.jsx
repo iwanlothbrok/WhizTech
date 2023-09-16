@@ -13,8 +13,19 @@ import JavaScript from './langDb/javascript'
 
 
 export default function Language() {
+    let test = {
+        image: 'SAD',
+        langName: 'Java Script',
+        information: [
+          'ADadA'
+        ],
+        photoStyle: {
+            width: '400px', /* Set the desired width */
+            height: '400px'/* Set the desired height */
+        }
+    };
     const { lang } = useParams();
-    const [languageParams, setLanguageParams] = useState();
+    const [languageParams, setLanguageParams] = useState(test);
     useEffect(() => {
         if (lang === 'csharp') {
             setLanguageParams(csharp);
@@ -28,7 +39,8 @@ export default function Language() {
             setLanguageParams(cplus);
         }
     }, [lang]);
-
+    console.log('params');
+    console.log(languageParams);
     const pathExercises = `/exer/${lang}`;
     return (
         <>

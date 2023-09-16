@@ -2,7 +2,8 @@ import React from 'react';
 
 import { FaCheck } from 'react-icons/fa'; // Import the FontAwesome checkmark icon
 
-const LanguageInformation = ({lang}) => {
+const LanguageInformation = ({ lang }) => {
+    console.log('langgg');
     console.log(lang);
     return (
         <div className="container">
