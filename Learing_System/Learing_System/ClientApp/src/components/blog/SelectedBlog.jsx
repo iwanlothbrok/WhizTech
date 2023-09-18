@@ -18,6 +18,7 @@ export default function SelectedBlog() {
       // Handle the case where no blog post with the specified id was found
       // You can redirect to an error page or display a message here
     }
+
   },
     [blogId]);
   //const blog = blogs.find((blog) => blog.id === blogId);
@@ -44,8 +45,8 @@ export default function SelectedBlog() {
             <h1>{blog.title}</h1>
             <p>{blog.content}</p>
 
-            <h2>{blog.totalInformation.firstTitle}</h2>
-            <h4>{blog.totalInformation.firstParagraph}</h4>
+            {/* <h2>{blog.totalInformation.firstTitle}</h2>
+            <h4>{blog.totalInformation.firstParagraph}</h4> */}
           </div>
         </div>
       </div>

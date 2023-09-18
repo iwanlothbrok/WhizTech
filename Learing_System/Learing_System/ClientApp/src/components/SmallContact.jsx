@@ -28,7 +28,6 @@ export default function SmallContact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmitButtonClicked(true);
-        console.log('out');
         // Check if all fields are completed
         if (
             formData.FullName &&
@@ -48,9 +47,8 @@ export default function SmallContact() {
                     Description: ''
                 });
 
-                setSuccessMessageVisible(true); // Show the success message
-                // setSubmitButtonClicked(false);
-
+                setSuccessMessageVisible(true);
+                setSubmitButtonClicked(false);
             } else {
                 console.log('Form submission failed');
             }

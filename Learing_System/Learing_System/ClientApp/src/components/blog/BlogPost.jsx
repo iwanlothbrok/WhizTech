@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import SelectedBlog from "./SelectedBlog";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function BlogPost({ blog }) {
