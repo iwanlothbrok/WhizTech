@@ -7,16 +7,22 @@ const Exercise = () => {
     const { lang } = useParams();
     const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
     const [exercise, setExercises] = useState([csharpExercises]);
-
     const [currentPage, setCurrentPage] = useState(1); // Track the current page
+    const [isStudyPage, setStudyPage] = useState(false)
+
+
     const exercisesPerPage = 6; // Number of exercises to show per page
 
-    const url = window.location.href;
-    const isStudyPage = url.includes('/study');
+    const startIndex = (currentPage - 1) * exercisesPerPage;
+    const endIndex = startIndex + exercisesPerPage;
+
 
     useEffect(() => {
         setIsLoading(true);
-
+        if (window.location.href.includes('/study')) {
+            setStudyPage(true);
+        }
+        console.log(isStudyPage);
         if (isStudyPage) {
             if (lang === 'csharp') {
                 setTimeout(() => {
@@ -50,10 +56,14 @@ const Exercise = () => {
             }
         }
         else {
+
+            console.log(startIndex);
+            console.log(endIndex);
+
             if (lang === 'csharp') {
                 setTimeout(() => {
                     setIsLoading(false);
-                    setExercises(csharpExercises);
+                    setExercises(csharpExercises.slice(startIndex, endIndex));
                 }, 1000)
             }
             else if (lang === 'javascript') {
@@ -81,13 +91,6 @@ const Exercise = () => {
                 }, 1000)
             }
         }
-        const startIndex = (currentPage - 1) * exercisesPerPage;
-        const endIndex = startIndex + exercisesPerPage;
-        const slicedExercises = exercise.slice(startIndex, endIndex);
-        setExercises(slicedExercises);
-
-
-
     }, [lang, currentPage]);
 
 
@@ -96,7 +99,6 @@ const Exercise = () => {
         setCurrentPage(newPage);
     };
 
-    console.log(exercise)
     return (
         <div className="container mt-5">
             {isLoading ? (
@@ -111,11 +113,15 @@ const Exercise = () => {
                 <div>
 
                     <SingleExercise exercises={exercise} />
-                    <Pages
-                        currentPage={currentPage}
-                        totalPages={Math.ceil(csharpExercises.length / exercisesPerPage)} // Calculate total pages based on the total exercises
-                        onPageChange={handlePageChange}
-                    />
+                    {isStudyPage ? (<div></div>)
+                        : (
+                            <Pages
+                                currentPage={currentPage}
+                                totalPages={Math.ceil(csharpExercises.length / exercisesPerPage)} // Calculate total pages based on the total exercises
+                                onPageChange={handlePageChange}
+                            />
+
+                        )}
                 </div>
 
             )}
