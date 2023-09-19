@@ -3,10 +3,9 @@ import ServiceSection from './ServiceSection';
 import '../../styles/style.css';
 import '../../styles/css/custom.css';
 import '../../styles/css/bootstrap.min.css';
-import SmallContact from '../SmallContact';
 import HomePage from './HomePage';
 import ContactWithInformation from '../ContactWithInformation';
-
+import AskedQuestions from '../../components/questions/AskedQuestions'
 
 export default function Home() {
   return (
@@ -14,7 +13,8 @@ export default function Home() {
     <div>
       <HomePage />
       <ServiceSection />
-      <ContactWithInformation/>
+      <AskedQuestions />
+      <ContactWithInformation />
     </div>
   )
 }

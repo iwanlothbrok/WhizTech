@@ -32,8 +32,8 @@ export default function HomePage() {
                 </div>
 
                 <div className="button-container m-5 text-center p-2">
-                    <Link to='/contact' >
-                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary m-2 p-5 btn-lg flex-fill custom-button">Услуги</button>
+                    <Link to='/about' >
+                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary m-2 p-5 btn-lg flex-fill custom-button">За Нас</button>
                     </Link>
                     <Link to='/contact'>
                         <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary p-5 btn-lg flex-fill custom-button">Контакти</button>
