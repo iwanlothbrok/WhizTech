@@ -65,7 +65,7 @@ export default function SmallContact() {
     }
     return (
         <div style={{ backgroundColor: '#232323' }}>
-            <div className="container">
+            <div className="container ">
                 <div className="row container-fluid justify-content-center align-items-center" style={{ backgroundColor: '#232323' }}>
                     {successMessageVisible && (
                         <div className="alert alert-success" role="alert">
