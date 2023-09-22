@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import clientPhoto from '../../styles/teacher01.png'
+import clientPhoto1 from '../../styles/teacher01.png'
+import clientPhoto2 from '../../styles/vankata1.jpg'
+
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel'; // Import Owl Carousel
 import 'animate.css/animate.min.css';
@@ -11,16 +13,16 @@ const Clients = () => {
 
     const clients = [
         {
-            img: clientPhoto,
+            img: clientPhoto1,
             fullName: 'Ivan Ivanov',
             profession: 'Developer',
             feedback: 'The'
         },
         {
-            img: clientPhoto,
-            fullName: 'Gogo',
-            profession: 'Prigranus',
-            feedback: 'The besst'
+            img: clientPhoto2,
+            fullName: 'Иван Малинков',
+            profession: 'Студент по "Софтуерни Технологии и Дизайн"',
+            feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
         },
 
     ]

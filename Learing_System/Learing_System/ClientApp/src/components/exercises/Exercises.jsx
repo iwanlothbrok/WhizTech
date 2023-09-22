@@ -6,7 +6,7 @@ import Pages from '../blog/Pages'
 const Exercise = () => {
     const { lang } = useParams();
     const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
-    const [exercise, setExercises] = useState([csharpExercises]);
+    const [exercise, setExercises] = useState([]);
     const [currentPage, setCurrentPage] = useState(1); // Track the current page
     const [isStudyPage, setStudyPage] = useState(false)
 
@@ -20,6 +20,7 @@ const Exercise = () => {
     useEffect(() => {
         setIsLoading(true);
         if (window.location.href.includes('/study')) {
+            console.log('trueeeee');
             setStudyPage(true);
         }
         console.log(isStudyPage);
@@ -56,10 +57,6 @@ const Exercise = () => {
             }
         }
         else {
-
-            console.log(startIndex);
-            console.log(endIndex);
-
             if (lang === 'csharp') {
                 setTimeout(() => {
                     setIsLoading(false);
@@ -92,7 +89,6 @@ const Exercise = () => {
             }
         }
     }, [lang, currentPage]);
-
 
 
     const handlePageChange = (newPage) => {

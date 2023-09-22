@@ -6,14 +6,19 @@ const SingleExercise = ({ exercises }) => {
             {exercises.map((exercise, index) => (
                 <div key={exercise.id} className="mb-3">
                     <h4 className="exercise-title text-white">Задача {exercise.id}</h4>
-                    <p style={{fontSize: '20px'}} className="exercise-question text-white">{exercise.question}</p>
+                    <p style={{ fontSize: '20px' }} className="exercise-question text-white">{exercise.question}</p>
+                    <p style={{ fontSize: '15px' }} className="exercise-question text-white">Вход: <br /><strong>{exercise.firstInput}<br />{exercise.secondInput}</strong></p>
+
+
                     <ul className="list-group">
+                        <p style={{ fontSize: '15px' }} className="exercise-question text-white">Изход:</p>
+
                         {exercise.answers.map((answer, answerIndex) => (
                             <li
                                 key={answerIndex}
                                 className="list-group-item"
                             >
-                                {answerIndex + 1}. {answer}
+                                0{answerIndex + 1}. {answer}
                             </li>
                         ))}
                     </ul>
