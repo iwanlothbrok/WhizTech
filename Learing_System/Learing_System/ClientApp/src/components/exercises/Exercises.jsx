@@ -1,92 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import SingleExercise from './SingleExercise';
-import csharpExercises from './exerDb/csharpExercises'
 import Pages from '../blog/Pages'
+
+
+import csharpExercises from './exerDb/csharpExercises'
+import jsExercises from './exerDb/jsExercises'
+import sqlExercises from './exerDb/sqlExercises';
+
 const Exercise = () => {
     const { lang } = useParams();
     const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
     const [exercise, setExercises] = useState([]);
     const [currentPage, setCurrentPage] = useState(1); // Track the current page
     const [isStudyPage, setStudyPage] = useState(false)
-
+    const [exercisesCounter, setExercisesCounter] = useState(0);
 
     const exercisesPerPage = 6; // Number of exercises to show per page
-
     const startIndex = (currentPage - 1) * exercisesPerPage;
     const endIndex = startIndex + exercisesPerPage;
 
-
     useEffect(() => {
         setIsLoading(true);
-        if (window.location.href.includes('/study')) {
-            console.log('trueeeee');
+        if (window.location.href.includes('/study/')) {
             setStudyPage(true);
         }
-        console.log(isStudyPage);
+
         if (isStudyPage) {
-            if (lang === 'csharp') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    setExercises(csharpExercises.slice(0, 3));
-                }, 1000)
-            }
-            else if (lang === 'javascript') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises.slice(0, 3));
-                }, 1000)
-            }
-            else if (lang === 'cplus') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises.slice(0, 3));
-                }, 1000)
-            }
-            else if (lang === 'sql') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises.slice(0, 3));
-                }, 1000)
-            }
-            else if (lang === 'java') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises.slice(0, 3));
-                }, 1000)
-            }
+            checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, 0, 3);
         }
         else {
-            if (lang === 'csharp') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    setExercises(csharpExercises.slice(startIndex, endIndex));
-                }, 1000)
+            if (window.location.href.includes('/study/')) {
+                checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, 0, 3);
+            } else {
+                checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, startIndex, endIndex);
             }
-            else if (lang === 'javascript') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises);
-                }, 1000)
-            }
-            else if (lang === 'cplus') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises);
-                }, 1000)
-            }
-            else if (lang === 'sql') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises);
-                }, 1000)
-            }
-            else if (lang === 'java') {
-                setTimeout(() => {
-                    setIsLoading(false);
-                    // setExercises(csharpExercises);
-                }, 1000)
-            }
+
         }
     }, [lang, currentPage]);
 
@@ -106,23 +55,58 @@ const Exercise = () => {
                     There are no exercises for this language.
                 </div>
             ) : (
-                <div>
-
+                <div className='mb-5'>
                     <SingleExercise exercises={exercise} />
                     {isStudyPage ? (<div></div>)
                         : (
                             <Pages
                                 currentPage={currentPage}
-                                totalPages={Math.ceil(csharpExercises.length / exercisesPerPage)} // Calculate total pages based on the total exercises
+                                totalPages={Math.ceil(exercisesCounter / exercisesPerPage)}
                                 onPageChange={handlePageChange}
                             />
-
                         )}
                 </div>
-
             )}
         </div>
     );
 };
 
 export default Exercise;
+
+function checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, startIndex, endIndex) {
+    if (lang === 'csharp') {
+        setTimeout(() => {
+            setIsLoading(false);
+            setExercisesCounter(csharpExercises.length);
+            setExercises(csharpExercises.slice(startIndex, endIndex));
+        }, 1000);
+    }
+    else if (lang === 'javascript') {
+        setTimeout(() => {
+            setIsLoading(false);
+            setExercisesCounter(jsExercises.length);
+            setExercises(jsExercises.slice(startIndex, endIndex));
+        }, 1000);
+    }
+    else if (lang === 'cplus') {
+        setTimeout(() => {
+            setIsLoading(false);
+            setExercisesCounter(csharpExercises.length);
+            setExercises(csharpExercises.slice(startIndex, endIndex));
+        }, 1000);
+    }
+    else if (lang === 'sql') {
+        setTimeout(() => {
+            setIsLoading(false);
+            setExercisesCounter(sqlExercises.length);
+            setExercises(sqlExercises.slice(startIndex, endIndex));
+        }, 1000);
+    }
+    else if (lang === 'java') {
+        setTimeout(() => {
+            setIsLoading(false);
+            setExercisesCounter(csharpExercises.length);
+            setExercises(csharpExercises.slice(startIndex, endIndex));
+        }, 1000);
+    }
+}
