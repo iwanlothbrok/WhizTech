@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faPenAlt, faUser, faRocket, faHome, faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane,faList,faMoneyCheck, faCoins, faRocket, faHome, faBookOpen,faClock,faComputer } from '@fortawesome/free-solid-svg-icons';
 import { faPaperPlane as farPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 
@@ -28,7 +28,7 @@ export default function AskedQuestions() {
             </div>
             <div className="row">
                 <div className="col-md-6 col-lg-4 mb-5">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={farPaperPlane} style={questionStyle} className="pe-2" />Как се провеждат уроците?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faBookOpen} style={questionStyle} className="pe-2" />Как се провеждат уроците?</h6>
                     <p style={answerStyle}>
                         Уроците се провеждат изцяло онлайн. Лекторът и ученикът се свързват чрез интернет, обикновено чрез виртуална
                         платформа за срещи. Лекторът може да сподели своя екран и дори да вземе дистанционен достъп до компютъра на
@@ -37,7 +37,7 @@ export default function AskedQuestions() {
                     </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-5">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPenAlt} className="pe-2" style={questionStyle} /> Колко време е един урок?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faClock} className="pe-2" style={questionStyle} /> Колко време е един урок?</h6>
                     <p style={answerStyle}>
                         Един урок продължава 45 минути, което е оптималното време, което сме установили
                         чрез нашия опит с ученици и студенти.
@@ -45,17 +45,17 @@ export default function AskedQuestions() {
                     </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-5">
-                    <h6 className="mb-3" style={questionStyle} ><FontAwesomeIcon style={questionStyle} icon={faUser} className="pe-2" />Kакви технологии преподавате?</h6>
+                    <h6 className="mb-3" style={questionStyle} ><FontAwesomeIcon style={questionStyle} icon={faRocket} className="pe-2" />Kакви технологии преподавате?</h6>
                     <p style={answerStyle}>
                         Преподаваме разнообразни технологии в две основни области: front-end и back-end. <br />
 
-                        Front-end технологии: <br />
+                        Front-End технологии: <br />
 
                         React,
                         HTML (HyperText Markup Language),
                         CSS (Cascading Style Sheets),
                         JavaScript,
-                        Bootstrap
+                        Bootstrap<br />
 
                         Back-end технологии: <br />
                         C#,
@@ -67,18 +67,18 @@ export default function AskedQuestions() {
                     </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faRocket} style={questionStyle} className="pe-2" /> Как да се свържим с Вас?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPaperPlane} style={questionStyle} className="pe-2" /> Как да се свържим с Вас?</h6>
                     <p style={answerStyle}>
                         Можете да се свържете с нас чрез изпращане на имейл в секция "Контакти" в сайта или да ни се обадите на <strong>+359 88 904 4614</strong>.
                     </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faBookOpen} style={questionStyle} className="pe-2" /> Какви са изискванията за участие в уроците?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faList } style={questionStyle} className="pe-2" /> Какви са изискванията за участие в уроците?</h6>
                     <p style={answerStyle}>
                         За участие в уроците ви е необходим компютър или лаптоп с интернет връзка. Определени уроци може да изискват инсталиране на специфичен софтуер, който ще бъде предоставен предварително.                    </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faHome} style={questionStyle} className="pe-2" /> Какви са начините на плащане?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faCoins} style={questionStyle} className="pe-2" /> Какви са начините на плащане?</h6>
                     <p style={answerStyle}>
                         Приемаме плащания чрез PayPal, EasyPay, ePay и Банков превод.
 
