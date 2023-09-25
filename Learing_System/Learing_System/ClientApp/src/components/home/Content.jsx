@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../styles/favicon.png'
+import img from '../../styles/blackLogo.png'
 const Content = () => {
     return (
         <div className='text-white'>
