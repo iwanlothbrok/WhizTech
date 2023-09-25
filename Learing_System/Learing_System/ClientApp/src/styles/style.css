@@ -30,6 +30,15 @@
     bottom: 45px;
     z-index: 99;
 }
+ p{
+    font-size: 16px;
+ }
+.navbar-logo {
+    max-height: 100%;
+    /* Adjust the max height as needed */
+    max-width: 90px;
+    /* Allows the image to scale proportionally */
+}
 
 
 /*** Spinner ***/
