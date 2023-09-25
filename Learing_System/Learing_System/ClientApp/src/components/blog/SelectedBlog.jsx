@@ -93,7 +93,7 @@ export default function SelectedBlog() {
               <div className="blog-question">
                 <h2 style={questionStyle} >{blog.conclusionTitle}</h2>
 
-                <p style={answerStyle}>{blog.conclusionParagrapth}</p>
+                <p style={answerStyle}>{blog.conclusionParagraph}</p>
               </div>
 
 

@@ -12,16 +12,17 @@ export default function BlogPost({ blog }) {
                     <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
                 </h3>
                 <p style={{ fontSize: '20px' }}>{blog.content}</p>
-                <div className="meta meta-style2">
+                <div className="meta meta-style2 d-flex flex-column justify-content-end">
                     <ul>
                         <li style={{ fontSize: '15px' }}>
                             <i className="fas fa-calendar-alt"></i> {blog.date}
                         </li>
                         <li style={{ fontSize: '15px' }}>
-                            <i className="fas fa-user" ></i> {blog.author}
+                            <i className="fas fa-user"></i> {blog.author}
                         </li>
                     </ul>
                 </div>
+
             </div>
         </div>
     );

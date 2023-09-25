@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import clientPhoto1 from '../../styles/teacher01.png'
+import clientPhoto1 from '../../styles/client002.png'
 import clientPhoto2 from '../../styles/vankata1.jpg'
+import clientPhoto3 from '../../styles/client03.jpg'
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel'; // Import Owl Carousel
@@ -14,17 +15,21 @@ const Clients = () => {
     const clients = [
         {
             img: clientPhoto1,
-            fullName: 'Ivan Ivanov',
-            profession: 'Developer',
-            feedback: 'The'
+            fullName: 'Кристина Шопова',
+            profession: 'Стажант еди къде си ',
+            feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
         },
         {
             img: clientPhoto2,
             fullName: 'Иван Малинков',
             profession: 'Студент по "Софтуерни Технологии и Дизайн"',
             feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
+        }, {
+            img: clientPhoto3,
+            fullName: 'Mesut Pashaberber',
+            profession: 'Студент по "Софтуерни Технологии и Дизайн"',
+            feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
         },
-
     ]
 
 
@@ -49,7 +54,7 @@ const Clients = () => {
                     600: {
                         items: 2
                     },
-                    1000: {
+                    600: {
                         items: 3
                     }
                 }

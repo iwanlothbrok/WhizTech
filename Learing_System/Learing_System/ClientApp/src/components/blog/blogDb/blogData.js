@@ -1,5 +1,6 @@
 import visualStudio from '../../../styles/blog01.png'
 import dynamicProggraming from '../../../styles/dynamic.png'
+import csharpBegginers from '../../../styles/c#lang.png'
 
 const blogData = [
     {
@@ -60,7 +61,7 @@ const blogData = [
             
             Благодарим ви, че прочетохте.`,
 
-        date: `10 Jul, ${new Date().getFullYear()}`,
+        date: `10 Sept, ${new Date().getFullYear()}`,
         author: "Иван Иванов",
 
     },
@@ -82,30 +83,31 @@ const blogData = [
         conclusionTitle: "",
         conclusionParagraph: "",
 
-        date: `20 Oct, ${new Date().getFullYear()}`,
-        author: "John Smith",
+        date: `10 Sept, ${new Date().getFullYear()}`,
+        author: "Иван Иванов",
     },
     {
-        id: 4,
-        title: "Why React is Becoming Everyone's Favorite",
-        imageSrc: visualStudio,
-        content: "React has taken the world of web development by storm. In this blog post, we delve into the reasons why React has become the preferred choice for building user interfaces. From its component-based architecture to its vibrant ecosystem, discover why developers are falling in love with React.",
+        id: 6,
+        title: "Основни Характеристики на Езика C#",
+        imageSrc: csharpBegginers,
+        content: "Въпреки че е създаден преди повече от 20 години, C# все още се счита за един от модерните езици за програмиране. Той е сравнително опростен, статично типизиран език за обектно-ориентирано програмиране. Езикът борави с обекти, взаимодействащи помежду си и дава на програмистите мощен инструментариум за разработка.",
 
-        firstQuestion: "Component-Based Architecture",
-        firstParagraph: "React's component-based architecture encourages modular development. Reusable components simplify code maintenance and enable efficient collaboration among developers. Additionally, React's virtual DOM enables lightning-fast updates, enhancing the user experience.",
+        firstQuestion: "Защо C# е Подходящ за Начинаещи?",
+        firstParagraph: "C# е високо ниво на език, което означава, че е лесен за четене и разбиране. Синтаксисът му е близък до английския език, което го прави достъпен и позволява бързо усвояване за начинаещите. Програмистите могат да се научат на езика и да създават приложения по-бързо и ефективно, като избягват излишни технически подробности и се съсредоточават върху създаването на функционални решения. Структурата и обектно-ориентираното мислене, на което се насочва C#, са изключително полезни за развитието на добри програмистически практики.",
 
-        secondQuestion: "Virtual DOM for Speed",
-        secondParagraph: "React's virtual DOM optimizes rendering performance. It updates only the necessary parts of the actual DOM, resulting in faster and smoother user interfaces. Moreover, React's one-way data flow and state management libraries like Redux streamline application development.",
+        secondQuestion: "Силата на Управлението на Паметта",
+        secondParagraph: "Едно от предизвикателствата за начинаещите е управлението на паметта. Тук C# предоставя значително предимство с функцията Гарбеж Колектор. Този инструмент автоматично освобождава ресурсите, които не са повече необходими в програмата, предотвратявайки утечки на памет и намалявайки риска от грешки. Това позволява на програмистите да се фокусират върху създаването на приложенията си и да се избегне необходимостта за ръчно управление на паметта. Този аспект на C# спомага за ускоряване на разработката и увеличаване на продуктивността. Също така, намалява съответно риска от сериозни грешки, свързани с управлението на паметта.",
 
-        thirdQuestion: "Thriving Ecosystem",
-        thirdParagraph: "React is supported by a rich ecosystem of libraries and tools. From state management with Redux to server-side rendering with Next.js, React offers solutions for various development needs. Additionally, the React community actively contributes to a wealth of open-source projects and extensions.",
+        thirdQuestion: "Развитие и Мултиплатформеност",
+        thirdParagraph: "C# е изключително гъвкав език, позволяващ мултиплатформена разработка и се използва в различни индустрии и приложения. Компании като Microsoft, Slack, и Pinterest го използват в своите продукти, а също и в областта на игрите и уеб разработката. Този широк спектър на приложенията на C# създава вълнуващи възможности за програмистите, които могат да се състезават със своите умения и креативност в различни сфери. От създаването на игри до разработката на уеб и десктоп приложения, програмистите могат да научат C# и да се развиват в тези разнообразни области. Този аспект на езика го прави идеален за онези, които искат да разширят своите умения и да пробват различни проекти и приложения.",
 
-        conclusionTitle: "Join the React Revolution",
-        conclusionParagraph: "If you haven't explored React yet, now is the time. Its developer-friendly features, performance benefits, and extensive community support make it the go-to choice for web development. Dive into the world of React and elevate your UI game! Whether you're building a personal blog or a complex web application, React empowers developers to create outstanding user interfaces.",
+        conclusionTitle: "Открий Силата на C#",
+        conclusionParagraph: "Без значение дали сте начинаещ или опитен програмист, който иска да разшири уменията си, C# предлага обширни възможности за програмиране. Неговата универсалност, лесна употреба и обширно общество го правят изключителен избор за разнообразни индустрии и приложения. Направете първите си стъпки в програмирането с C# още днес! И не забравяйте, независимо от това какви проекти и приложения искате да създавате, винаги има множество ресурси и общност от програмисти, които да ви подкрепят и насърчат в развитието ви като програмист.",
 
-        date: `5 Nov, ${new Date().getFullYear()}`,
-        author: "Sarah Davis",
-    }, {
+        date: `25 Януари, ${new Date().getFullYear()}`,
+        author: "Анна Иванова",
+    }
+    , {
         id: 5,
         title: "Newest Things in JavaScript",
         imageSrc: visualStudio,
