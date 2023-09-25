@@ -39,7 +39,7 @@ export default function AskedQuestions() {
                 <div className="col-md-6 col-lg-4 mb-5">
                     <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faClock} className="pe-2" style={questionStyle} /> Колко време е един урок?</h6>
                     <p style={answerStyle}>
-                        Един урок продължава 45 минути, което е оптималното време, което сме установили
+                        Един урок продължава 60 минути, което е оптималното време, което сме установили
                         чрез нашия опит с ученици и студенти.
                         Този период от време ни позволява да представим материала ефективно и да поддържаме вниманието на обучаемия.
                     </p>

@@ -6,7 +6,7 @@ import { animateScroll as scroll } from "react-scroll";
 export default function Pages({ currentPage, totalPages, onPageChange }) {
     return (
         <div className="row mt-6 wow fadeInUp">
-            <div className="col-12">
+            <div className="col-12 mb-5">
                 <div className="pagination text-small text-uppercase text-extra-dark-gray">
                     <ul>
                         {currentPage > 1 && (

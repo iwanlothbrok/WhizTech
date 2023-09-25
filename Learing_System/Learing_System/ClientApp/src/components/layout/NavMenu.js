@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from "react-scroll";
-
+import logo from '../../styles/whiteLogo.png'
 function NavMenu() {
   const [isContentVisible, setIsContentVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,8 @@ function NavMenu() {
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <h2 className="m-0 text-alert">
-          <i className="fa fa-book me-3"></i>WhizTech
+          <img src={logo} alt="Logo" className="navbar-logo me-3" />
+          WhizTech
         </h2>
       </Link>
       <button
