@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import SingleExercise from './SingleExercise';
 import Pages from '../blog/Pages'
 
@@ -15,6 +15,7 @@ const Exercise = () => {
     const [currentPage, setCurrentPage] = useState(1); // Track the current page
     const [isStudyPage, setStudyPage] = useState(false)
     const [exercisesCounter, setExercisesCounter] = useState(0);
+    const history = useNavigate();
 
     const exercisesPerPage = 6; // Number of exercises to show per page
     const startIndex = (currentPage - 1) * exercisesPerPage;
@@ -27,13 +28,13 @@ const Exercise = () => {
         }
 
         if (isStudyPage) {
-            checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, 0, 3);
+            checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, 0, 3, history);
         }
         else {
             if (window.location.href.includes('/study/')) {
-                checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, 0, 3);
+                checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, 0, 3, history);
             } else {
-                checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, startIndex, endIndex);
+                checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, startIndex, endIndex, history);
             }
 
         }
@@ -73,7 +74,7 @@ const Exercise = () => {
 
 export default Exercise;
 
-function checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, startIndex, endIndex) {
+function checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, startIndex, endIndex, history) {
     if (lang === 'csharp') {
         setTimeout(() => {
             setIsLoading(false);
@@ -108,5 +109,8 @@ function checkLanguage(lang, setIsLoading, setExercises, setExercisesCounter, st
             setExercisesCounter(csharpExercises.length);
             setExercises(csharpExercises.slice(startIndex, endIndex));
         }, 1000);
+    } else {
+        console.log('inside');
+        history('/error'); // Redirect to the /blog route
     }
 }
