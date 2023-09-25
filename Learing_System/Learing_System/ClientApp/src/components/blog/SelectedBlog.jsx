@@ -1,29 +1,56 @@
 import React, { useEffect, useState } from "react";
 
 import blogData from "./blogDb/blogData";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+
 export default function SelectedBlog() {
+  const history = useNavigate();
 
   const [blog, setBlog] = useState({});
   const { blogId } = useParams();
+  const [isMobile, setIsMobile] = useState(false);
 
-  // you should get all blogs from our fake db and should select the needed one with filter or other function 
   useEffect(() => {
 
     const selected = blogData.find((b) => b.id === parseInt(blogId, 10));
+    console.log(selected);
 
+    if (selected === undefined) {
+      console.log('inside');
+      history('/error'); // Redirect to the /blog route
+    }
     if (selected) {
       setBlog(selected);
-    } else {
-      // Handle the case where no blog post with the specified id was found
-      // You can redirect to an error page or display a message here
+    }
+  }, [blogId])
+
+
+  useEffect(() => {
+    function handleWindowSizeChange() {
+      const isMobile = window.innerWidth <= 768; // Adjust the threshold as needed
+      setIsMobile(isMobile);
     }
 
-  },
-    [blogId]);
-  //const blog = blogs.find((blog) => blog.id === blogId);
-  console.log(blogId);
-  console.log(blog);
+    // Add an event listener to check if the screen size changes
+    window.addEventListener('resize', handleWindowSizeChange);
+
+    // Check the initial screen size
+    handleWindowSizeChange();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+
+  const questionStyle = {
+    color: '#71F483'
+  }
+  const answerStyle = {
+    fontSize: isMobile ? '16px' : '20px'
+  }
+
 
   return (
     <div className="container mt-4">
@@ -34,20 +61,45 @@ export default function SelectedBlog() {
           </Link>
         </div>
       </div>
-      <div className="row mb-5">
-        <div className="col-md-6">
-          <div className="blog-grid-img position-relative">
-            <img alt="img" src={blog.imageSrc} className="img-fluid" />
+      <div className="container mb-5">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="blog-grid-img position-relative img-cover-container">
+              <img alt="img" src={blog.imageSrc} className="img-fluid img-cover" />
+            </div>
           </div>
-        </div>
-        <div className="col-md-6">
-          <div className="selected-blog text-white">
-            <h1>{blog.title}</h1>
-            <p>{blog.content}</p>
+          <div className="col-md-12">
+            <div className="selected-blog text-white">
+              <h1 className="display-4" style={questionStyle}>{blog.title}</h1>
+              <p style={answerStyle}>{blog.content}</p>
 
-            {/* <h2>{blog.totalInformation.firstTitle}</h2>
-            <h4>{blog.totalInformation.firstParagraph}</h4> */}
+
+              <div className="blog-question">
+                <h2 style={questionStyle} >{blog.firstQuestion}</h2>
+                <p style={answerStyle}>{blog.firstParagraph}</p>
+              </div>
+
+              <div className="blog-question">
+                <h2 style={questionStyle} >{blog.secondQuestion}</h2>
+
+                <p style={answerStyle}>{blog.secondParagraph}</p>
+              </div>
+
+              <div className="blog-question">
+                <h2 style={questionStyle} >{blog.thirdQuestion}</h2>
+
+                <p style={answerStyle}>{blog.thirdParagraph}</p>
+              </div>
+              <div className="blog-question">
+                <h2 style={questionStyle} >{blog.conclusionTitle}</h2>
+
+                <p style={answerStyle}>{blog.conclusionParagrapth}</p>
+              </div>
+
+
+            </div>
           </div>
+
         </div>
       </div>
     </div>
