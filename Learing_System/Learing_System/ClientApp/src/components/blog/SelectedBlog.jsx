@@ -46,9 +46,11 @@ export default function SelectedBlog() {
 
   const questionStyle = {
     color: '#71F483'
+
   }
   const answerStyle = {
-    fontSize: isMobile ? '16px' : '20px'
+    fontSize: isMobile ? '16px' : '20px',
+    whiteSpace: 'pre-line'
   }
 
 

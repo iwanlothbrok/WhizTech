@@ -18,8 +18,8 @@ function NavMenu() {
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <h2 className="m-0 text-alert">
-          <img src={logo} alt="Logo" className="navbar-logo me-3" />
-          WhizTech
+          <img src={logo} alt="Logo" className="navbar-logo mb-3" />
+          Whiz Tech
         </h2>
       </Link>
       <button
@@ -111,7 +111,7 @@ function NavMenu() {
             className="btn bg-black text-white px-lg-5 d-none d-lg-block m-2"
             onClick={onClickHandle}
           >
-            Join Now
+            JOIN
           </Link>
         </div>
       </div>
