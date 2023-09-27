@@ -35,7 +35,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
-                        <h4 className="text-white mb-3">Изпрати Имейл</h4>
+                        <h4 className="text-white mb-3">Изпрати Имейл за връзка</h4>
                         <div className="position-relative mx-auto" style={{ maxWidth: '400px' }}>
 
                             <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" value={email}

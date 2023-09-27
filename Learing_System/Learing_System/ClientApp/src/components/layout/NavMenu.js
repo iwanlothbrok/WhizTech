@@ -103,16 +103,17 @@ function NavMenu() {
           <Link to="/blog" onClick={onClickHandle} className="nav-item nav-link">
             Блог
           </Link>
-          <Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
+          {/* <Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
             Контакти
-          </Link>
+          </Link> */}
           <Link
             to="/contact"
-            className="btn bg-black text-white px-lg-5 d-none d-lg-block m-2"
+            className="btn bg-black text-white px-lg-5 d-none d-lg-block text-center" // Add "text-center" class here
             onClick={onClickHandle}
           >
-            JOIN
+            <p className="mt-2" style={{fontSize:'20px'}}>Контакти</p> {/* Add classes for centering and font size */}
           </Link>
+
         </div>
       </div>
     </nav>

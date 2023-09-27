@@ -1,13 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
+
 const firebaseConfig = {
-    apiKey: "AIzaSyCkAaumclVywpuX9B1aMBwZ136T7mXRRzk",
-    authDomain: "whiztechsystem.firebaseapp.com",
-    projectId: "whiztechsystem",
-    storageBucket: "whiztechsystem.appspot.com",
-    messagingSenderId: "839273473381",
-    appId: "1:839273473381:web:9d454fe35e978d5c346d8c"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_API_KEY
 };
 
 
@@ -29,9 +30,7 @@ const contactSubmitHandle = async (formData) => {
             Email: formData.Email,
             PhoneNumber: formData.PhoneNumber,
             Description: formData.Description,
-        });
-        console.log(docRef);
-        console.log('in');
+        }); 
         // Handle success or show a success message to the user
         console.log('Form submitted successfully!');
 

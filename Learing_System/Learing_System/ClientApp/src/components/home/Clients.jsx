@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import clientPhoto1 from '../../styles/client002.png'
-import clientPhoto2 from '../../styles/vankata1.jpg'
-import clientPhoto3 from '../../styles/client03.jpg'
+import clientPhoto1 from '../../styles/photos/client002.png'
+import clientPhoto2 from '../../styles/photos/vankata1.jpg'
+import clientPhoto3 from '../../styles/photos/yanislav.png'
 import client04 from '../../styles/photos/clientLiubcho.jpg';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel'; // Import Owl Carousel
@@ -17,18 +17,18 @@ const Clients = () => {
             img: client04,
             fullName: 'Любомир Радунтчев',
             profession: 'Стажант в "Re4Life" и студент по "Информационни технологии" ',
-            feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
+            feedback: 'Уроците по C# и JavaScript на Whiz Tech бяха невероятни. Получих комплексно обучение, което ми позволи да изградя солидни умения в програмирането.'
         },
         {
             img: clientPhoto2,
             fullName: 'Иван Малинков',
             profession: 'Студент по "Софтуерни Технологии и Дизайн"',
-            feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
+            feedback: 'Проучвах различни опции за обучение по C# и най-накрая избрах Whiz Tech. Беше най-доброто решение, което можех да взема. Научих се не само как да пиша код на C#, но и как да го правя по ефективен начин.'
         }, {
             img: clientPhoto3,
-            fullName: 'Петър Стефанов',
-            profession: 'Студент по "Софтуерни Технологии и Дизайн"',
-            feedback: 'Методи на обучение са супер разбираеми и лесни за следване. Направи ми страхотно впечатление как съумях да науча "C#" по толкова бърз и забавен начин.'
+            fullName: 'Янислав Димитров',
+            profession: 'Студент в Software University',
+            feedback: 'Преподавателят ми в "Whiz Tech" не само ме научи как да пиша код, но и ме насърчи да бъда креативен и да търся нови решения. Без съмнение, неговите уроци са били ключов фактор за моите успехи в света на програмирането. Благодаря му за всичко!'
         },
     ]
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../styles/teacher01.png'
+import img from '../../styles/photos/teacher01.png'
 const TeamComponent = () => {
     return (
         <div className="container-xxl py-5 ">
