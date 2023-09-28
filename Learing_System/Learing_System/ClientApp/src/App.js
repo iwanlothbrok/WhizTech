@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
 import About from './components/about/About'
 import ErrorPage from './components/ErrorPage';
-import AddCourse from './components/courses/AddCourse';
 import Exercise from './components/exercises/Exercises';
 import Calendar from './components/calendar/Calendar';
 import BlogList from './components/blog/BlogList';
@@ -21,7 +20,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactWithInformation />} />
-        <Route path="/courses/add" element={<AddCourse />} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />
         <Route path="/study/:lang" element={<Language />} />

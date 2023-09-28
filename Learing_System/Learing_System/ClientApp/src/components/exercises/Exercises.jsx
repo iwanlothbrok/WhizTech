@@ -48,11 +48,11 @@ const Exercise = () => {
     return (
         <div className="container mt-5">
             {isLoading ? (
-                <div className="text-center mt-5 text-white" style={{ fontSize: '48px' }}>
+                <div className="text-center m-5 text-white" style={{ fontSize: '48px' }}>
                     Loading...
                 </div>
             ) : exercise.length === 0 ? (
-                <div className="text-center mt-5 text-white" style={{ fontSize: '48px' }}>
+                <div className="text-center m-5 text-white" style={{ fontSize: '48px' }}>
                     There are no exercises for this language.
                 </div>
             ) : (

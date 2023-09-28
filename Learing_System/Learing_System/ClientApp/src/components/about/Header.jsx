@@ -11,12 +11,12 @@ export default function Header() {
                 <div className="container py-5">
                     <div className="row justify-content-center">
                         <div className="col-lg-10 text-center">
-                            <h1 className="display-3 text-white animated slideInDown">About Us</h1>
+                            <h1 className="display-3 text-white animated slideInDown">За Нас</h1>
                             <nav aria-label="breadcrumb">
                                 <ol className="breadcrumb justify-content-center">
-                                    <li className="breadcrumb-item"><Link className="text-white" to="/">Home</Link></li>
-                                    <li className="breadcrumb-item"><Link className="text-white" to="/pages">Pages</Link></li>
-                                    <li className="breadcrumb-item text-white active" aria-current="page">About</li>
+                                    <li className="breadcrumb-item"><Link className="text-white" to="/">Начало</Link></li>
+                                    <li className="breadcrumb-item"><Link className="text-white" to="/about">За Нас</Link></li>
+                                    <li className="breadcrumb-item"><Link className="text-white" to="/contact">Контакти</Link></li>
                                 </ol>
                             </nav>
                         </div>

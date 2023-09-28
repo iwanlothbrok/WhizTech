@@ -28,7 +28,7 @@ const ContactInfoSection = () => {
                                 </div>
                                 <div className='d-flex flex-column flex-md-row align-items-center'>
                                     <span className='p-2 p-md-4 h1'>Email: </span>
-                                    <a href='mailto:info@yoursite.com' className='p-2 p-md-4 h5' style={{ fontSize: '1.7rem', marginLeft: '22px' }}>whiztech@gmail.com</a>
+                                    <a href='whiztech.team@gmail.com' className='p-2 p-md-4 h5' style={{ fontSize: '1.7rem', marginLeft: '22px' }}>whiztech.team@gmail.com</a>
                                 </div>
                             </div>
                         </div>
