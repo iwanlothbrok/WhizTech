@@ -205,7 +205,7 @@ const blogData = [
         е съкращение от Document Object Model, който рендира само тези компоненти, които са се променили, вместо да рендира цялата 
         страница. Друга ключова характеристика на React е по-простият синтаксис на JSX вместо на JavaScript.`,
 
-        secondQuestion: "Плюсове на използването на React",
+        secondQuestion: "Плюсове за използването на React",
         secondParagraph: (
             <div>
                 <ul>
@@ -239,7 +239,7 @@ const blogData = [
                 </ul>
             </div>),
 
-        thirdQuestion: "Минуси н използването на React",
+        thirdQuestion: "Минуси за използването на React",
         thirdParagraph: (
             <div>
                 <ul>
