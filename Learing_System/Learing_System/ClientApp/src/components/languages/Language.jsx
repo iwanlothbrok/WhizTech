@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { animateScroll as scroll } from "react-scroll";
 
 import LanguageInformation from './LanguageInformation';
 import Exercise from '../exercises/Exercises';
@@ -13,19 +14,24 @@ import JavaScript from './langDb/javascript'
 
 
 export default function Language() {
+
+    const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+
     let test = {
         image: 'SAD',
         langName: 'Java Script',
         information: [
-          'ADadA'
+            'ADadA'
         ],
         photoStyle: {
             width: '400px', /* Set the desired width */
             height: '400px'/* Set the desired height */
         }
     };
+
     const { lang } = useParams();
     const [languageParams, setLanguageParams] = useState(test);
+
     useEffect(() => {
         if (lang === 'csharp') {
             setLanguageParams(csharp);
@@ -39,8 +45,8 @@ export default function Language() {
             setLanguageParams(cplus);
         }
     }, [lang]);
-    console.log('params');
-    console.log(languageParams);
+
+
     const pathExercises = `/exer/${lang}`;
     return (
         <>
@@ -58,8 +64,8 @@ export default function Language() {
                         <h1 className='text-center m-4' style={{ color: '#71F483' }}>Примерни задачи</h1>
                         <Exercise />
                         <h1 className="text-center mb-4 text-white">
-                            Можете да намерите още задачи, {' '}
-                            <Link to={pathExercises} className="link" style={{ color: '#71F483' }}>ТУК</Link>
+                            Можете да намерите още задачи {' '}
+                            <Link to={pathExercises} onClick={onClickHandle} className="link" style={{ color: '#71F483' }}>ТУК</Link>
                         </h1>
                     </div>
                 </div>
