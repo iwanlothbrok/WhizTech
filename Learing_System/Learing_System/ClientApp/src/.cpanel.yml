@@ -2,6 +2,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/whiztech/public_html/
+    - export DEPLOYPATH=/home/whiztech/repositories/WhizTech 
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
