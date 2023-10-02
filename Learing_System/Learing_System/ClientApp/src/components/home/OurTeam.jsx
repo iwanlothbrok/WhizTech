@@ -21,7 +21,7 @@ const TeamComponent = () => {
                             </div>
                             <div className="text-center p-4">
                                 <h5 className="mb-0">Иван Иванов</h5>
-                                <small>Full-Stack Developer</small>
+                                <small>Fullstack Developer</small>
                             </div>
                         </div>
                     </div>

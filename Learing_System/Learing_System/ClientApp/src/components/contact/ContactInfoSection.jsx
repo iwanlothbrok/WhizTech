@@ -29,7 +29,7 @@ const ContactInfoSection = () => {
                                     </div>
                                     <div className='d-flex flex-column flex-md-row align-items-center'>
                                         <span className='p-2 p-md-4 h1'>Email: </span>
-                                        <a href='mailto:whiztech.team@gmail.com' className='p-2 p-md-4 h5' style={{ fontSize: '1.7rem', marginRight:'26px' }}>whiztech.team@gmail.com</a>
+                                        <a href='mailto:whiztech.team@gmail.com' className='p-2 p-md-4 h5' style={{ fontSize: '1.7rem', marginRight: '26px' }}>whiztech.team@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const ContactInfoSection = () => {
                                     </div>
                                     <div className='d-flex flex-column flex-md-row align-items-center'>
                                         <span className='p-2 p-md-4 h1'>Website: </span>
-                                        <a href='#' className='p-2 p-md-4 h2'>WhizTech.bg</a>
+                                        <a href='#' className='p-2 p-md-4 h2'>whiztechlessons.com</a>
                                     </div>
                                 </div>
                             </div>
