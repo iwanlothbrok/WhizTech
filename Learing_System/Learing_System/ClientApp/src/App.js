@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/style.css';
 import './styles/css/custom.css';
 import './styles/css/bootstrap.min.css';
@@ -16,6 +16,7 @@ import SelectedBlog from './components/blog/SelectedBlog';
 export default function App() {
   return (
     <div className="App">
+      {/* <Router basename="/"> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,8 +28,9 @@ export default function App() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:blogId" element={<SelectedBlog />} />
         <Route path="/*" element={<ErrorPage />} />
-
       </Routes>
+      {/* </Router> */}
+
     </div>
   );
 }

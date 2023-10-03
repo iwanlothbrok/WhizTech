@@ -14,7 +14,8 @@ const Footer = () => {
     }
 
     return (
-        <div className="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <div className="container-fluid text-light footer pt-5 wow fadeIn" style={{ background: '#232323' }} data-wow-delay="0.1s">
             <div className="container py-5">
                 <div className="row g-5">
                     <div className="col-lg-3 col-md-6">
@@ -31,7 +32,7 @@ const Footer = () => {
                         <p className="mb-2"><i className="fa fa-envelope me-3"></i>whiztech.team@gmail.com</p>
                         <div className="d-flex pt-2">
                             <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-linkedin-in"></i></a>
+                            <a className="btn btn-outline-light btn-social" href="https://www.instagram.com/whiztechlessons/?hl=en"><i className="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
@@ -55,13 +56,11 @@ const Footer = () => {
                 <div className="copyright">
                     <div className="row">
                         <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a className="border-bottom" href="#">WhizTech</a>, All Right Reserved.
-                            <a className="border-bottom m-2" href="https://htmlcodex.com">HTML Codex</a>
+                            &copy; <a className="border-bottom" href="#">Whiz Tech</a>, All Right Reserved.
                         </div>
                         <div className="col-md-6 text-center text-md-end">
                             <div className="footer-menu">
                                 <a href="">Home</a>
-                                <a href="">Cookies</a>
                             </div>
                         </div>
                     </div>
