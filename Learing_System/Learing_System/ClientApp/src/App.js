@@ -16,21 +16,19 @@ import SelectedBlog from './components/blog/SelectedBlog';
 export default function App() {
   return (
     <div className="App">
-      <Router basename="/WhizTech">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<ContactWithInformation />} />
-          <Route path="/error" element={<ErrorPage />} />
-          <Route path="/exer/:lang" element={<Exercise />} />
-          <Route path="/study/:lang" element={<Language />} />
-          <Route path="/cal" element={<Calendar />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:blogId" element={<SelectedBlog />} />
-          <Route path="/*" element={<ErrorPage />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactWithInformation />} />
+        <Route path="/error" element={<ErrorPage />} />
+        <Route path="/exer/:lang" element={<Exercise />} />
+        <Route path="/study/:lang" element={<Language />} />
+        <Route path="/cal" element={<Calendar />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:blogId" element={<SelectedBlog />} />
+        <Route path="/*" element={<ErrorPage />} />
+      </Routes>
 
-    </div>
+    </div >
   );
 }
