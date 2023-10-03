@@ -19,7 +19,7 @@ function NavMenu() {
 
     // Check the initial screen size
     handleWindowSizeChange();
-
+    
     // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);

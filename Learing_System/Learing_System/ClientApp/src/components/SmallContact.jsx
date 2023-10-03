@@ -6,7 +6,7 @@ import '../styles/css/btn.css';
 export default function SmallContact() {
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
     const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
-
+    const [error, setError] = useState('')
     const [formData, setFormData] = useState({
         FullName: '',
         Email: '',
@@ -31,13 +31,18 @@ export default function SmallContact() {
         // Check if all fields are completed
         if (
             formData.FullName &&
-            validateEmail(formData.Email) &&
             formData.PhoneNumber &&
             formData.Description
         ) {
+
+            if (!validateEmail(formData.Email)) {
+                // Email is invalid, set the error message
+                setError('Email is invalid. Please enter a valid email address.');
+                return;
+            }
+
             const result = await contactSubmitHandle(formData);
-            console.log(result);
-            console.log('in if');
+
             if (result.success) {
                 // CLEARING THE STATE
                 setFormData({
@@ -88,7 +93,7 @@ export default function SmallContact() {
                                         required
                                     />
                                     {submitButtonClicked && !formData.FullName && (
-                                        <div className="invalid-feedback">Полето е задължително!</div>
+                                        <div className="alert alert-danger">Полето е задължително!</div>
                                     )}
                                 </div>
                                 <div className="col-md-7 mb-1 pb-3">
@@ -103,7 +108,10 @@ export default function SmallContact() {
                                         required
                                     />
                                     {submitButtonClicked && !formData.Email && (
-                                        <div className="invalid-feedback">Полето е задължително!</div>
+                                        <div className="alert alert-danger">Полето е задължително!</div>
+                                    )}
+                                    {error && (
+                                        <div className="alert alert-danger">{error}</div>
                                     )}
                                 </div>
                             </div>
@@ -121,7 +129,7 @@ export default function SmallContact() {
                                         required
                                     />
                                     {submitButtonClicked && !formData.PhoneNumber && (
-                                        <div className="invalid-feedback">Полето е задължително!</div>
+                                        <div className="alert alert-danger">Полето е задължително!</div>
                                     )}
                                 </div>
                             </div>
@@ -138,7 +146,7 @@ export default function SmallContact() {
                                     required
                                 />
                                 {submitButtonClicked && !formData.Description && (
-                                    <div className="invalid-feedback">Полето е задължително!</div>
+                                    <div className="alert alert-danger">Полето е задължително!</div>
                                 )}
                             </div>
                             <div className="text-center">
