@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from "react-scroll";
 import js from '../../styles/js-logo.png';
 import csharp from '../../styles/Csharp_Logo.png';
 import cpp from '../../styles/ISO_C++_Logo.svg.png';
 import java from '../../styles/java-logo.webp';
 import sql from '../../styles/sql.png';
 function Technologies() {
+    const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+
     return (
         <div className="container mt-5">
             <div className="row justify-content-center align-items-center">
@@ -30,19 +33,19 @@ function Technologies() {
                 <div className="col-md-6 text-center">
                     <div className="logo-container">
                         <Link to="/study/javascript">
-                            <img src={js} alt="JavaScript" style={{ width: '70px' }} className="logo m-1" />
+                            <img src={js} alt="JavaScript" onClick={onClickHandle} style={{ width: '70px' }} className="logo m-1" />
                         </Link>
                         <Link to="/study/csharp">
-                            <img src={csharp} alt="C#" style={{ width: '120px' }} className="logo m-1" />
+                            <img src={csharp} alt="C#" onClick={onClickHandle} style={{ width: '120px' }} className="logo m-1" />
                         </Link>
                         <Link to="/study/cplus">
-                            <img src={cpp} alt="C++" style={{ width: '70px' }} className="logo m-1" />
+                            <img src={cpp} alt="C++" onClick={onClickHandle} style={{ width: '70px' }} className="logo m-1" />
                         </Link>
                         <Link to="/study/java">
-                            <img src={java} alt="Java" style={{ width: '60px' }} className="logo m-3" />
+                            <img src={java} alt="Java" onClick={onClickHandle} style={{ width: '60px' }} className="logo m-3" />
                         </Link>
                         <Link to="/study/sql">
-                            <img src={sql} alt="Java" style={{ width: '70px' }} className="logo m-3" />
+                            <img src={sql} alt="Java" onClick={onClickHandle} style={{ width: '70px' }} className="logo m-3" />
                         </Link>
                     </div>
                 </div>

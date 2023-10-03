@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 export default function BlogPost({ blog }) {
+    const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+
     return (
         <div className="blog-grid text-white">
             <div className="blog-grid-img position-relative">
@@ -9,7 +12,7 @@ export default function BlogPost({ blog }) {
             </div>
             <div className="blog-grid-text p-4">
                 <h3 className="h2 mb-3" >
-                    <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
+                    <Link onClick={onClickHandle} to={`/blog/${blog.id}`}>{blog.title}</Link>
                 </h3>
                 <p style={{ fontSize: '20px' }}>{blog.content}</p>
                 <div className="meta meta-style2 d-flex flex-column justify-content-end">
