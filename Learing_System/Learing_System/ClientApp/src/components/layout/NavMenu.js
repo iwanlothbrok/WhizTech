@@ -42,12 +42,17 @@ function NavMenu() {
   const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
-      <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <div className="container">
+  <div className="row align-items-center">
+    <div className="col-6 col-lg-3">
+      <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center">
         <h2 className="m-0 text-alert">
           <img src={logo} alt="Logo" className="navbar-logo m-3" width="70" height="70" />
           Whiz Tech
         </h2>
       </Link>
+    </div>
+    <div className="col-6 d-lg-none d-flex justify-content-end">
       <button
         type="button"
         className="navbar-toggler me-4"
@@ -57,6 +62,10 @@ function NavMenu() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+    </div>
+  </div>
+</div>
+
       <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">
           <Link to="/" className="nav-item nav-link active" onClick={onClickHandle}>
