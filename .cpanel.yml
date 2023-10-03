@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/whiztech/public_html/
-    - /bin/cp -R Learing_System/Learing_System/ClientApp/public/* $DEPLOYPATH
+    - /bin/cp -R Learing_System/Learing_System/ClientApp/build/* $DEPLOYPATH
