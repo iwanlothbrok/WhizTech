@@ -4,7 +4,7 @@
 <head>
   <!-- <base href="https://whiztechlessons.com/" /> -->
   <meta name="theme-color" content="#232323">
-  <title>Частни и индивидуални уроци по програмиране и софтуер</title>
+  <title>Частни и индивидуални уроци по програмиране</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="keywords"
@@ -35,7 +35,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <meta name="google-site-verification" content="8mQq0U1F8vMe83fmXDdTXd3RF5VIngGTaZaXRVSbYxY" />
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Libraries Stylesheet -->
@@ -49,7 +49,22 @@
 
   <!-- Template Stylesheet -->
   <link href="../src/styles/style.css" rel="stylesheet">
+
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+  
 </head>
+
 <style>
   #root {
     /* background-color: #0000; */
@@ -71,6 +86,12 @@
     <i class="bi bi-arrow-up"></i>
   </a>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Start Single Page Apps for GitHub Pages -->
+
+  <!-- End Single Page Apps for GitHub Pages -->
+
+
 
   <script>
     $(document).ready(function () {
