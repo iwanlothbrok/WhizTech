@@ -19,7 +19,12 @@ function NavMenu() {
 
     // Check the initial screen size
     handleWindowSizeChange();
-    
+
+    if (window.innerWidth <= 768) {
+      setIsContentVisible(false);
+      console.log('mob');
+    }
+
     // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
@@ -32,6 +37,7 @@ function NavMenu() {
   };
   const toggleContent = () => {
     setIsContentVisible(!isContentVisible);
+    console.log('in');
   };
   const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
   return (
@@ -127,7 +133,7 @@ function NavMenu() {
             Контакти
           </Link> */}
           {isMobile
-            ? (<Link to="/contact" onClick={onClickHandle}  className="nav-item nav-link">
+            ? (<Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
               <strong>Контакти</strong>
             </Link>)
             : (<Link
