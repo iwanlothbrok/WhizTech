@@ -19,12 +19,12 @@ export default function BlogList() {
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
-   
+
     return (
         <div className="container mt-5">
             <div className="row">
                 {currentBlogData.map((blog, index) => (
-                    <div key={index} className="col-10 col-md-6 mt-5">
+                    <div key={index} className="col-12 col-md-6 mt-5">
                         <BlogPost blog={blog} />
                     </div>
                 ))}

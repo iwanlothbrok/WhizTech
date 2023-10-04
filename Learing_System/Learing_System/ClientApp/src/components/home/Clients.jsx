@@ -34,8 +34,8 @@ const Clients = () => {
 
 
     const carouselStyle = {
-        boxShadow: '5px 5px 10px rgba(255, 0, 0, 0.5);' /* Change the color here */
-
+        boxShadow: '5px 5px 10px rgba(255, 0, 0, 0.5);', /* Change the color here */
+        background: 'white'
     }
     useEffect(() => {
         if (window.$) {
@@ -45,16 +45,16 @@ const Clients = () => {
                 nav: false,
                 dots: true,
                 autoplay: true,
-                autoplayTimeout: 4000,
+                autoplayTimeout:5500,
 
                 responsive: {
                     0: {
                         items: 1
                     },
-                    300: {
+                    450: {
                         items: 2
                     },
-                    600: {
+                    900: {
                         items: 3
                     }
                 }
@@ -70,7 +70,6 @@ const Clients = () => {
                     <h2 className="mb-5 text-white">Доволни клиенти</h2>
                 </div>
                 <div className="owl-carousel testimonial-carousel position-relative" style={carouselStyle}>
-
                     {clients.map((testimonial, index) => (
                         <Client
                             key={index}
@@ -83,3 +82,4 @@ const Clients = () => {
     );
 }
 export default Clients;
+
