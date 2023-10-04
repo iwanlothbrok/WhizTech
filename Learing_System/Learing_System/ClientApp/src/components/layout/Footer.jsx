@@ -31,7 +31,7 @@ const Footer = () => {
                         <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+359 88 904 4614</p>
                         <p className="mb-2"><i className="fa fa-envelope me-3"></i>whiztech.team@gmail.com</p>
                         <div className="d-flex pt-2">
-                            <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
+                            <a className="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61551909726471"><i className="fab fa-facebook-f"></i></a>
                             <a className="btn btn-outline-light btn-social" href="https://www.instagram.com/whiztechlessons/?hl=en"><i className="fab fa-instagram"></i></a>
                         </div>
                     </div>
