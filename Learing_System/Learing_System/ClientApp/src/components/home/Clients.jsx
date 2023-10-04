@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import clientPhoto1 from '../../styles/photos/client002.png'
+import zd from '../../styles/photos/zdrawko.jpg'
 import clientPhoto2 from '../../styles/photos/vankata1.jpg'
 import clientPhoto3 from '../../styles/photos/yanislav.png'
 import client04 from '../../styles/photos/clientLiubcho.jpg';
@@ -9,9 +9,6 @@ import 'animate.css/animate.min.css';
 import Client from './Client';
 
 const Clients = () => {
-
-    // const [clients, setClients] = useState([]);
-
     const clients = [
         {
             img: client04,
@@ -27,11 +24,16 @@ const Clients = () => {
         }, {
             img: clientPhoto3,
             fullName: 'Янислав Димитров',
-            profession: 'Студент в Software University',
-            feedback: 'Преподавателят ми в "Whiz Tech" не само ме научи как да пиша код, но и ме насърчи да бъда креативен и да търся нови решения. Без съмнение, неговите уроци са били ключов фактор за моите успехи в света на програмирането. Благодаря му за всичко!'
+            profession: 'Ученик в Езикова Гимназия',
+            feedback: 'Преподавателят ми в "Whiz Tech" не само ме научи как да пиша код, но и ме насърчи да бъда креативен и да търся нови решения. Без съмнение, неговите уроци бяха ключов фактор за моите успехи учебните часове. Благодаря му за всичко!'
+        },
+        {
+            img: zd,
+            fullName: 'Здравко Караджов',
+            profession: 'Студент по "Електротехника"',
+            feedback: 'След уроците се справих успешно с изпитите по C++, получавайки добри оценки и придобивайки ценни умения в програмирането. Бих препоръчал уроците на всеки!'
         },
     ]
-
 
     const carouselStyle = {
         boxShadow: '5px 5px 10px rgba(255, 0, 0, 0.5);', /* Change the color here */
@@ -45,7 +47,7 @@ const Clients = () => {
                 nav: false,
                 dots: true,
                 autoplay: true,
-                autoplayTimeout:5500,
+                autoplayTimeout: 5500,
 
                 responsive: {
                     0: {

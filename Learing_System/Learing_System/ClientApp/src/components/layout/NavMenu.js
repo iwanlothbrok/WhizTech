@@ -37,7 +37,7 @@ function NavMenu() {
       if (isClicked) {
         setIsClicked(false);
       }
-      else if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      else if (window.scrollY > lastScrollY && isMobile) { // if scroll down hide the navbar
         setIsContentVisible(false);
       }
       // remember current page location to use in the next move
