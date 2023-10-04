@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../styles/bkg01.avif'; // Adjust the path based on your file structure
 import { animateScroll as scroll } from "react-scroll";
@@ -6,7 +6,16 @@ import { animateScroll as scroll } from "react-scroll";
 export default function HomePage() {
 
     const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        function handleWindowSizeChange() {
+            const isMobile = window.innerWidth <= 768;
+            setIsMobile(isMobile);
+        }
 
+        handleWindowSizeChange();
+
+    }, []);
     const sectionStyle = {
         backgroundImage: `url(${img})`, // Use the imported background image
         backgroundSize: 'cover', // Adjust this according to your preference
@@ -20,7 +29,9 @@ export default function HomePage() {
     };
     const btnStyle = {
         borderColor: 'black',
-        borderRadius: '30px'
+        borderRadius: '30px',
+        padding: isMobile ? '2.7rem' : '3rem'
+
     }
 
     return (
@@ -33,10 +44,10 @@ export default function HomePage() {
 
                 <div className="button-container m-5 text-center p-2">
                     <Link to='/about' >
-                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary m-2 p-5 btn-lg flex-fill custom-button">За Нас</button>
+                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary m-2 btn-lg flex-fill custom-button">За Нас</button>
                     </Link>
                     <Link to='/contact'>
-                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary p-5 btn-lg flex-fill custom-button">Контакти</button>
+                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary btn-lg flex-fill custom-button">Контакти</button>
                     </Link>
                 </div>
             </div>
