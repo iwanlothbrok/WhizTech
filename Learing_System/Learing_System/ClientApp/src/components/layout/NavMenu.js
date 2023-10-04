@@ -7,17 +7,16 @@ function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const [isMobile, setIsMobile] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     function handleWindowSizeChange() {
-      const isMobile = window.innerWidth <= 768; // Adjust the threshold as needed
+      const isMobile = window.innerWidth <= 768;
       setIsMobile(isMobile);
     }
 
-    // Add an event listener to check if the screen size changes
     window.addEventListener('resize', handleWindowSizeChange);
 
-    // Check the initial screen size
     handleWindowSizeChange();
 
     if (window.innerWidth <= 768) {
@@ -25,46 +24,76 @@ function NavMenu() {
       console.log('mob');
     }
 
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
     };
   }, []);
 
+
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (isClicked) {
+        setIsClicked(false);
+      }
+      else if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setIsContentVisible(false);
+      }
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY, isClicked]);
+
+
   const toggleDropdown = (e) => {
     e.preventDefault();
     setIsOpen(!isOpen);
   };
+
   const toggleContent = () => {
-    setIsContentVisible(!isContentVisible);
-    console.log('in');
+    if (isMobile) {
+      setIsClicked(true);
+      setIsContentVisible(!isContentVisible);
+    }
   };
   const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
       <div className="container">
-  <div className="row align-items-center">
-    <div className="col-6 col-lg-3">
-      <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center">
-        <h2 className="m-0 text-alert">
-          <img src={logo} alt="Logo" className="navbar-logo m-3" width="70" height="70" />
-          Whiz Tech
-        </h2>
-      </Link>
-    </div>
-    <div className="col-6 d-lg-none d-flex justify-content-end">
-      <button
-        type="button"
-        className="navbar-toggler me-4"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-        onClick={toggleContent}
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</div>
+        <div className="row align-items-center">
+          <div className="col-6 col-lg-3">
+            <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center">
+              <h2 className="m-0 text-alert">
+                <img src={logo} alt="Logo" className="navbar-logo m-3" width="70" height="70" />
+                Whiz Tech
+              </h2>
+            </Link>
+          </div>
+          <div className="col-6 d-lg-none d-flex justify-content-end">
+            <button
+              type="button"
+              className="navbar-toggler me-4"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+              onClick={toggleContent}
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">

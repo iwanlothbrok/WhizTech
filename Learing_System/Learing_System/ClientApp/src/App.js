@@ -26,7 +26,7 @@ export default function App() {
         <Route path="/cal" element={<Calendar />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:blogId" element={<SelectedBlog />} />
-        <Route path="/*" element={<ErrorPage />} />
+        {/* <Route path="/*" element={<ErrorPage />} /> */}
       </Routes>
 
     </div >
