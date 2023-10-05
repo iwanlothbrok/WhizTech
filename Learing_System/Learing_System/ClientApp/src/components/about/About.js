@@ -13,7 +13,6 @@ const About = () => {
   return (
     <div>
       <Header />
-      {/* <Content /> */}
       <Technologies />
       <Information />
       <OurTeam />

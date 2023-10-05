@@ -5,7 +5,7 @@ const SingleExercise = ({ exercises }) => {
         <div className="exercise-list">
             {exercises.map((exercise, index) => (
                 <div key={exercise.id} className="mb-3">
-                    <h4 className="exercise-title" style={{ color: '#71F483' }}>Задача {exercise.id}</h4>
+                    <h4 className="exercise-title" style={{ color: 'white' }}>Задача {exercise.id}</h4>
                     <p style={{ fontSize: '20px', color: '#71F483' }} className="exercise-question" >{exercise.question}</p>
                     <p style={{ fontSize: '15px' }} className="exercise-question text-white">Вход: <br /><strong>{exercise.firstInput}<br />{exercise.secondInput}</strong></p>
 

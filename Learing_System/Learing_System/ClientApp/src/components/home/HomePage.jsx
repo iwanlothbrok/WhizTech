@@ -4,9 +4,9 @@ import img from '../../styles/bkg01.avif'; // Adjust the path based on your file
 import { animateScroll as scroll } from "react-scroll";
 
 export default function HomePage() {
+    const [isMobile, setIsMobile] = useState(false);
 
     const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
-    const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         function handleWindowSizeChange() {
             const isMobile = window.innerWidth <= 768;

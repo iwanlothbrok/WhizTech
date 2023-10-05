@@ -1,4 +1,4 @@
-import img from '../../../styles/Csharp_Logo.png';
+import img from '../../../styles/photos/csharpLogoNew.png';
 
 const csharp = {
     image: img,
@@ -12,7 +12,8 @@ const csharp = {
         "Изобилни перспективи за работа в различни роли, свързани с разработването на софтуер.",
     ],
     photoStyle: {
-        width: '500px', /* Set the desired width */
+        width: '400px',
+        height: '400px' /* Set the desired width */
     }
 }
 

@@ -19,7 +19,7 @@ const JavaScript = {
     ],
     photoStyle: {
         width: '400px', /* Set the desired width */
-        height: '400px'/* Set the desired height */
+        height: '400px'/* Set the desired height */,
     }
 }
 
