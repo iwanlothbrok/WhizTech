@@ -77,7 +77,7 @@ function NavMenu() {
             <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center">
               <h2 className="m-0 text-alert">
                 <img src={logo} alt="Logo" className="navbar-logo m-3" width="70" height="70" />
-                Whiz Tech
+                WhizTech
               </h2>
             </Link>
           </div>
@@ -167,19 +167,19 @@ function NavMenu() {
           <Link to="/blog" onClick={onClickHandle} className="nav-item nav-link">
             Блог
           </Link>
-          {/* <Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
+          <Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
             Контакти
-          </Link> */}
+          </Link>
           {isMobile
-            ? (<Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
-              <strong>Контакти</strong>
+            ? (<Link to="/calendar" onClick={onClickHandle} className="nav-item nav-link">
+              <strong>Запази Урок</strong>
             </Link>)
             : (<Link
-              to="/contact"
+              to="/calendar"
               className="btn bg-black text-white px-lg-5 d-none d-lg-block text-center" // Add "text-center" class here
               onClick={onClickHandle}
             >
-              <p className="mt-2" style={{ fontSize: '20px' }}>Контакти</p> {/* Add classes for centering and font size */}
+              <p className="" style={{ fontSize: '20px' }}>Запази Урок</p> {/* Add classes for centering and font size */}
             </Link>)}
         </div>
       </div>

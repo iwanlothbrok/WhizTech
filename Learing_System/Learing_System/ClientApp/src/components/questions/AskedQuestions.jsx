@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane,faList,faMoneyCheck, faCoins, faRocket, faHome, faBookOpen,faClock,faComputer } from '@fortawesome/free-solid-svg-icons';
-import { faPaperPlane as farPaperPlane } from '@fortawesome/free-regular-svg-icons';
-
+import { faPaperPlane, faList, faMoneyCheck, faCoins, faRocket, faHome, faBookOpen, faClock, faComputer } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 export default function AskedQuestions() {
 
@@ -69,11 +68,12 @@ export default function AskedQuestions() {
                 <div className="col-md-6 col-lg-4 mb-4">
                     <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPaperPlane} style={questionStyle} className="pe-2" /> Как да се свържим с Вас?</h6>
                     <p style={answerStyle}>
-                        Можете да се свържете с нас чрез изпращане на имейл в секция "Контакти" в сайта или да ни се обадите на <strong>+359 88 904 4614</strong>.
+                        Можете да се свържете с нас чрез изпращане на имейл в секция "Контакти" в сайта, да ни се обадите на <strong>+359 88 904 4614</strong>. <br />Или запазете час за урок на момента {' '}
+                        <Link to="/calendar" className="link" style={{ color: '#71F483' }}>ТУК</Link>.
                     </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faList } style={questionStyle} className="pe-2" /> Какви са изискванията за участие в уроците?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faList} style={questionStyle} className="pe-2" /> Какви са изискванията за участие в уроците?</h6>
                     <p style={answerStyle}>
                         За участие в уроците ви е необходим компютър или лаптоп с интернет връзка. Определени уроци може да изискват инсталиране на специфичен софтуер, който ще бъде предоставен предварително.                    </p>
                 </div>

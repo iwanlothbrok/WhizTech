@@ -23,8 +23,8 @@ function Technologies() {
 
                         Не се колебайте повече, започнете пътя си към успешна кариера в областта на програмирането с нас.
                         Свържете се с нас и се запишете за частни уроци по програмиране, които ще ви осигурят необходимите знания и увереност. <p style={{ fontSize: '30px' }} className="text-center mb-4 text-white">
-                            Запиши се {' '}
-                            <Link to="/contact" className="link" style={{ color: '#71F483' }}>ТУК</Link>
+                            Запиши се за първи урок {' '}
+                            <Link to="/calendar" className="link" style={{ color: '#71F483' }}>ТУК</Link>
                         </p>
                     </p>
                 </div>
