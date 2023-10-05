@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { FaCheck } from 'react-icons/fa'; // Import the FontAwesome checkmark icon
 
 const LanguageInformation = ({ lang }) => {
-    console.log('langgg');
-    console.log(lang);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        function handleWindowSizeChange() {
+            const isMobile = window.innerWidth <= 768;
+            setIsMobile(isMobile);
+        }
+
+        handleWindowSizeChange();
+    }, []);
+    const computerStyle = {
+      marginTop:'20px',
+      marginBottom: '20px'
+    }
+    const mobileStyle = {
+        marginRight: '20px', marginTop: '20px'
+    }
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6" style={isMobile ? mobileStyle : computerStyle}>
                     <img
                         src={lang.image}
-                        alt="Your Photo"
-                        className="img-fluid m-4"
+                        alt={lang.langName}
+                        className="img-fluid"
                         style={lang.photoStyle}
                     />
                 </div>
