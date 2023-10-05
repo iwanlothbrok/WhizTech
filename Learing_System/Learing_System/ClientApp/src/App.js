@@ -23,10 +23,9 @@ export default function App() {
         <Route path="/error" element={<ErrorPage />} />
         <Route path="/exer/:lang" element={<Exercise />} />
         <Route path="/study/:lang" element={<Language />} />
-        <Route path="/cal" element={<Calendar />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:blogId" element={<SelectedBlog />} />
-        {/* <Route path="/*" element={<ErrorPage />} /> */}
       </Routes>
 
     </div >

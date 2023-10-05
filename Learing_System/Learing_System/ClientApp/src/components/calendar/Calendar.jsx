@@ -1,58 +1,26 @@
-// import * as React from 'react';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
-// import Button from '@mui/material/Button'; // Import the Button component
+import React from 'react';
+import { InlineWidget } from "react-calendly";
 
 
 export default function Calendar() {
-    // const [selectedDate, setSelectedDate] = React.useState(null); // State to store the selected date
-    // const [message, setMessage] = React.useState(''); // State to store the success message
-
-    // const handleDateChange = (date) => {
-    //     setSelectedDate(date);
-    // };
-
-    // const handleOKClick = () => {
-    //     // Check if a date is selected before sending to the API
-    //     if (selectedDate) {
-    //         // Replace 'your-api-endpoint' with your actual API endpoint
-    //         fetch('your-api-endpoint', {
-    //             method: 'POST',
-    //             body: JSON.stringify({ date: selectedDate }),
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //         })
-    //             .then(response => {
-    //                 if (response.ok) {
-    //                     setMessage('Event information sent successfully');
-    //                 } else {
-    //                     setMessage('Error sending event information');
-    //                 }
-    //             })
-    //             .catch(error => {
-    //                 setMessage('Error sending event information');
-    //             });
-    //     } else {
-    //         setMessage('Please select a date before clicking OK');
-    //     }
-    // };
-
-    // return (
-    //     <LocalizationProvider dateAdapter={AdapterDayjs}>
-    //         <StaticDatePicker
-    //             orientation="landscape"
-    //             value={selectedDate}
-    //             onChange={handleDateChange}
-    //         />
-    //         <Button onClick={handleOKClick} variant="contained" color="primary">
-    //             OK
-    //         </Button>
-    //         <p>{message}</p>
-    //     </LocalizationProvider>
-    // );
+    const calendlyEmbed = {
+        width: '100%',/* Set the desired width */
+        height: '750px', /* Set the desired height */
+        overflow: 'hidden' /* Hide the scrollbar */
+    }
     return (
-        <div>asd</div>
-    )
+        <div>
+            <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 className="mt-4" style={{ color: '#71F483', fontSize: '2.5rem', fontFamily: 'cursive' }}>
+                    🚀 Запази Урок и Прелети През Знанието! 📚
+                </h1>
+            </div>
+            <InlineWidget
+                text="Click here to schedule!"
+                textColor="#ffffff"
+                color="#00a2ff"
+                styles={calendlyEmbed}
+                url="https://calendly.com/whiztech-team/meeting" />
+        </div>
+    );
 }
