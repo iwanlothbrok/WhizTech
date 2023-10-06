@@ -5,7 +5,7 @@ import BlogPost from "./BlogPost";
 import blogData from "./blogDb/blogData";
 export default function BlogList() {
 
-    const itemsPerPage = 6; // Number of blog posts per page
+    const itemsPerPage = 4; // Number of blog posts per page
     const [currentPage, setCurrentPage] = useState(1);
 
     // Calculate the index range for the current page
@@ -13,13 +13,13 @@ export default function BlogList() {
     const endIndex = startIndex + itemsPerPage;
 
     // Filter the blog data for the current page
-    const currentBlogData = blogData.slice(startIndex, endIndex);
+    const currentBlogData = blogData.slice(startIndex, endIndex).sort((a, b) => b.id - a.id);
 
     // Function to handle page navigation
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
-
+    
     return (
         <div className="container mt-5">
             <div className="row">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ContactInfoSection from './contact/ContactInfoSection'
 import { contactSubmitHandle } from '../firebaseConfig'
 import '../styles/css/btn.css';
 
@@ -57,8 +56,6 @@ export default function SmallContact() {
             } else {
                 console.log('Form submission failed');
             }
-        } else {
-            console.log('Please complete all fields before submitting.');
         }
 
         console.log('After setFormData');

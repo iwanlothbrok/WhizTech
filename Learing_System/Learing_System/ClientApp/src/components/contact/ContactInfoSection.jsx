@@ -81,7 +81,7 @@ const ContactInfoSection = () => {
                                     </div>
                                     <div className='d-flex flex-column flex-md-row align-items-center'>
                                         <span className='p-2 p-md-4 h1'>Instagram: </span>
-                                        <a href='https://www.instagram.com/whiztechlessons/?hl=en' style={phoneStyle} className='p-2 p-md-4 h5'>whiztechlessons</a>
+                                        <a href='https://www.instagram.com/whiztechlessons/?hl=en' target='_blank' style={phoneStyle} className='p-2 p-md-4 h5'>whiztechlessons</a>
                                     </div>
                                 </div>
                             </div>
