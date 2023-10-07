@@ -39,7 +39,7 @@ export default function HomePage() {
             <div className="photo-container d-flex flex-column justify-content-center align-items-center">
                 <div className="centered-text text-center p-4 bg-black bg-opacity-75" style={{ borderRadius: '30px' }}>
                     <h2 className="display-2 mb-0 font-family-roboto text-white" ><strong>Индивидуални уроци по програмиране</strong></h2>
-                    <h4 className="mb-0 font-family-roboto" style={{ color: '#71F483' }}><strong>Първи безплатен урок</strong>, бъди смел, направи първата крачка, ние ще те подкрепим.</h4>
+                    <h4 className="mb-0 font-family-roboto" style={{ color: '#71F483' }}>Бъди смел, постави началото! Ние ще те подкрепим с <strong>първи безплатен урок</strong>.</h4>
                 </div>
 
                 <div className="button-container m-5 text-center p-2">
