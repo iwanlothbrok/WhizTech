@@ -8,7 +8,9 @@ export default function BlogPost({ blog }) {
     return (
         <div className="blog-grid text-white">
             <div className="blog-grid-img position-relative">
-                <img alt="img" src={blog.imageSrc} className="img-fluid" />
+                <Link onClick={onClickHandle} to={`/blog/${blog.id}`}>
+                    <img alt="img" src={blog.imageSrc} className="img-fluid" />
+                </Link>
             </div>
             <div className="blog-grid-text p-4">
                 <h3 className="h2 mb-3" >
