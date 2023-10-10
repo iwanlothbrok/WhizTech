@@ -1,28 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
 function ServiceSection() {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => {
-      hiddenElements.forEach((element) => {
-        observer.unobserve(element);
-      });
-    };
-  }, []);
   return (
     <div className='hidden' style={{ backgroundColor: '#232323' }}>
       <div className="container-xxl py-5">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/style.css';
 import './styles/css/custom.css';
@@ -13,7 +13,16 @@ import BlogList from './components/blog/BlogList';
 import Language from './components/languages/Language';
 import ContactWithInformation from './components/ContactWithInformation'
 import SelectedBlog from './components/blog/SelectedBlog';
+import fadeInAnimation from './animation/fadeInAnimation';
 export default function App() {
+  useEffect(() => {
+    // Define the elements you want to animate
+    const elementsToAnimate = document.querySelectorAll('.hidden');
+
+    // Call the fadeInAnimation function with the elements
+    fadeInAnimation(elementsToAnimate);
+  }, []); // 
+
   return (
     <div className="App">
       <Routes>
