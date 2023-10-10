@@ -66,7 +66,7 @@ export default function AskedQuestions() {
                     </p>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4 question hidden">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPaperPlane} style={questionStyle} className="pe-2" /> Как да се свържим с Вас?</h6>
+                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPaperPlane} style={questionStyle} className="pe-2" /> Как да се свържем с Вас?</h6>
                     <p style={answerStyle}>
                         Можете да се свържете с нас чрез изпращане на имейл в секция "Контакти" в сайта, да ни се обадите на <strong>+359 88 904 4614</strong>. <br />Или запазете час за урок на момента {' '}
                         <Link to="/calendar" className="link" style={{ color: '#71F483' }}>ТУК</Link>.
