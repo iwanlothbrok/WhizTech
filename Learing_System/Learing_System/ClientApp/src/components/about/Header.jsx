@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <div>
             <div className="container-fluid bg-primary py-5 mb-5 page-header">
-                <div className="container py-5">
+                <div className="container py-5 hidden">
                     <div className="row justify-content-center">
                         <div className="col-lg-10 text-center">
                             <h1 className="display-3 text-white animated slideInDown">За Нас</h1>

@@ -7,8 +7,16 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel'; // Import Owl Carousel
 import 'animate.css/animate.min.css';
 import Client from './Client';
+import fadeInAnimation from '../../animation/fadeInAnimation';
 
 const Clients = () => {
+    useEffect(() => {
+        // Define the elements you want to animate
+        const elementsToAnimate = document.querySelectorAll('.hidden');
+
+        // Call the fadeInAnimation function with the elements
+        fadeInAnimation(elementsToAnimate);
+    }, []); // 
     const clients = [
         {
             img: client04,
@@ -67,7 +75,7 @@ const Clients = () => {
 
     return (
         <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div className="container">
+            <div className="container hidden">
                 <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h2 className="mb-5 text-white">Доволни клиенти</h2>
                 </div>

@@ -10,7 +10,7 @@ function Technologies() {
     const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 hidden">
             <div className="row justify-content-center align-items-center">
                 <div className="col-md-6 text-center mb-4 text-white">
                     <h1>Индивидуални уроци</h1>
@@ -33,19 +33,19 @@ function Technologies() {
                 <div className="col-md-6 text-center">
                     <div className="logo-container">
                         <Link to="/study/javascript">
-                            <img src={js} alt="JavaScript" onClick={onClickHandle} style={{ width: '70px' }} className="logo m-1" />
+                            <img src={js} alt="JavaScript" onClick={onClickHandle} style={{ width: '70px' }} className="logo hidden m-1" />
                         </Link>
                         <Link to="/study/csharp">
-                            <img src={csharp} alt="C#" onClick={onClickHandle} style={{ width: '120px' }} className="logo m-1" />
+                            <img src={csharp} alt="C#" onClick={onClickHandle} style={{ width: '120px' }} className="logo hidden m-1" />
                         </Link>
                         <Link to="/study/cplus">
-                            <img src={cpp} alt="C++" onClick={onClickHandle} style={{ width: '70px' }} className="logo m-1" />
+                            <img src={cpp} alt="C++" onClick={onClickHandle} style={{ width: '70px' }} className="logo hidden m-1" />
                         </Link>
                         <Link to="/study/java">
-                            <img src={java} alt="Java" onClick={onClickHandle} style={{ width: '60px' }} className="logo m-3" />
+                            <img src={java} alt="Java" onClick={onClickHandle} style={{ width: '60px' }} className="logo hidden m-3" />
                         </Link>
                         <Link to="/study/sql">
-                            <img src={sql} alt="Java" onClick={onClickHandle} style={{ width: '70px' }} className="logo m-3" />
+                            <img src={sql} alt="Java" onClick={onClickHandle} style={{ width: '70px' }} className="logo hidden m-3" />
                         </Link>
                     </div>
                 </div>
