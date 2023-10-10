@@ -80,3 +80,27 @@ code {
   transition-delay: 1000ms;
 }
 
+/* VIDEO */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5;
+  left: 0;
+  background-color: rgba(0, 0, 0, .2);
+}
