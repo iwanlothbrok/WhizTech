@@ -15,14 +15,6 @@ import ContactWithInformation from './components/ContactWithInformation'
 import SelectedBlog from './components/blog/SelectedBlog';
 import fadeInAnimation from './animation/fadeInAnimation';
 export default function App() {
-  useEffect(() => {
-    // Define the elements you want to animate
-    const elementsToAnimate = document.querySelectorAll('.hidden');
-
-    // Call the fadeInAnimation function with the elements
-    fadeInAnimation(elementsToAnimate);
-  }, []); // 
-
   return (
     <div className="App">
       <Routes>
