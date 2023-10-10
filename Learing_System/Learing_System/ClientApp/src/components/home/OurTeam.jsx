@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import img from '../../styles/photos/imgProfile.jpg'
+import fadeInAnimation from '../../animation/fadeInAnimation';
 const TeamComponent = () => {
+    useEffect(() => {
+        // Define the elements you want to animate
+        const elementsToAnimate = document.querySelectorAll('.hidden');
+
+        // Call the fadeInAnimation function with the elements
+        fadeInAnimation(elementsToAnimate);
+    }, []);
+
     return (
-        <div className="container-xxl py-5 ">
+        <div className="container-xxl py-5">
             <div className="container">
                 <div className="row g-4">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h2 className="mb-5 text-white">Лектори</h2>
                     </div>
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div className="team-item bg-light">
+                        <div className="team-item bg-light icon hidden">
                             <div className="overflow-hidden">
                                 <img className="img-fluid" src={img} alt="" />
                             </div>

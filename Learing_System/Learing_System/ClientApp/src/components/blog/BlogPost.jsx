@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-
+import fadeInAnimation from "../../animation/fadeInAnimation";
 export default function BlogPost({ blog }) {
     const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+    useEffect(() => {
+        // Define the elements you want to animate
+        const elementsToAnimate = document.querySelectorAll('.hidden');
+
+        // Call the fadeInAnimation function with the elements
+        fadeInAnimation(elementsToAnimate);
+    }, []);
 
     return (
         <div className="blog-grid text-white">
@@ -12,7 +19,7 @@ export default function BlogPost({ blog }) {
                     <img alt="img" src={blog.imageSrc} className="img-fluid" />
                 </Link>
             </div>
-            <div className="blog-grid-text p-4">
+            <div className="blog-grid-text p-4 hidden">
                 <h3 className="h2 mb-3" >
                     <Link onClick={onClickHandle} to={`/blog/${blog.id}`}>{blog.title}</Link>
                 </h3>

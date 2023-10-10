@@ -12,7 +12,7 @@ import csharp from './langDb/csharp'
 import java from './langDb/java'
 import JavaScript from './langDb/javascript'
 
-
+import fadeInAnimation from '../../animation/fadeInAnimation';
 export default function Language() {
 
     const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
@@ -46,13 +46,20 @@ export default function Language() {
         }
     }, [lang]);
 
+    useEffect(() => {
+        // Define the elements you want to animate
+        const elementsToAnimate = document.querySelectorAll('.hidden');
+
+        // Call the fadeInAnimation function with the elements
+        fadeInAnimation(elementsToAnimate);
+    }, []);
 
     const pathExercises = `/exer/${lang}`;
     return (
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-12" style={{ backgroundColor: '#71F483' }}>
+                    <div className="col-xl-12 hidden" style={{ backgroundColor: '#71F483' }}>
                         <LanguageInformation lang={languageParams} />
                     </div>
                 </div>
