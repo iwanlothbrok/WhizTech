@@ -9,6 +9,7 @@ import AskedQuestions from '../../components/questions/AskedQuestions'
 import Clients from './Clients';
 import { useEffect } from 'react';
 import fadeInAnimation from '../../animation/fadeInAnimation';
+import Carousel from '../layout/Carousel';
 export default function Home() {
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Home() {
   return (
 
     <div>
-      <HomePage />
+      <Carousel />
       <ServiceSection />
       <AskedQuestions />
       <Clients />

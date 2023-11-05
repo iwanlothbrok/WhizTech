@@ -13,7 +13,6 @@ import BlogList from './components/blog/BlogList';
 import Language from './components/languages/Language';
 import ContactWithInformation from './components/ContactWithInformation'
 import SelectedBlog from './components/blog/SelectedBlog';
-import fadeInAnimation from './animation/fadeInAnimation';
 export default function App() {
   return (
     <div className="App">
