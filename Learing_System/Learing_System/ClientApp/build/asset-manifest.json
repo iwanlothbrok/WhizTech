@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.51d8aad7.css",
+    "main.js": "/static/js/main.16d6a996.js",
+    "static/media/video2.mp4": "/static/media/video2.9dcbf2de09536efa6506.mp4",
+    "static/media/aboutPh.jpg": "/static/media/aboutPh.794eae0d8e9bb3a21efa.jpg",
+    "static/media/yanislav.png": "/static/media/yanislav.fb0af205822602c0c8bb.png",
+    "static/media/zdrawko.jpg": "/static/media/zdrawko.bf61e78b8af20e1cf381.jpg",
+    "static/media/imgProfile.jpg": "/static/media/imgProfile.a4129f6c348c64cc59d6.jpg",
+    "static/media/bkg01.avif": "/static/media/bkg01.ac1651ee063b43740bb2.avif",
+    "static/media/ISO_C++_Logo.svg.png": "/static/media/ISO_C++_Logo.svg.5185ce2f4c945505ee4f.png",
+    "static/media/csharpLogoNew.png": "/static/media/csharpLogoNew.314222320637e492146d.png",
+    "static/media/dynamic.png": "/static/media/dynamic.6215fb7ac642dc6e5fca.png",
+    "static/media/vankata1.jpg": "/static/media/vankata1.3a4737b9add1eab77a81.jpg",
+    "static/media/reactBlog.png": "/static/media/reactBlog.137c09a68ab43657e7d4.png",
+    "static/media/blackLogo.png": "/static/media/blackLogo.25371b73dbac5c8f6f5d.png",
+    "static/media/learnJS.png": "/static/media/learnJS.3c583420d82ef37ba7ca.png",
+    "static/media/blog01.png": "/static/media/blog01.26356b2646cb1cc2f8af.png",
+    "static/media/favicon.jpg": "/static/media/favicon.bcb4d5f8633308f73b3c.jpg",
+    "static/media/csharpBlog.jpg": "/static/media/csharpBlog.5583a08ded36674fc25f.jpg",
+    "static/media/Csharp_Logo.png": "/static/media/Csharp_Logo.fc430729bfa8902c06fd.png",
+    "static/media/java-logo.webp": "/static/media/java-logo.5b8759b669260de3581a.webp",
+    "static/media/sql.png": "/static/media/sql.934b5a16397ffe001902.png",
+    "static/media/js-logo.png": "/static/media/js-logo.266bd9fb2663dcc057b4.png",
+    "index.html": "/index.html",
+    "main.51d8aad7.css.map": "/static/css/main.51d8aad7.css.map",
+    "main.16d6a996.js.map": "/static/js/main.16d6a996.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51d8aad7.css",
+    "static/js/main.16d6a996.js"
+  ]
+}

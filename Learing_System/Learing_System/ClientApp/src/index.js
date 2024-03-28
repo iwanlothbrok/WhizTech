@@ -5,11 +5,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'owl.carousel/dist/assets/owl.carousel.css';
-import NavMenu from '../src/components/layout/NavMenu'
-import Footer from '../src/components/layout/Footer'
+
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'wowjs/dist/wow.min.js';
 import 'owl.carousel/dist/owl.carousel.min.js';
+import Footer from '../src/components/layout/Footer';
+import NavMenu from '../src/components/layout/NavMenu';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -19,8 +20,7 @@ root.render(
     <NavMenu />
     <App />
     <Footer />
-  </BrowserRouter>
-);
+  </BrowserRouter>);
 
 
 
