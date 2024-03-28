@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { contactSubmitHandle } from '../firebaseConfig'
+import { contactSubmitHandle, courseSubmitHandle } from '../firebaseConfig'
 import '../styles/css/btn.css';
 
 export default function SmallContact() {
@@ -40,10 +40,13 @@ export default function SmallContact() {
                 return;
             }
 
-            const result = await contactSubmitHandle(formData);
 
+            const result = await contactSubmitHandle(formData);
+            console.log(result);
+            // console.log('before');
+            // const result = await courseSubmitHandle();
+            console.log('after');
             if (result.success) {
-                // CLEARING THE STATE
                 setFormData({
                     FullName: '',
                     Email: '',
