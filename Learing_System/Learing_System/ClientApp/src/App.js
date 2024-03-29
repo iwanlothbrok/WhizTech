@@ -15,6 +15,7 @@ import ContactWithInformation from './components/ContactWithInformation'
 import SelectedBlog from './components/blog/SelectedBlog';
 import fadeInAnimation from './animation/fadeInAnimation';
 import JoinCourse from './components/contact/JoinCourse';
+import Contact from './components/Contact';
 export default function App() {
   return (
     <div className="App">
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:blogId" element={<SelectedBlog />} />
         <Route path="/course" element={<JoinCourse />} />
+        <Route path='/joincourse' element={<Contact />} />
       </Routes>
 
     </div >

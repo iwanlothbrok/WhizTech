@@ -1,15 +1,26 @@
 .formCourse {
-    width: 340px;
-    height: 440px;
     background: #e6e6e6;
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
-    margin: calc(50vh - 220px) auto;
+    margin: calc(30vh - 220px) auto;
     padding: 20px 30px;
     max-width: calc(100vw - 40px);
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     position: relative
+}
+
+.gray {
+    color: #5a5a5a
+}
+
+.inputCourse:focus {
+    border-bottom: 2px solid #78788c;
+    /* Add additional styles when the dropdown is clicked */
+    background-color: #f0f0f0;
+    /* Example background color */
+    color: #333;
+    /* Example text color */
 }
 
 .joinOurCourse {
@@ -46,6 +57,11 @@
     color: #5a5a5a
 }
 
+.green {
+    color: #16a72a;
+}
+
+
 .joinBtn {
     float: right;
     padding: 8px 12px;
@@ -63,18 +79,17 @@
     color: #fff
 }
 
-
 .iconsDiv {
     content: 'Hi';
     position: absolute;
     bottom: -15px;
     right: -20px;
-    background: #50505a;
+    background: #16a72a;
     color: #fff;
     width: 320px;
     padding: 16px 4px 16px 0;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 16px;
     box-shadow: 10px 10px 40px -14px #000
 }
 
@@ -82,4 +97,3 @@
 .icon {
     margin: 0 5px 0 15px
 }
-
