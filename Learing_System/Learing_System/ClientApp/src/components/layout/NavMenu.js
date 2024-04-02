@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from "react-scroll";
-import logo from '../../styles/photos/favicon.jpg'
+import logo from '../../styles/photos/navlogo.png'
 function NavMenu() {
   const [isContentVisible, setIsContentVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -70,14 +70,14 @@ function NavMenu() {
   };
   const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
   return (
-    <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 sticky-top" style={{ top: 0 }}>
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-white navbar-light shadow p-0 mt-0 sticky-top" >
+      <div className="container" style={{ margin: `${isMobile ? '0' : '10px'}` }}>
         <div className="row align-items-center">
           <div className="col-6 col-lg-3">
             <Link to="/" onClick={onClickHandle} className="navbar-brand d-flex align-items-center">
               <h2 className="m-0 text-alert">
                 <img src={logo} alt="Logo" className="navbar-logo m-3" width="70" height="70" />
-                WhizTech
+                Whiz Academy
               </h2>
             </Link>
           </div>
@@ -164,11 +164,11 @@ function NavMenu() {
               </Link>
             </div>
           </div>
-          <Link to="/blog" onClick={onClickHandle} className="nav-item nav-link">
+          {/* <Link to="/blog" onClick={onClickHandle} className="nav-item nav-link">
             Блог
-          </Link>
-          <Link to="/contact" onClick={onClickHandle} className="nav-item nav-link">
-            Контакти
+          </Link> */}
+          <Link to="/course" onClick={onClickHandle} className="nav-item nav-link">
+            Кандидаствай
           </Link>
           {isMobile
             ? (<Link to="/calendar" onClick={onClickHandle} className="nav-item nav-link">
