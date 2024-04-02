@@ -17,7 +17,9 @@ const Contact = () => {
 
     // // style
     const sectionStyle = {
-        backgroundImage: `url(${backgroundImage})`, // Use the imported background image
+        // background-image: linear-gradient(to right, rgba(109, 179, 242, .6), rgba(109, 179, 242, .6)), url('images/checked.png');
+
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`, // Add black overlay with 60% opacity
         backgroundSize: 'cover', // Adjust this according to your preference
         backgroundPosition: 'center', // Adjust this according to your preference
         width: '100vw',  // Make the section cover the full viewport width

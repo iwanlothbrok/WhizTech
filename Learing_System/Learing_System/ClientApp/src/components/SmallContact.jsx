@@ -69,16 +69,16 @@ export default function SmallContact() {
         return regex.test(email);
     }
     return (
-        <div style={{ backgroundColor: '#232323' }}>
+        <div className='text-white' >
             <div className="container ">
-                <div className="row container-fluid justify-content-center align-items-center" style={{ backgroundColor: '#232323' }}>
+                <div className="row container-fluid justify-content-center align-items-center" >
                     {successMessageVisible && (
                         <div className="alert alert-success" role="alert">
                             Успешно изпратено запитване!
                         </div>
                     )}
 
-                    <div className="col">
+                    <div className="col text-white">
                         <form className="mx-md-5">
                             <div className="row">
                                 <div className="col-md-5 mb-1 pb-2">
