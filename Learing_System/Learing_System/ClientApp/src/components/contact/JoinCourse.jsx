@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../../styles/css/joinCourse.css'
 import backgroundImage from '../../styles/photos/bg02.jpg'
-import { contactSubmitHandle, courseSubmitHandle } from '../../firebaseConfig'
+import { courseSubmitHandle } from '../../firebaseConfig'
 export default function JoinCourse() {
-    const [isOpen, setIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
     const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
@@ -44,17 +43,18 @@ export default function JoinCourse() {
             formData.Language
         ) {
 
-            if (!validateEmail(formData.Email)) {
+            if (!validateEmail(formData.Email) || formData.Language === 'Изберете Език') {
                 // Email is invalid, set the error message
                 setError('Email is invalid. Please enter a valid email address.');
                 return;
             }
 
 
+            // const result = await courseSubmitHandle(formData);
+            //console.log(result);
+
+            console.log('before');
             const result = await courseSubmitHandle(formData);
-            console.log(result);
-            // console.log('before');
-            // const result = await courseSubmitHandle();
             console.log('after');
             if (result.success) {
                 setFormData({
@@ -81,7 +81,6 @@ export default function JoinCourse() {
             Language: e.target.value // Update Language field in the state with the selected value
         });
     };
-    console.log(successMessageVisible);
 
     function validateEmail(email) {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -92,44 +91,31 @@ export default function JoinCourse() {
         height: isMobile ? '490px' : '510px'
     }
     const sectionStyle = {
-        backgroundImage: `url(${backgroundImage})`, // Use the imported background image
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`, // Add black overlay with 60% opacity
         backgroundSize: 'cover', // Adjust this according to your preference
         backgroundPosition: 'center', // Adjust this according to your preference
         width: '100vw',  // Make the section cover the full viewport width
         height: '100vh'
     };
-    const toggleDropdown = (e) => {
-        e.preventDefault();
-        setIsOpen(!isOpen);
-    };
+
 
     return (
 
         <section style={sectionStyle}>
-            {successMessageVisible && error == ''
-                (
-                    <div className="alert alert-success" role="alert">
-                        Успешно изпратено запитване!
-                    </div>
-                )
-                // :
-                // (
-                //     <div className="alert alert-danger" role="alert">
-                //         {error}
-                //     </div>
-                // )
-            }
 
             <div className="container d-flex justify-content-center align-items-center h-100">
 
                 <div >
-                    {error != ' ' && submitButtonClicked == true &&
-                        (
-                            <div className="alert alert-danger" role="alert">
-                                {error}
-                            </div>
-                        )
-                    }   
+                    {successMessageVisible && error == '' && (
+                        <div className="alert alert-success mb-0" role="alert">
+                            Успешно изпратено запитване!
+                        </div>
+                    )}
+                    {error !== '' && submitButtonClicked && (
+                        <div className="alert alert-danger mb-0" role="alert">
+                            {error}
+                        </div>
+                    )}
                     <form className='formCourse' style={formCss}>
                         <h2 className='joinOurCourse'><strong className='gray'><span className='green'>ЗАПИШИ</span> СЕ</strong></h2>
                         <label className='labelCourse'><strong>ТРИ ИМЕНА:</strong></label>
@@ -148,7 +134,7 @@ export default function JoinCourse() {
                             className={`inputCourse`}
                             placeholder="example@example.com"
                             value={formData.Email}
-                            onChange={(e) => setFormData({ ...formData, FullName: e.target.value })}
+                            onChange={(e) => setFormData({ ...formData, Email: e.target.value })}
                             required
 
                         />
@@ -170,10 +156,10 @@ export default function JoinCourse() {
                             onClick={handleSubmit}
                             type='submit'
                         >ИЗПРАТИ</button>
-                        <div className='iconsDiv m-2 p-1 text-center '>
+                        <div className='iconsDiv m-2 p-1 text-center'>
                             <span class="fa fa-phone icon"></span>088 904 4614
                             <br></br>
-                            <span class="fa fa-envelope-o icon"></span> contact@company.com
+                            <span class="fa fa-envelope-o icon"></span> whiztech.team@gmail.com
                         </div>
                     </form>
                 </div>
