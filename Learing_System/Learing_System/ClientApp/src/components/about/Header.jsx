@@ -10,7 +10,7 @@ export default function Header() {
                 <div className="container py-5 hidden">
                     <div className="row justify-content-center">
                         <div className="col-lg-10 text-center">
-                            <h1 className="display-3 text-white animated slideInDown">За Нас</h1>
+                            <h1 className="display-3 animated slideInDown" style={{ color: '#71F483' }}>За Нас</h1>
                             <nav aria-label="breadcrumb">
                                 <ol className="breadcrumb justify-content-center">
                                     <li className="breadcrumb-item"><Link className="text-white" to="/">Начало</Link></li>
