@@ -83,7 +83,7 @@
   "scripts": {
     "prestart": "node aspnetcore-https && node aspnetcore-react",
     "start": "rimraf ./build && react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env REACT_APP_FIREBASE_API_KEY=AIzaSyCkAaumclVywpuX9B1aMBwZ136T7mXRRzk REACT_APP_FIREBASE_AUTH_DOMAIN=whiztechsystem.firebaseapp.com REACT_APP_FIREBASE_PROJECT_ID=whiztechsystem REACT_APP_FIREBASE_STORAGE_BUCKET=whiztechsystem.appspot.com REACT_APP_FIREBASE_MESSAGING_SENDER_ID=839273473381 REACT_APP_FIREBASE_APP_ID=1:839273473381:web:9d454fe35e978d5c346d8c react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/"
