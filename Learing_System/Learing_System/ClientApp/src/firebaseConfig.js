@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore';
 
 
 const firebaseConfig = {
@@ -17,7 +17,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 
 const contactFormsCollection = collection(db, 'contactForms');
-const courseFormsCollection = collection(db, 'courseForms');
+const courseFormsCollection = collection(db, 'joinCourseForm');
 
 // function for submit
 const contactSubmitHandle = async (formData) => {
@@ -47,6 +47,7 @@ const courseSubmitHandle = async (formData) => {
             Name: formData.FullName,
             Email: formData.Email,
             Language: formData.Language,
+            Date: Timestamp.now()
         });
         // Handle success or show a success message to the user
         console.log('Form submitted successfully!');
