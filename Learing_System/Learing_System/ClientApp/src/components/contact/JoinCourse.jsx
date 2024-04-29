@@ -10,7 +10,8 @@ export default function JoinCourse() {
     const [formData, setFormData] = useState({
         FullName: '',
         Email: '',
-        Language: ''
+        Language: '',
+        Phone: ''
     });
 
 
@@ -40,7 +41,8 @@ export default function JoinCourse() {
         if (
             formData.FullName &&
             formData.Email &&
-            formData.Language
+            formData.Language &&
+            formData.Phone
         ) {
 
             if (!validateEmail(formData.Email) || formData.Language === 'Изберете Език') {
@@ -60,7 +62,8 @@ export default function JoinCourse() {
                 setFormData({
                     FullName: '',
                     Email: '',
-                    Language: ''
+                    Language: '',
+                    Phone: ''
                 });
 
                 setSuccessMessageVisible(true);
@@ -87,8 +90,8 @@ export default function JoinCourse() {
         return regex.test(email);
     }
     const formCss = {
-        width: '440px',
-        height: isMobile ? '490px' : '510px'
+        width: '540px',
+        height: isMobile ? '600px' : '615px'
     }
     const sectionStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`, // Add black overlay with 60% opacity
@@ -138,7 +141,16 @@ export default function JoinCourse() {
                             required
 
                         />
+                        <label className='labelCourse' htmlFor="phone"><strong>ТЕЛ. НОМЕР:</strong></label>
+                        <input
+                            id="phone"
+                            className={`inputCourse`}
+                            placeholder="+359 88 888 8888"
+                            value={formData.Phone}
+                            onChange={(e) => setFormData({ ...formData, Phone: e.target.value })}
+                            required
 
+                        />
                         <label className='labelCourse' htmlFor="language"><strong>ПРОГРАМЕН ЕЗИК:</strong></label>
                         <select
                             id="language"
@@ -156,7 +168,7 @@ export default function JoinCourse() {
                             onClick={handleSubmit}
                             type='submit'
                         >ИЗПРАТИ</button>
-                        <div className='iconsDiv m-2 p-1 text-center'>
+                        <div className='iconsDiv m-4 p-1 text-center'>
                             <span class="fa fa-phone icon"></span>088 904 4614
                             <br></br>
                             <span class="fa fa-envelope-o icon"></span> whiztech.team@gmail.com

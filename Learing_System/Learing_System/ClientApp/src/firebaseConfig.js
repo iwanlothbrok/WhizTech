@@ -47,7 +47,8 @@ const courseSubmitHandle = async (formData) => {
             Name: formData.FullName,
             Email: formData.Email,
             Language: formData.Language,
-            Date: Timestamp.now()
+            Date: Timestamp.now(),
+            Phote: formData.Phone
         });
         // Handle success or show a success message to the user
         console.log('Form submitted successfully!');
