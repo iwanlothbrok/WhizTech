@@ -44,13 +44,20 @@ export default function JoinCourse() {
             formData.Language &&
             formData.Phone
         ) {
-
-            if (!validateEmail(formData.Email) || formData.Language === 'Изберете Език') {
+            if (!validateEmail(formData.Email)) {
                 // Email is invalid, set the error message
-                setError('Email is invalid. Please enter a valid email address.');
+                setError('Невалиден имейл!');
                 return;
             }
-
+            if (formData.Language === 'Изберете Език') {
+                setError('Моля изберете език!');
+                return;
+            }
+            if (!validatePhone(formData.Phone)) {
+                // Email is invalid, set the error message
+                setError('Невалиден телефонен номер!');
+                return;
+            }
 
             // const result = await courseSubmitHandle(formData);
             //console.log(result);
@@ -89,6 +96,14 @@ export default function JoinCourse() {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return regex.test(email);
     }
+
+    function validatePhone(phone) {
+        var regex = /\d/;
+
+        // Test the input string against the regular expression
+        return regex.test(phone)
+    }
+
     const formCss = {
         width: '540px',
         height: isMobile ? '600px' : '615px'
@@ -119,7 +134,7 @@ export default function JoinCourse() {
                             {error}
                         </div>
                     )}
-                    <form className='formCourse mt-0' style={formCss}>
+                    <form className='formCourse mt-3' style={formCss}>
                         <h2 className='joinOurCourse'><strong className='gray'><span className='green'>ЗАПИШИ</span> СЕ</strong></h2>
                         <label className='labelCourse'><strong>ТРИ ИМЕНА:</strong></label>
                         <input
