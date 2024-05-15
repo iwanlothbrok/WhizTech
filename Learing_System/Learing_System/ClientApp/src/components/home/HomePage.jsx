@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../styles/photos/bg-biju.png'; // Adjust the path based on your file structure
 import { animateScroll as scroll } from "react-scroll";
+import '../../styles/css/homePage.css'
 
 export default function HomePage() {
     const [isMobile, setIsMobile] = useState(false);
@@ -56,13 +57,13 @@ export default function HomePage() {
                         ЗАПИШИ СЕ СЕГА И ПОЛУЧИ ПЪРВИ <span style={{ color: '#71F483' }}>БЕЗПЛАТЕН УРОК</span>
                     </h4>
                 </div>
-                <Link to='/signin'>
+                <Link to='/course'>
                     <button
-                        style={btnStyle}
-                        onMouseEnter={(e) => { e.target.style.backgroundColor = btnHoverStyle.backgroundColor; e.target.style.color = btnHoverStyle.color; }}
-                        onMouseLeave={(e) => { e.target.style.backgroundColor = btnStyle.backgroundColor; e.target.style.color = btnStyle.color; }}
-                        onClick={onClickHandle}
-                        className="btn btn-outline-secondary fw-bold mt-0 m-2 btn-lg flex-fill custom-button"
+                        // style={btnStyle}
+                        // onMouseEnter={(e) => { e.target.style.backgroundColor = btnHoverStyle.backgroundColor; e.target.style.color = btnHoverStyle.color; }}
+                        // onMouseLeave={(e) => { e.target.style.backgroundColor = btnStyle.backgroundColor; e.target.style.color = btnStyle.color; }}
+                        // onClick={onClickHandle}
+                        className="signBtn btn-lg"
                     >
                         ЗАПИШИ СЕ
                     </button>
