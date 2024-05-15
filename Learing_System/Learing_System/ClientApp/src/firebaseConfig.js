@@ -16,7 +16,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 const db = getFirestore(firebaseApp);
 
-const contactFormsCollection = collection(db, 'contactForms');
+const contactFormsCollection = collection(db, 'basicForm');
 const courseFormsCollection = collection(db, 'joinCourseForm');
 
 // function for submit
@@ -26,8 +26,7 @@ const contactSubmitHandle = async (formData) => {
         const docRef = await addDoc(contactFormsCollection, {
             FullName: formData.FullName,
             Email: formData.Email,
-            PhoneNumber: formData.PhoneNumber,
-            Description: formData.Description,
+            Phone: formData.Phone,
         });
         // Handle success or show a success message to the user
         console.log('Form submitted successfully!');
