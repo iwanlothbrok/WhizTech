@@ -70,6 +70,8 @@ export default function SmallContact() {
     }
     return (
         <div className='text-white' >
+            <h2 className='mb-5 mt-4 md-4 display-4 text-center text-white' >Контакти</h2>
+
             <div className="container ">
                 <div className="row container-fluid justify-content-center align-items-center" >
                     {successMessageVisible && (

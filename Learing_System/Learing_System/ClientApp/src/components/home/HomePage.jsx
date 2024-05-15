@@ -1,62 +1,73 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../styles/bkg01.avif'; // Adjust the path based on your file structure
+import img from '../../styles/photos/bg-biju.png'; // Adjust the path based on your file structure
 import { animateScroll as scroll } from "react-scroll";
-import video from '../../styles/videos/video2.mp4'
+
 export default function HomePage() {
     const [isMobile, setIsMobile] = useState(false);
 
-    const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+    const onClickHandle = () => scroll.scrollToTop({ duration: 200 });
+
     useEffect(() => {
         function handleWindowSizeChange() {
-            const isMobile = window.innerWidth <= 768;
-            setIsMobile(isMobile);
+            setIsMobile(window.innerWidth <= 768);
         }
 
         handleWindowSizeChange();
-
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => window.removeEventListener('resize', handleWindowSizeChange);
     }, []);
-    // const sectionStyle = {
-    //     backgroundImage: `url(${video})  no-repeat center center fixed`, // Use the imported background image
-    //     backgroundSize: 'cover', // Adjust this according to your preference
-    //     backgroundPosition: 'center', // Adjust this according to your preference
-    //     width: '100%',  // Make the section cover the full viewport width
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
 
-    // };
+    const sectionStyle = {
+        backgroundImage: `url(${img})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+    };
+
     const btnStyle = {
         borderColor: 'black',
-        borderRadius: '30px',
-        padding: isMobile ? '2.7rem' : '3rem'
+        borderRadius: '25px',
+        padding: '30px 40px',
+        backgroundColor: 'white',
+        color: 'black',
+        fontSize: '1.5rem',
+        transition: 'background-color 0.3s, color 0.3s',
+    };
 
-    }
+    const btnHoverStyle = {
+        backgroundColor: 'black',
+        color: 'white',
+    };
 
     return (
-        <section className="h-100 vh-100 mb-0 gradient-custom-2 header-carousel">
-            <div className='overlay'>
-                <video className='video' src={video} autoPlay loop muted>
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div className="photo-container d-flex flex-column justify-content-center align-items-center hidden">
-                <div className="centered-text text-center p-4 bg-black bg-opacity-75" style={{ borderRadius: '30px', marginTop: '200px' }}>
-                    <h2 className="display-2 mb-0 font-family-roboto text-white" ><strong>Индивидуални уроци по програмиране</strong></h2>
-                    <h4 className="mb-0 font-family-roboto text-white"><span style={{ color: '#71F483' }}>Бъди смел</span>, постави началото! Ние ще те <span style={{ color: '#71F483' }}>подкрепим</span> с <strong >първи безплатен урок</strong>.</h4>
+        <section style={sectionStyle}>
+            <div className="photo-container d-flex flex-column justify-content-center align-items-center">
+                <div className="centered-text text-center p-4">
+                    <h2 className={`display-2 mb-0 text-white ${isMobile ? 'mt-0' : 'mt-5'}`}>
+                        <strong>ИНДИВИДУАЛНИ УРОЦИ ПО ПРОГРАМИРАНЕ ЗА <span style={{ color: '#71F483' }}>НАЧИНАЕЩИ</span></strong>
+                    </h2>
+                    <h4 className={`mb-0 text-white ${isMobile ? 'mt-4' : 'mt-1'}`}>
+                        ЗАПИШИ СЕ СЕГА И ПОЛУЧИ ПЪРВИ <span style={{ color: '#71F483' }}>БЕЗПЛАТЕН УРОК</span>
+                    </h4>
                 </div>
-
-                <div className="button-container m-5 text-center p-2">
-                    <Link to='/about' >
-                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary m-2 btn-lg flex-fill custom-button">За Нас</button>
-                    </Link>
-                    <Link to='/contact'>
-                        <button style={btnStyle} onClick={onClickHandle} className="btn btn-outline-secondary btn-lg flex-fill custom-button">Контакти</button>
-                    </Link>
-                </div>
+                <Link to='/signin'>
+                    <button
+                        style={btnStyle}
+                        onMouseEnter={(e) => { e.target.style.backgroundColor = btnHoverStyle.backgroundColor; e.target.style.color = btnHoverStyle.color; }}
+                        onMouseLeave={(e) => { e.target.style.backgroundColor = btnStyle.backgroundColor; e.target.style.color = btnStyle.color; }}
+                        onClick={onClickHandle}
+                        className="btn btn-outline-secondary fw-bold mt-0 m-2 btn-lg flex-fill custom-button"
+                    >
+                        ЗАПИШИ СЕ
+                    </button>
+                </Link>
             </div>
-
         </section>
     );
 }
