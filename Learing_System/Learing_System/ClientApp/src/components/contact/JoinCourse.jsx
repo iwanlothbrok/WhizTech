@@ -119,7 +119,7 @@ export default function JoinCourse() {
                             {error}
                         </div>
                     )}
-                    <form className='formCourse' style={formCss}>
+                    <form className='formCourse mt-0' style={formCss}>
                         <h2 className='joinOurCourse'><strong className='gray'><span className='green'>ЗАПИШИ</span> СЕ</strong></h2>
                         <label className='labelCourse'><strong>ТРИ ИМЕНА:</strong></label>
                         <input

@@ -28,8 +28,7 @@ code {
       rgb(0, 92, 0),
       rgb(0, 72, 10),
       rgb(0, 52, 7) 50%,
-      rgb(35, 35, 35)
-      );
+      rgb(35, 35, 35));
 
 }
 
@@ -102,6 +101,10 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.greenText {
+  color: #41ea57;
 }
 
 .overlay {
