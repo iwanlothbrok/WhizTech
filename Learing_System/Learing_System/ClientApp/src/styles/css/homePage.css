@@ -1,0 +1,16 @@
+.signBtn {
+    /* float: right; */
+    padding: 24px 30px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #71F483;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.signBtn:hover {
+    background: rgba(21, 183, 18, 0.711);
+    color: #ffffff
+}
