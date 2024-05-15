@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../../styles/css/joinCourse.css'
 import backgroundImage from '../../styles/photos/bg02.jpg'
-import { courseSubmitHandle } from '../../firebaseConfig'
+import { courseSubmitHandle, contactSubmitHandle } from '../../firebaseConfig'
 export default function BasicContact() {
     const [isMobile, setIsMobile] = useState(false);
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
@@ -10,7 +10,6 @@ export default function BasicContact() {
     const [formData, setFormData] = useState({
         FullName: '',
         Email: '',
-        Language: '',
         Phone: ''
     });
 
@@ -41,28 +40,31 @@ export default function BasicContact() {
         if (
             formData.FullName &&
             formData.Email &&
-            formData.Language &&
             formData.Phone
         ) {
 
-            if (!validateEmail(formData.Email) || formData.Language === 'Изберете Език') {
+            if (!validateEmail(formData.Email)) {
                 // Email is invalid, set the error message
-                setError('Email is invalid. Please enter a valid email address.');
+                setError('Невалиден имейл!');
+                return;
+            }
+            if (!validatePhone(formData.Phone)) {
+                // Email is invalid, set the error message
+                setError('Невалиден номер!');
                 return;
             }
 
 
-            // const result = await courseSubmitHandle(formData);
-            //console.log(result);
 
             console.log('before');
-            const result = await courseSubmitHandle(formData);
+
+            const result = await contactSubmitHandle(formData);
+
             console.log('after');
             if (result.success) {
                 setFormData({
                     FullName: '',
                     Email: '',
-                    Language: '',
                     Phone: ''
                 });
 
@@ -78,20 +80,21 @@ export default function BasicContact() {
         console.log('After setFormData');
     };
 
-    const handleLanguageChange = (e) => {
-        setFormData({
-            ...formData,
-            Language: e.target.value // Update Language field in the state with the selected value
-        });
-    };
 
     function validateEmail(email) {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return regex.test(email);
     }
+
+    function validatePhone(phone) {
+        var regex = /\d/;
+
+        // Test the input string against the regular expression
+        return regex.test(phone)
+    }
     const formCss = {
         width: '540px',
-        height: isMobile ? '350px' : '455px'
+        height: isMobile ? '380px' : '405px'
     }
 
 
@@ -113,7 +116,7 @@ export default function BasicContact() {
                             {error}
                         </div>
                     )}
-                    <form className='formCourse mt-0' style={formCss}>
+                    <form className='formCourse mt-1' style={formCss}>
                         <label className='labelCourse'><strong>ТРИ ИМЕНА:</strong></label>
                         <input
                             id="input-name"
@@ -145,15 +148,11 @@ export default function BasicContact() {
 
                         />
                         <button
-                            className='joinBtn btn-lg'
+                            className='joinBtn btn-lg '
                             onClick={handleSubmit}
                             type='submit'
                         >ИЗПРАТИ</button>
-                        <div className='iconsDiv m-4 p-1 text-center'>
-                            <span class="fa fa-phone icon"></span>088 904 4614
-                            <br></br>
-                            <span class="fa fa-envelope-o icon"></span> whiztech.team@gmail.com
-                        </div>
+
                     </form>
                 </div>
             </div>

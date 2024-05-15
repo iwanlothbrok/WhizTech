@@ -30,7 +30,6 @@ export default function App() {
         <Route path="/blog/:blogId" element={<SelectedBlog />} />
         <Route path="/course" element={<JoinCourse />} />
         <Route path="/offerts" element={<PricingPage />} />
-
       </Routes>
 
     </div >
