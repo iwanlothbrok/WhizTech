@@ -25,7 +25,8 @@ export default function AskedQuestions() {
             <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h2 className="mb-5 text-white">Често задавани въпроси</h2>
             </div>
-            <div className="row">
+
+            <div className="row mt-2">
                 <div className="col-md-6 col-lg-4 mb-5 question photo hidden">
                     <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faBookOpen} style={questionStyle} className="pe-2" />Как се провеждат уроците?</h6>
                     <p style={answerStyle}>
