@@ -59,10 +59,6 @@ export default function HomePage() {
                 </div>
                 <Link to='/course'>
                     <button
-                        // style={btnStyle}
-                        // onMouseEnter={(e) => { e.target.style.backgroundColor = btnHoverStyle.backgroundColor; e.target.style.color = btnHoverStyle.color; }}
-                        // onMouseLeave={(e) => { e.target.style.backgroundColor = btnStyle.backgroundColor; e.target.style.color = btnStyle.color; }}
-                        // onClick={onClickHandle}
                         className="signBtn btn-lg"
                     >
                         ЗАПИШИ СЕ
