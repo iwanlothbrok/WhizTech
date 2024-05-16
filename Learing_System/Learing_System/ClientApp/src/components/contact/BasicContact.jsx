@@ -102,7 +102,7 @@ export default function BasicContact() {
 
         <section >
 
-            <h2 className='mb-2 mt-4 md-4 text-center text-white' >Регистрация</h2>
+            <h2 className='mb-2 mt-4 md-4 text-center text-white' >Запиши се</h2>
             <div className="container d-flex justify-content-center align-items-center h-100">
 
                 <div >

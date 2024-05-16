@@ -15,7 +15,6 @@ export default function ContactWithInformation() {
     return (
         <div className='row m-3 wave-background'>
             <SmallContact />
-
         </div>
     )
 }
