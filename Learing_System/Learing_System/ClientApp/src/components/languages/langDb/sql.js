@@ -1,13 +1,13 @@
-import img from '../../../styles/sql.png';
+import img from '../../../styles/44.png';
 
 const reasonsToChooseSQL = {
-    dataManipulation: "SQL предоставя мощни инструменти за манипулиране на данни в бази данни.",
-    dataQuery: "Лесно и бързо извличане на информация с SQL заявки.",
-    dataModeling: "Създаване на структурирани и ефективни модели на данни.",
-    databaseIntegration: "Възможност за интеграция с различни бази данни и системи.",
-    dataSecurity: "Вградена защита на данните и управление на достъпа.",
-    scalability: "Лесно скалиране на бази данни с повече информация.",
-    careerOpportunities: "Голям брой възможности за кариера в областта на управлението на данни.",
+    dataManipulation: " SQL предоставя мощни инструменти за манипулиране на данни в бази данни.",
+    dataQuery: " Лесно и бързо извличане на информация с SQL заявки.",
+    dataModeling: " Създаване на структурирани и ефективни модели на данни.",
+    databaseIntegration: " Възможност за интеграция с различни бази данни и системи.",
+    dataSecurity: " Вградена защита на данните и управление на достъпа.",
+    scalability: " Лесно скалиране на бази данни с повече информация.",
+    careerOpportunities: " Голям брой възможности за кариера в областта на управлението на данни.",
 };
 
 
@@ -23,10 +23,7 @@ const sql = {
         reasonsToChooseSQL.scalability,
         reasonsToChooseSQL.careerOpportunities
     ],
-    photoStyle: {
-        width: '400px', /* Set the desired width */
-        height: '350px'/* Set the desired height */
-    }
+
 }
 
 export default sql
