@@ -14,3 +14,13 @@
     background: rgba(21, 183, 18, 0.711);
     color: #ffffff
 }
+
+.navBtn:hover {
+    background: rgba(21, 183, 18, 0.711);
+    color: white;
+}
+
+.navBtn {
+    background-color: black;
+    color: white;
+}

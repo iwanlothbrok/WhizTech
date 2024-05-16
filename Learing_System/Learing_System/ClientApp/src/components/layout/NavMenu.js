@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from "react-scroll";
 import logo from '../../styles/photos/navlogo.png'
+import '../../styles/css/homePage.css'
+
 function NavMenu() {
   const [isContentVisible, setIsContentVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -135,55 +137,19 @@ function NavMenu() {
               </Link>
             </div>
           </div>
-          <div className="nav-item dropdown">
-            <Link
-              to="#"
-              className="nav-link dropdown-toggle"
-              onClick={toggleDropdown}
-            >
-              Задачи
-            </Link>
-            <div
-              className={`dropdown-menu fade-down m-0 ${isOpen ? 'show' : ''}`}
-              onClick={toggleDropdown} // Close the dropdown when an item is clicked
-            >
-              <Link to="/exer/csharp" className="dropdown-item" onClick={onClickHandle}>
-                C#
-              </Link>
-              <Link to="/exer/cplus" className="dropdown-item" onClick={onClickHandle}>
-                C++
-              </Link>
-              <Link to="/exer/javascript" className="dropdown-item" onClick={onClickHandle}>
-                JavaScript
-              </Link>
-              <Link to="/exer/java" className="dropdown-item" onClick={onClickHandle}>
-                Java
-              </Link>
-              <Link to="/exer/sql" className="dropdown-item" onClick={onClickHandle}>
-                SQL
-              </Link>
-            </div>
-          </div>
+
           {/* <Link to="/blog" onClick={onClickHandle} className="nav-item nav-link">
             Блог
           </Link> */}
-          <Link to="/course" onClick={onClickHandle} className="nav-item nav-link">
+          {/* <Link to="/course" onClick={onClickHandle} className="nav-item nav-link">
             Кандидаствай
+          </Link> */}
+          <Link style={{ fontSize: '16px' }} className="btn text-white navBtn nav-item nav-link">
+            Кандидатствай
           </Link>
-          {isMobile
-            ? (<Link to="/calendar" onClick={onClickHandle} className="nav-item nav-link">
-              <strong>Запази Урок</strong>
-            </Link>)
-            : (<Link
-              to="/calendar"
-              className="btn bg-black text-white px-lg-5 d-none d-lg-block text-center" // Add "text-center" class here
-              onClick={onClickHandle}
-            >
-              <p className="" style={{ fontSize: '20px' }}>Запази Урок</p> {/* Add classes for centering and font size */}
-            </Link>)}
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }
 
