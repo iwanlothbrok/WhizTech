@@ -8,7 +8,7 @@ const Information = () => {
     useEffect(() => { setQuestions(questionsDb) }, questions)
 
     return (
-        <div className="container mt-5 text-white">
+        <div className="container mt-5 justify-content-center align-items-center text-white">
             <div className="row">
                 {questions.map((quest) => <InformationCard key={quest.id} quest={quest} />)}
             </div>
