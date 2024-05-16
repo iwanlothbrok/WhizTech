@@ -144,7 +144,7 @@ function NavMenu() {
           {/* <Link to="/course" onClick={onClickHandle} className="nav-item nav-link">
             Кандидаствай
           </Link> */}
-          <Link style={{ fontSize: '16px' }} className="btn text-white navBtn nav-item nav-link">
+          <Link to="/course" style={{ fontSize: '16px' }} className="btn text-white navBtn nav-item nav-link">
             Кандидатствай
           </Link>
         </div>

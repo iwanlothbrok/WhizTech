@@ -2,9 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'; // Assuming you are using react-router for navigation
 import hero from '../../styles/photos/aivan.png'
 import '../../styles/css/hero.css'
+import { animateScroll as scroll } from "react-scroll";
 
 export default function Hero() {
     const green = { color: '#71F483' }
+    const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
+
     return (
         <section className="hero d-flex flex-column  justify-content-center align-items-center mt-4" id="intro">
             <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -23,7 +26,7 @@ export default function Hero() {
                                 Участвал е в професионални проекти с различни технологии и има страст към софтуерното инженерство.
                                 Вълнува се от програмиране, както на Back-End, така и на Front-End.<br></br> Обича да предава знанията си и да помага на хората да ги усвояват и напредват. <br />
                                 <strong>Целта му</strong> като преподавател е да помогне на начинаещите да станат разработчици възможно <strong>най-бързо</strong>.</p>
-                            <button className='btn btn-lg mt-0 mb-5 consultationBtn'>КОНСУЛТАЦИЯ</button>
+                            <Link to='/course' onClick={onClickHandle}>  <button className='btn btn-lg mt-0 mb-5 consultationBtn'>КОНСУЛТАЦИЯ</button> </Link>
                         </div>
                     </div>
                 </div>
