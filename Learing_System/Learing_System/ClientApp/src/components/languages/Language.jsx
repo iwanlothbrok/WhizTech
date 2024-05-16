@@ -11,7 +11,7 @@ import sql from './langDb/sql'
 import csharp from './langDb/csharp'
 import java from './langDb/java'
 import JavaScript from './langDb/javascript'
-
+import BasicContact from '../contact/BasicContact'
 import fadeInAnimation from '../../animation/fadeInAnimation';
 export default function Language() {
 
@@ -67,17 +67,17 @@ export default function Language() {
                     <div className="col-lg-12 mt-3 mb-2">
                         <QAList lang={lang} />
                     </div>
-                    <div className="col-lg-12 mt-5">
+                    {/* <div className="col-lg-12 mt-5">
                         <h1 className='text-center m-4' style={{ color: '#71F483' }}>Примерни задачи</h1>
                         <Exercise />
                         <h1 className="text-center mb-4 text-white">
                             Можете да намерите още задачи {' '}
                             <Link to={pathExercises} onClick={onClickHandle} className="link" style={{ color: '#71F483' }}>ТУК</Link>
                         </h1>
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            <ContactWithInformation />
+            <BasicContact />
         </>
     );
 }

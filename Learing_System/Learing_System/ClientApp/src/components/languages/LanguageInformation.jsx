@@ -14,28 +14,28 @@ const LanguageInformation = ({ lang }) => {
         handleWindowSizeChange();
     }, []);
     const computerStyle = {
-      marginTop:'20px',
-      marginBottom: '20px'
+        marginTop: '20px',
+        marginBottom: '20px'
     }
     const mobileStyle = {
         marginRight: '20px', marginTop: '20px'
     }
+
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6" style={isMobile ? mobileStyle : computerStyle}>
+        <div className="container mt-2 mb-0">
+            <div className="row mb-0">
+                <div className="col-md-4 m-0 mb-0" style={isMobile ? mobileStyle : computerStyle}>
                     <img
                         src={lang.image}
                         alt={lang.langName}
-                        className="img-fluid"
-                        style={lang.photoStyle}
+                        className="img-fluid w-75"
                     />
                 </div>
-                <div className="col-md-6 text-black mt-5 mr-5">
+                <div className="col-md-7 text-black mt-5  ">
                     <h2>Частните уроци по {lang.langName} се провеждат според Вашите нужди и изисквания.</h2>
                     <ul className="list-unstyled">
                         {lang.information.map((info, index) => (
-                            <li key={index} style={{ fontSize: '20px' }}> {/* Apply the custom class "larger-text" */}
+                            <li key={index} style={{ fontSize: '22px' }}> {/* Apply the custom class "larger-text" */}
                                 <FaCheck className="text-alert mr-5" />
                                 {info}
                             </li>
