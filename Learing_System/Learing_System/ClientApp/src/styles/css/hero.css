@@ -1,0 +1,68 @@
+.hero-title,
+.email-link {
+  background: var(--dark-color);
+  border-radius: var(--border-radius-medium);
+  color: var(--white-color);
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 2rem 1.5rem 2rem;
+  font-size: 2.2em;
+}
+
+.email-link {
+  background: var(--primary-color);
+  color: var(--dark-color);
+  font-size: var(--h4-font-size);
+  padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.email-link:hover {
+  background: var(--dark-color);
+  color: var(--white-color);
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .hero-text {
+    position: relative;
+    top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .email-link {
+    font-size: 20px;
+    padding: 0.3rem 2rem 0.6rem 2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .hero-title {
+    font-size: 1.8em;
+    padding-bottom: 1rem;
+  }
+
+  .email-link {
+    font-size: 22px;
+    padding: 0.5rem 2rem 0.7rem 2rem;
+  }
+}
+
+.consultationBtn {
+  background-color: white;
+  color: black;
+}
+
+.consultationBtn:hover {
+  color: black;
+
+  background-color: #71F483;
+}
