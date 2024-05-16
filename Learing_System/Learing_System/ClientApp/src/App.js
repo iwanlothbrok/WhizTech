@@ -15,6 +15,7 @@ import ContactWithInformation from './components/ContactWithInformation'
 import SelectedBlog from './components/blog/SelectedBlog';
 import JoinCourse from './components/contact/JoinCourse';
 import PricingPage from './components/pricing/PricingPage';
+import Hero from './components/about/Hero';
 export default function App() {
   return (
     <div className="App">
@@ -23,13 +24,15 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactWithInformation />} />
         <Route path="/error" element={<ErrorPage />} />
-        <Route path="/exer/:lang" element={<Exercise />} />
+        {/* <Route path="/exer/:lang" element={<Exercise />} /> */}
         <Route path="/study/:lang" element={<Language />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/blog" element={<Home />} />
         <Route path="/blog/:blogId" element={<SelectedBlog />} />
         <Route path="/course" element={<JoinCourse />} />
         <Route path="/offerts" element={<PricingPage />} />
+        <Route path="/hero" element={<Hero />} />
+
       </Routes>
 
     </div >
