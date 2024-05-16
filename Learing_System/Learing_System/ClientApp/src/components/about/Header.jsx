@@ -10,12 +10,12 @@ export default function Header() {
                 <div className="container py-5 hidden">
                     <div className="row justify-content-center">
                         <div className="col-lg-10 text-center">
-                            <h1 className="display-3 animated slideInDown" style={{ color: '#71F483' }}>За Нас</h1>
+                            <h1 className="display-3 animated slideInDown text-white fw-bold" >За Нас</h1>
                             <nav aria-label="breadcrumb">
                                 <ol className="breadcrumb justify-content-center">
                                     <li className="breadcrumb-item"><Link className="text-white" to="/">Начало</Link></li>
                                     <li className="breadcrumb-item"><Link className="text-white" to="/about">За Нас</Link></li>
-                                    <li className="breadcrumb-item"><Link className="text-white" to="/contact">Контакти</Link></li>
+                                    <li className="breadcrumb-item"><Link className="text-white" to="/course">Контакти</Link></li>
                                 </ol>
                             </nav>
                         </div>

@@ -10,6 +10,7 @@ import Information from './Information';
 import Technologies from './Technologies';
 import Clients from '../home/Clients'
 import fadeInAnimation from '../../animation/fadeInAnimation';
+import Hero from './Hero';
 
 const About = () => {
   useEffect(() => {
@@ -24,8 +25,9 @@ const About = () => {
     <div>
       <Header />
       <Technologies />
+      <Hero />
       <Information />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Clients />
     </div>
 
