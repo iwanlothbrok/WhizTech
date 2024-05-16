@@ -45,7 +45,7 @@ const Clients = () => {
 
     const carouselStyle = {
         boxShadow: '5px 5px 10px rgba(255, 0, 0, 0.5);', /* Change the color here */
-        background: 'white'
+        background: 'rgb(108, 117, 125)'
     }
     useEffect(() => {
         if (window.$) {
