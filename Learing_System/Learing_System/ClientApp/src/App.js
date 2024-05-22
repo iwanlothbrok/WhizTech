@@ -16,6 +16,8 @@ import SelectedBlog from './components/blog/SelectedBlog';
 import JoinCourse from './components/contact/JoinCourse';
 import PricingPage from './components/pricing/PricingPage';
 import Hero from './components/about/Hero';
+import Feedback from './components/contact/Feedback';
+
 export default function App() {
   return (
     <div className="App">
@@ -32,6 +34,7 @@ export default function App() {
         <Route path="/course" element={<JoinCourse />} />
         <Route path="/offerts" element={<PricingPage />} />
         <Route path="/hero" element={<Hero />} />
+        <Route path='/feedback' element={<Feedback />} />
 
       </Routes>
 

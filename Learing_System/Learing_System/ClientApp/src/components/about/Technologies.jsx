@@ -9,7 +9,6 @@ import sql from '../../styles/sql.png';
 import '../../styles/css/custom.css'
 function Technologies() {
     const onClickHandle = () => scroll.scrollToTop({ duration: 200 })
-
     return (
         <div className="container mt-5 hidden">
             <div className="row justify-content-center align-items-center">
