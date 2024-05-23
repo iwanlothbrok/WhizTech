@@ -5,26 +5,28 @@ export default function Feedback() {
     return (
         <>
 
-            <form className="containerFeed ">
-                <h1 className="heading">Обратна връзка</h1>
+            <form className="containerFeed mb-5">
+                <h1 className="heading fw-bold">Обратна връзка</h1>
 
-                <div className="feedback-msg">
-                    <p className="para">
-                        What are the main reasons for your rating?
-                    </p>
-                    <textarea></textarea>
-                </div>
-                <label className='labelCourse' htmlFor="phone"><strong>ТЕЛ. НОМЕР:</strong></label>
+                <label className='labelCourse mb-0' htmlFor="name"><strong>Две имена</strong></label>
                 <input
-                    id="phone"
+                    id="name"
                     className={`inputCourse`}
-                    placeholder="+359 88 888 8888"
+                    placeholder="Иван Иванов"
                     required
 
                 />
-                <p className="para">What do you think of the issue search experience within the project?</p>
+                <label className='labelCourse mb-0' htmlFor="newThings"><strong>Какво научи?</strong></label>
+                <input
+                    id="newThings"
+                    className={`inputCourse`}
+                    placeholder="Днес преминахме през променливи..."
+                    required
 
-                <div className="feedback-level">
+                />
+                <label className='labelCourse mb-0' ><strong>Каква е твоята оценка на урока?</strong></label>
+
+                <div className="feedback-level mt-0">
                     <div className="level">
                         <i className="lar la-sad-tear"></i>
                     </div>
@@ -45,7 +47,7 @@ export default function Feedback() {
 
 
                 <div className="btn btn-warning ">
-                    <a href="javascript:void(0)" onClick={() => alert('Thanks for submitting your feedback')}>Submit</a>
+                    <a href="javascript:void(0)" onClick={() => alert('Thanks for submitting your feedback')}>Изпрати</a>
                 </div>
             </form>
         </>
