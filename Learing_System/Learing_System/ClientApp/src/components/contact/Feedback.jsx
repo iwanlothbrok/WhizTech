@@ -1,55 +1,131 @@
-import React from 'react'
-import '../../styles/css/feedback.css'
-
+import React, { useState, useEffect } from 'react';
+import '../../styles/css/feedback.css';
+import { feedbackSubmitHandle } from '../../firebaseConfig'
 export default function Feedback() {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        newThings: '',
+        feedbackLevel: ''
+    });
+
+    const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+    const [error, setError] = useState('');
+    const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
+
+    useEffect(() => {
+        if (successMessageVisible) {
+            setTimeout(() => {
+                setSuccessMessageVisible(false);
+            }, 5000);
+        }
+    }, [successMessageVisible]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitButtonClicked(true);
+
+        if (formData.fullName && formData.newThings && formData.feedbackLevel) {
+            console.log('Form Data:', formData);
+
+            const result = await feedbackSubmitHandle(formData);
+            console.log(result);
+
+            console.log('after');
+            if (result.success) {
+                setFormData({
+                    fullName: '',
+                    newThings: '',
+                    feedbackLevel: ''
+                });
+                setSuccessMessageVisible(true);
+                setError('');
+                setSubmitButtonClicked(false);
+            } else {
+                setError('Моля, попълнете всички полета!');
+            }
+        }
+    };
+
+    const handleFeedbackLevelChange = (level) => {
+        setFormData({
+            ...formData,
+            feedbackLevel: level
+        });
+    };
+
     return (
         <>
+            <form className="containerFeed mb-5" onSubmit={handleSubmit}>
+                <h1 className="heading fw-bold text-danger" style={{ fontSize: '24px' }}>Обратна връзка</h1>
 
-            <form className="containerFeed mb-5">
-                <h1 className="heading fw-bold">Обратна връзка</h1>
+                {successMessageVisible && error === '' && (
+                    <div className="alert alert-success mb-0" role="alert">
+                        Успешно изпратена обратна връзка!
+                    </div>
+                )}
+                {error && submitButtonClicked && (
+                    <div className="alert alert-danger mb-0" role="alert">
+                        {error}
+                    </div>
+                )}
 
                 <label className='labelCourse mb-0' htmlFor="name"><strong>Две имена</strong></label>
                 <input
                     id="name"
-                    className={`inputCourse`}
+                    className='inputCourse'
                     placeholder="Иван Иванов"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     required
-
                 />
+
                 <label className='labelCourse mb-0' htmlFor="newThings"><strong>Какво научи?</strong></label>
-                <input
+                <textarea
                     id="newThings"
-                    className={`inputCourse`}
+                    className='inputCourse h-100'
                     placeholder="Днес преминахме през променливи..."
+                    value={formData.newThings}
+                    onChange={(e) => setFormData({ ...formData, newThings: e.target.value })}
                     required
-
+                    rows="1"
                 />
-                <label className='labelCourse mb-0' ><strong>Каква е твоята оценка на урока?</strong></label>
 
+                <label className='labelCourse mb-0'><strong>Каква е твоята оценка на урока?</strong></label>
                 <div className="feedback-level mt-0">
-                    <div className="level">
+                    <div
+                        className={`level ${formData.feedbackLevel === 'sad' ? 'selected' : ''}`}
+                        onClick={() => handleFeedbackLevelChange('sad')}
+                    >
                         <i className="lar la-sad-tear"></i>
                     </div>
-                    <div className="level">
+                    <div
+                        className={`level ${formData.feedbackLevel === 'frown' ? 'selected' : ''}`}
+                        onClick={() => handleFeedbackLevelChange('frown')}
+                    >
                         <i className="las la-frown"></i>
                     </div>
-                    <div className="level">
+                    <div
+                        className={`level ${formData.feedbackLevel === 'meh' ? 'selected' : ''}`}
+                        onClick={() => handleFeedbackLevelChange('meh')}
+                    >
                         <i className="lar la-meh"></i>
                     </div>
-                    <div className="level">
+                    <div
+                        className={`level ${formData.feedbackLevel === 'smile' ? 'selected' : ''}`}
+                        onClick={() => handleFeedbackLevelChange('smile')}
+                    >
                         <i className="lar la-smile"></i>
                     </div>
-                    <div className="level">
+                    <div
+                        className={`level ${formData.feedbackLevel === 'grin' ? 'selected' : ''}`}
+                        onClick={() => handleFeedbackLevelChange('grin')}
+                    >
                         <i className="lar la-grin"></i>
                     </div>
                 </div>
 
-
-
-                <div className="btn btn-warning ">
-                    <a href="javascript:void(0)" onClick={() => alert('Thanks for submitting your feedback')}>Изпрати</a>
-                </div>
+                <button className="btn btn-danger" type="submit">Изпрати</button>
             </form>
         </>
-    )
+    );
 }
