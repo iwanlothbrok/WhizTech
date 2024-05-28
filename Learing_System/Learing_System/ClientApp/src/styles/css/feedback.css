@@ -117,3 +117,21 @@
     background: #fe71a4;
     color: #f8faff;
 }
+
+.level {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.level.selected {
+    transform: scale(1.2);
+    background-color: #f0f0f0;
+    color: #fe71a4;
+    border-radius: 50%;
+}
+
+.level i {
+    font-size: 2rem;
+}
