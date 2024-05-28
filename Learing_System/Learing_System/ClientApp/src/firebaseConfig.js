@@ -18,6 +18,7 @@ const db = getFirestore(firebaseApp);
 
 const contactFormsCollection = collection(db, 'basicForm');
 const courseFormsCollection = collection(db, 'joinCourseForm');
+const feedbackFormsCollection = collection(db, 'feedback');
 
 // function for submit
 const contactSubmitHandle = async (formData) => {
@@ -60,5 +61,25 @@ const courseSubmitHandle = async (formData) => {
     }
 };
 
+const feedbackSubmitHandle = async (formData) => {
+    try {
+        console.log('in');
+        console.log(formData);
+        const docRef = await addDoc(feedbackFormsCollection, {
+            FeedbackLevel: formData.feedbackLevel,
+            Name: formData.fullName,
+            NewThings: formData.newThings,
+            Date: Timestamp.now()
+        });
+        // Handle success or show a success message to the user
+        console.log('Form submitted successfully!');
 
-export { contactSubmitHandle, courseSubmitHandle };
+        return { success: true, message: 'Form submitted successfully' };
+    } catch (error) {
+        // Handle errors, show an error message, or log them
+        console.error('Error submitting form:', error);
+        return { success: false, message: 'Form submission failed' };
+    }
+};
+
+export { contactSubmitHandle, courseSubmitHandle, feedbackSubmitHandle };
