@@ -5,7 +5,8 @@ export default function Feedback() {
     const [formData, setFormData] = useState({
         fullName: '',
         newThings: '',
-        feedbackLevel: ''
+        mentorFeedback: '',
+        feedbackLevel: '',
     });
 
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
@@ -25,21 +26,20 @@ export default function Feedback() {
         setSubmitButtonClicked(true);
 
         if (formData.fullName && formData.newThings && formData.feedbackLevel) {
-            console.log('Form Data:', formData);
 
             const result = await feedbackSubmitHandle(formData);
-            console.log(result);
 
-            console.log('after');
             if (result.success) {
                 setFormData({
                     fullName: '',
                     newThings: '',
                     feedbackLevel: ''
                 });
+
                 setSuccessMessageVisible(true);
                 setError('');
                 setSubmitButtonClicked(false);
+
             } else {
                 setError('Моля, попълнете всички полета!');
             }
@@ -56,8 +56,6 @@ export default function Feedback() {
     return (
         <>
             <form className="containerFeed mb-5" onSubmit={handleSubmit}>
-                <h1 className="heading fw-bold text-danger" style={{ fontSize: '24px' }}>Обратна връзка</h1>
-
                 {successMessageVisible && error === '' && (
                     <div className="alert alert-success mb-0" role="alert">
                         Успешно изпратена обратна връзка!
@@ -68,6 +66,8 @@ export default function Feedback() {
                         {error}
                     </div>
                 )}
+                <h1 className="heading fw-bold text-danger" style={{ fontSize: '24px' }}>Обратна връзка</h1>
+
 
                 <label className='labelCourse mb-0' htmlFor="name"><strong>Две имена</strong></label>
                 <input
@@ -89,6 +89,19 @@ export default function Feedback() {
                     required
                     rows="1"
                 />
+
+
+                <label className='labelCourse mb-0' htmlFor="mentorFeedback"><strong>Как се справи твоят ментор?</strong></label>
+                <textarea
+                    id="mentorFeedback"
+                    className='inputCourse h-100'
+                    placeholder="Менторът ми..."
+                    value={formData.mentorFeedback}
+                    onChange={(e) => setFormData({ ...formData, mentorFeedback: e.target.value })}
+                    required
+                    rows="1"
+                />
+
 
                 <label className='labelCourse mb-0'><strong>Каква е твоята оценка на урока?</strong></label>
                 <div className="feedback-level mt-0">

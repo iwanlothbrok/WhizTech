@@ -69,6 +69,7 @@ const feedbackSubmitHandle = async (formData) => {
             FeedbackLevel: formData.feedbackLevel,
             Name: formData.fullName,
             NewThings: formData.newThings,
+            MentorFeedback: formData.mentorFeedback,
             Date: Timestamp.now()
         });
         // Handle success or show a success message to the user
