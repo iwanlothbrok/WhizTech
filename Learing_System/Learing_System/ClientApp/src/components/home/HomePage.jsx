@@ -51,7 +51,7 @@ export default function HomePage() {
             <div className="photo-container d-flex flex-column justify-content-center align-items-center">
                 <div className="centered-text text-center p-4">
                     <h2 className={`display-2 mb-0 text-white ${isMobile ? 'mt-0' : 'mt-5'}`}>
-                        <strong>ИНДИВИДУАЛНИ УРОЦИ ПО ПРОГРАМИРАНЕ ЗА <span style={{ color: '#71F483' }}>НАЧИНАЕЩИ</span></strong>
+                        <strong>ИНДИВИДУАЛНИ УРОЦИ ПО ПРОГРАМИРАНЕ<br /> ЗА <span style={{ color: '#71F483' }}>НАЧИНАЕЩИ</span></strong>
                     </h2>
                     <h4 className={`mb-0 text-white ${isMobile ? 'mt-4' : 'mt-1'}`}>
                         ЗАПИШИ СЕ СЕГА И ПОЛУЧИ ПЪРВИ <span style={{ color: '#71F483' }}>БЕЗПЛАТЕН УРОК</span>
