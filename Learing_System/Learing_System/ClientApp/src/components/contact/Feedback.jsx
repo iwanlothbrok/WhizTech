@@ -33,6 +33,7 @@ export default function Feedback() {
                 setFormData({
                     fullName: '',
                     newThings: '',
+                    mentorFeedback: '',
                     feedbackLevel: ''
                 });
 
