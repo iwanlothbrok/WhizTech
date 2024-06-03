@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.498ed087.css",
-    "main.js": "/static/js/main.8a13e572.js",
+    "main.js": "/static/js/main.7427d0ec.js",
     "static/media/aboutPh.jpg": "/static/media/aboutPh.794eae0d8e9bb3a21efa.jpg",
     "static/media/aivan.png": "/static/media/aivan.306fcf48da3157bf8444.png",
     "static/media/bg-biju.png": "/static/media/bg-biju.add8cc9a8cf77d370367.png",
@@ -12,6 +12,7 @@
     "static/media/navlogo.png": "/static/media/navlogo.059a3b7d3c5114136a80.png",
     "static/media/ISO_C++_Logo.svg.png": "/static/media/ISO_C++_Logo.svg.5185ce2f4c945505ee4f.png",
     "static/media/csharp1.png": "/static/media/csharp1.09fec7bac1619ce86c5b.png",
+    "static/media/interview.docx": "/static/media/interview.29325f5d54584106b6b8.docx",
     "static/media/dynamic.png": "/static/media/dynamic.6215fb7ac642dc6e5fca.png",
     "static/media/java-logo.png": "/static/media/java-logo.89fad66cb08faead0c8e.png",
     "static/media/45.png": "/static/media/45.3a7cf8e7041933392c33.png",
@@ -29,10 +30,10 @@
     "static/media/js-logo.png": "/static/media/js-logo.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
     "main.498ed087.css.map": "/static/css/main.498ed087.css.map",
-    "main.8a13e572.js.map": "/static/js/main.8a13e572.js.map"
+    "main.7427d0ec.js.map": "/static/js/main.7427d0ec.js.map"
   },
   "entrypoints": [
     "static/css/main.498ed087.css",
-    "static/js/main.8a13e572.js"
+    "static/js/main.7427d0ec.js"
   ]
 }

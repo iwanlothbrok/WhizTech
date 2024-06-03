@@ -17,6 +17,7 @@ import JoinCourse from './components/contact/JoinCourse';
 import PricingPage from './components/pricing/PricingPage';
 import Hero from './components/about/Hero';
 import Feedback from './components/contact/Feedback';
+import DownloadFile from './components/downloading/DownloadFile';
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/offerts" element={<PricingPage />} />
         <Route path="/hero" element={<Hero />} />
         <Route path='/feedback' element={<Feedback />} />
+        <Route path="/file-js" element={<DownloadFile />} />
 
       </Routes>
 
