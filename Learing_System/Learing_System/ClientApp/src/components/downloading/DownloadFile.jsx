@@ -17,7 +17,7 @@ const DownloadFile = () => {
     return (
         <>
             <div className='text-center m-5'>
-                <h1 className='text-success mt-5'>Файлът се изтегля...<br /> Oчаквайте ТОП 3 задачите, които присъстват на всяка JS интервю  </h1>
+                <h1 className='text-success mt-5'>Файлът се изтегля...<br /> Oчаквайте ТОП 3 задачите, които присъстват на всякo JS интервю </h1>
                 <img src={js} className='w-25 h-25' alt="" /></div>
         </>
     );
