@@ -18,6 +18,8 @@ import PricingPage from './components/pricing/PricingPage';
 import Hero from './components/about/Hero';
 import Feedback from './components/contact/Feedback';
 import DownloadFile from './components/downloading/DownloadFile';
+import ProductList from './components/products/ProductList';
+import ProductDetails from './components/products/ProductDetails';
 
 export default function App() {
   return (
@@ -37,6 +39,8 @@ export default function App() {
         <Route path="/hero" element={<Hero />} />
         <Route path='/feedback' element={<Feedback />} />
         <Route path="/file-js" element={<DownloadFile />} />
+        <Route path='/products' element={<ProductList />} />
+        <Route path='/product/:id' element={<ProductDetails />} />
 
       </Routes>
 
