@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <div>
-      <Header />
+      <Header pageInformation="За Нас" />
       <Technologies />
       <Hero />
       <Information />
