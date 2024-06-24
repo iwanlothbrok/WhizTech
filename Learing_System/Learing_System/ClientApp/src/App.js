@@ -17,10 +17,16 @@ import JoinCourse from './components/contact/JoinCourse';
 import PricingPage from './components/pricing/PricingPage';
 import Hero from './components/about/Hero';
 import Feedback from './components/contact/Feedback';
+<<<<<<< Updated upstream
 import DownloadFile from './components/downloading/DownloadFile';
 import ProductList from './components/products/ProductList';
 import ProductDetails from './components/products/ProductDetails';
 
+=======
+import Checkout from './components/Checkout';
+import { Elements } from '@stripe/react-stripe-js';
+import stripePromise from './Stripe';
+>>>>>>> Stashed changes
 export default function App() {
   return (
     <div className="App">
@@ -38,10 +44,21 @@ export default function App() {
         <Route path="/offerts" element={<PricingPage />} />
         <Route path="/hero" element={<Hero />} />
         <Route path='/feedback' element={<Feedback />} />
+<<<<<<< Updated upstream
         <Route path="/file-js" element={<DownloadFile />} />
         <Route path='/products' element={<ProductList />} />
         <Route path='/product/:id' element={<ProductDetails />} />
 
+=======
+        <Route
+          path='/checkout'
+          element={
+            <Elements stripe={stripePromise}>
+              <Checkout priceId="57.99" /> {/* Replace with your Stripe price ID */}
+            </Elements>
+          }
+        />
+>>>>>>> Stashed changes
       </Routes>
 
     </div >
