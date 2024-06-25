@@ -5,18 +5,22 @@ import courseCover from '../../../styles/photos/course-banner.png'
 const products = [
     {
         id: 1,
-        title: "Effective JavaScript Techniques",
-        description: "Explore advanced JavaScript techniques and best practices to enhance your coding skills and improve your web development projects.",
-        price: 15.99,
+        title: "Майсторство със C# за начинаещи - Наръчник",
+        description: "Въвеждащ наръчник по програмиране със C#, обхващащ основни концепции и практически приложения за начинаещи. С този наръчник ще научите - как да създадете вашето първо приложение, как да използвате важни нещата, като методи и масиви, как да правите проверки и още много други неща.",
+        price: 17.00,
         skills: [
-            "Asynchronous Programming",
-            "Error Handling",
-            "Functional Programming"
+            "Променливи",
+            "Четене и писане в конзолата",
+            "Проверки на кода с If-Else и Switch",
+            "Цикли For и While",
+            "Методи",
+            "Масиви"
         ],
         categories: [
-            "Programming",
-            "Web Development",
-            "Educational"
+            "Програмиране",
+            "Разработване на софтуер",
+            "Образователни",
+            "Начинаещи със C#"
         ],
         bookCover: bookCover,
 
@@ -24,8 +28,23 @@ const products = [
     {
         id: 2,
         bookCover: courseCover,
-        title: 'Fancy Product 2',
-        priceRange: '$50.00 - $90.00'
+        title: 'Напиши първото си приложение със C# - само за 3 седмици',
+        description: "Въвеждащ наръчник по програмиране със C#, обхващащ основни концепции и практически приложения за начинаещи. С този наръчник ще научите - как да създадете вашето първо приложение, как да използвате важни нещата, като методи и масиви, как да правите проверки и още много други неща.",
+        price: 17.00,
+        skills: [
+            "Променливи",
+            "Четене и писане в конзолата",
+            "Проверки на кода с If-Else и Switch",
+            "Цикли For и While",
+            "Методи",
+            "Масиви"
+        ],
+        categories: [
+            "Програмиране",
+            "Разработване на софтуер",
+            "Образователни",
+            "Начинаещи със C#"
+        ],
     },
     {
         id: 3,
