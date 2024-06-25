@@ -451,3 +451,110 @@ a.btn-social {
     padding-bottom: 15px;
     border-bottom: 1px solid #d5dadb;
 }
+
+/* src/styles/css/productDetails.css */
+
+/* src/styles/css/productDetails.css */
+
+
+
+
+.bootcamp-description {
+    padding: 40px;
+    background-color: #1c1e21;
+    /* Dark background for contrast */
+    /* Dark background for contrast */
+    color: white;
+    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+.bootcamp-section {
+    margin-bottom: 40px;
+}
+
+.signup-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #71F483;
+    /* Updated button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #e68900;
+    /* Slightly darker shade for hover effect */
+}
+
+.headersPrices {
+    color: #ff9800;
+    margin-bottom: 12px;
+}
+
+.textPrices {
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.discounted-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: red;
+    margin: 0 5px;
+}
+
+.discounted-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #71F483;
+    /* Updated discounted price color */
+}
+
+.strongTextPrices {
+    color: #71F483;
+    /* Updated strong text color */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .bootcamp-description {
+        text-align: center;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 115.78%;
+    /* 9/16 aspect ratio */
+    height: 0;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .bootcamp-description,
+    .video-container {
+        text-align: center;
+    }
+}
