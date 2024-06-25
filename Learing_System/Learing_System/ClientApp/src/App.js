@@ -17,16 +17,15 @@ import JoinCourse from './components/contact/JoinCourse';
 import PricingPage from './components/pricing/PricingPage';
 import Hero from './components/about/Hero';
 import Feedback from './components/contact/Feedback';
-<<<<<<< Updated upstream
 import DownloadFile from './components/downloading/DownloadFile';
 import ProductList from './components/products/ProductList';
 import ProductDetails from './components/products/ProductDetails';
 
-=======
 import Checkout from './components/Checkout';
 import { Elements } from '@stripe/react-stripe-js';
 import stripePromise from './Stripe';
->>>>>>> Stashed changes
+import CsharpCourseForm from './components/contact/CsharpCourse';
+
 export default function App() {
   return (
     <div className="App">
@@ -44,12 +43,11 @@ export default function App() {
         <Route path="/offerts" element={<PricingPage />} />
         <Route path="/hero" element={<Hero />} />
         <Route path='/feedback' element={<Feedback />} />
-<<<<<<< Updated upstream
+        <Route path='csharpCourse' element={<CsharpCourseForm />} />
         <Route path="/file-js" element={<DownloadFile />} />
         <Route path='/products' element={<ProductList />} />
         <Route path='/product/:id' element={<ProductDetails />} />
 
-=======
         <Route
           path='/checkout'
           element={
@@ -58,7 +56,6 @@ export default function App() {
             </Elements>
           }
         />
->>>>>>> Stashed changes
       </Routes>
 
     </div >
