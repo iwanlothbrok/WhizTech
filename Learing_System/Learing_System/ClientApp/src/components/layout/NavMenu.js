@@ -97,7 +97,7 @@ function NavMenu() {
         </div>
       </div>
 
-      <div className={`collapse content ${isContentVisible ? 'show' : ''}`} >
+      <div className={`collapse content align-items-right justify-content-end ${isContentVisible ? 'show' : ''}`} >
         <div className="navbar-nav ms-auto p-4 p-lg-0">
           <Link to="/" className="nav-item nav-link active" onClick={onClickHandle}>
             Начало

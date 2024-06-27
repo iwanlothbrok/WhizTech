@@ -1,41 +1,99 @@
-// src/components/CourseDescription.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import '../../styles/css/productsDescriptionFunnel.css';
 
 export default function CourseDescription() {
+    const calculateTimeLeft = () => {
+        const endDate = new Date('2024-07-07T23:59:59'); // End date and time
+        const now = new Date();
+        const timeLeft = Math.max(Math.floor((endDate - now) / 1000), 0); // Time left in seconds, rounded down
+        return timeLeft;
+    };
+
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(prevTime => Math.max(prevTime - 1, 0));
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    const formatTime = (seconds) => {
+        const days = Math.floor(seconds / (3600 * 24));
+        const hrs = Math.floor((seconds % (3600 * 24)) / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${days}d ${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    };
+
+
+
     return (
-        <div className="bootcamp-description text-white">
-            <h1 className='headersPrices'>Започнете със C# и създайте първия си проект с нашите насоки</h1>
+        <div className="funnel-description text-white">
+            <h1 className='header-main'>Усвояване на C# за 3 седмици - Стъпки към създаване на първия проекти</h1>
 
-            <div className="bootcamp-section">
-                <h3 className='headersPrices'>Началото на вашето пътуване към програмирането</h3>
-                <p className='textPrices'>
-                    Присъединете се към нашия <strong className='strongTextPrices'>интензивен 3-седмичен курс по C#</strong> "Първи стъпки в кодирането", предназначен за начинаещи в програмирането.
-                    С <strong className='strongTextPrices'>3 сесии на седмица</strong> бързо ще усвоите основните елементи на програмирането на C# - от създаването на среда за разработка до овладяването на потока на управление, циклите и методите.
-                    Този курс е вашият вход към света на програмирането.
+            <div className="timer">{formatTime(timeLeft)}</div>
+
+            <div className="funnel-section">
+                <h3 className='header-secondary'>Защо да изберете нашия C# Bootcamp?</h3>
+                <p className='body-text'>
+                    Искаш ли да се потопиш в програмирането и да усвоиш основите на C# само за 3 седмици?
+                    Ако отговорът е “Да”, тогава този курс е идеалният старт за теб. С нашите интензивни сесии ще научиш как да създадеш своята първа разработка бързо и ефективно.
+                </p>
+                <p className='body-text'>
+                    С три сесии на седмица, които ще бъдат на живо, ще усвоиш основите на C# – от създаването на среда за разработка до основни входно-изходни операции, поток на управление, цикли и методи.
+                </p>
+                <p className='body-text'>
+                    Натрупай практически опит и изгради солидна основа за усъвършенстване на уменията си за програмиране. Този курс ще те подготви за реални проекти и ще ти помогне да започнеш своето пътуване в света на програмирането.
                 </p>
             </div>
 
-            <div className="bootcamp-section">
-                <h3 className='headersPrices'>Практическо обучение и подкрепа</h3>
-                <p className='textPrices'>
-                    Нашият курс предлага <strong className='strongTextPrices'>практическо обучение</strong> с практически упражнения, сесии с въпроси и отговори и презентации на проекти на живо. Ще имате достъп до записани лекции,
-                    нашия ексклузивен <strong className='strongTextPrices'>електронен наръчник</strong> и подкрепяща общност в Discord.
-                    Възползвайте се от експертните насоки и съвместното обучение, за да повишите увереността си в кодирането.
+            <div className="funnel-section">
+                <h3 className='header-secondary'>Какво ще научите</h3>
+                <p className='body-text'>
+                    В курса ще научиш как да:
+                </p>
+                <ul className='bonuses-list'>
+                    <li>Пишеш код на C#</li>
+                    <li>Създаваш собствени проекти от нулата</li>
+                    <li>Използваш основни и напреднали функции на C#</li>
+                    <li>Решаваш задачи и проекти самостоятелно</li>
+                </ul>
+                <p className='body-text'>
+                    Практическият опит, който ще получиш, ще бъде основата за твоето усъвършенстване в програмирането.
                 </p>
             </div>
 
-            <div className="bootcamp-section">
-                <h3 className='headersPrices'>Специални оферти и истории на успеха</h3>
-                <p className='textPrices'>
-                    Възползвайте се от нашите <strong className='strongTextPrices'>оферти с ограничено времетраене</strong>: за първите 24 часа се запишете на цена
-                    <span className="original-price">597 USD</span> <span className="discounted-price">197 USD</span> (намалена от 597 USD),
-                    а за следващите 36 часа - на цена 297 USD. Постигнете оценка 4,5 или по-висока на финалния изпит за отстъпка от цената на следващия курс.
-                    Чуйте от нашите успешни възпитаници, като 10 ученици, които са усвоили методите само за 5 урока.
-                    Започнете своето пътешествие в програмирането с нас и изградете практически умения още от първия ден!
-                </p>
+            <div className="funnel-section">
+                <h3 className='header-secondary'>Бонуси</h3>
+                <ul className='bonuses-list'>
+                    <li>Безплатна електронна книга на стойност 25 лв.</li>
+                    <li>Достъп до записани лекции.</li>
+                    <li>Присъединяване към нашата Discord общност за помощ и мрежа.</li>
+                </ul>
             </div>
 
-            <button className="signup-button">Запиши се СЕГА</button>
+            <div className="funnel-section">
+                <h3 className='header-secondary'>Специални оферти</h3>
+                <p className='body-text'>
+                    <strong className='text-highlight'>Ограничени по време отстъпки:</strong>
+                </p>
+                <p className='body-text'>
+                    Първите 24 часа: <span className="original-price">597 лв.</span> <span className="discounted-price">197 лв.</span><br />
+                    Следващите 36 часа: <span className="original-price">597 лв.</span> <span className="discounted-price">297 лв.</span>
+                </p>
+                <p className='body-text'>
+                    <strong className='text-highlight'>Ексклузивни предимства:</strong>
+                </p>
+                <ul className='bonuses-list'>
+                    <li>Резултат над 4,5 на финалния изпит - 15% отстъпка от следващия курс.</li>
+                    <li>Отличен 6,00 - 30% отстъпка за следващия курс.</li>
+                </ul>
+            </div>
+
+            <button className="signup-button">Регистрирайте се</button>
         </div>
     );
 }
