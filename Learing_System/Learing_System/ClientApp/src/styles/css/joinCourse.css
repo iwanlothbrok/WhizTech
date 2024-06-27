@@ -1,34 +1,4 @@
-.form-wrapper {
-    width: 100%;
-    max-width: 540px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .form-wrapper {
-        padding: 10px;
-    }
-
-    .inputCourse,
-    .joinBtn {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-@media (min-width: 769px) {
-    .form-wrapper {
-        padding: 20px;
-    }
-
-    .inputCourse,
-    .joinBtn {
-        width: auto;
-    }
-}
-
-/* .formCourse {
+.formCourse {
     background: #e6e6e6;
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
@@ -38,153 +8,92 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     position: relative
-} */
-.formCourse {
-    background: #e6e6e6;
-    border-radius: 8px;
-    box-shadow: 0 0 30px -10px #065512;
-    margin: calc(30vh - 220px) auto;
-    padding: 20px 30px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
+
+.gray {
+    color: #5a5a5a
+}
+
+.inputCourse:focus {
+    border-bottom: 2px solid #78788c;
+    /* Add additional styles when the dropdown is clicked */
+    background-color: #f0f0f0;
+    /* Example background color */
+    color: #333;
+    /* Example text color */
+}
+
+.joinOurCourse {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 200px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c
+}
+
 
 .inputCourse {
+    width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2
 }
 
+.inputCourse:focus {
+    border-bottom: 2px solid #78788c
+}
+
+.labelCourse:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a
+}
+
+.green {
+    color: #16a72a;
+}
+
+
+.joinBtn {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.joinBtn:hover {
+    background: #78788c;
+    color: #fff
+}
 
 .iconsDiv {
-    margin-top: 20px;
-    text-align: center;
+    content: 'Hi';
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #16a72a;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 10px 10px 40px -14px #000
 }
+
 
 .icon {
-    margin-right: 10px;
-}
-
-/* Checkbox Styles */
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    outline: none;
-    position: relative;
-    height: 1.5rem;
-    width: 4.5rem;
-    border: 3px solid var(--body);
-    border-radius: 1.25rem;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(110, 110, 110, 0.6),
-        -5px -5px 10px rgba(82, 82, 82, 0.5), inset 6px 6px 8px -6px #c3c3c3,
-        inset -6px -6px 8px -6px #fff;
-    background-color: var(--body);
-    transition: background 0.15s, box-shadow 0.15s;
-
-    @media (prefers-color-scheme: light) {
-        box-shadow: 5px 5px 10px rgba(189, 189, 189, 0.6),
-            -5px -5px 10px rgba(255, 255, 255, 0.5),
-            inset 6px 6px 8px -6px #c3c3c3, inset -6px -6px 8px -6px #fff;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        box-shadow: -5px -2.5px 5px 0px rgba(255, 255, 255, 0.05),
-            5px 2.5px 7.5px 0px rgba(0, 0, 0, 0.5),
-            inset -2.5px -2.5px 2.5px 0px rgba(255, 255, 255, 0.05),
-            inset 2.5px 2.5px 2.5px 0px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Toggle Indicator */
-    &::before {
-        content: "";
-        height: 0.9375rem;
-        width: 0.9375rem;
-        background-color: var(--body);
-        position: absolute;
-        margin: auto;
-        top: 0;
-        left: 0.625rem;
-        bottom: 0;
-        border-radius: 50%;
-        box-shadow: 4px 4px 7.5px #585858, 5px 5px 10px rgba(109, 109, 109, 0.6);
-        transition: left 0.15s, box-shadow 0.15s;
-
-        @media (prefers-color-scheme: light) {
-            box-shadow: 4px 4px 7.5px #3d3d3d, 5px 5px 10px rgba(61, 61, 61, 0.6);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            box-shadow: -4px -2.5px 5px 0px rgba(255, 255, 255, 0.05),
-                4px 2.5px 7.5px 0px rgba(0, 0, 0, 0.5);
-        }
-    }
-
-    /* Label */
-    &::after {
-        content: "НЕ";
-        position: absolute;
-        font-size: 0.8125rem;
-        top: 0.3125rem;
-        right: 0.625rem;
-        color: var(--text-secondary);
-        font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial",
-            sans-serif;
-        font-weight: 400;
-        letter-spacing: 0.004em;
-    }
-
-    /* Checked Styles */
-    &:checked {
-        background: #15b115;
-
-        @media (prefers-color-scheme: light) {
-            box-shadow: 5px 5px 10px rgba(22, 190, 44, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5),
-                inset 6px 6px 8px -6px rgba(22, 190, 44, 0.6),
-                inset -6px -6px 8px -6px rgba(22, 190, 44, 0.6),
-        }
-
-        &::before {
-            left: 1.5625rem;
-            box-shadow: none;
-        }
-
-        &::after {
-            content: "ДА";
-            left: 0.625rem;
-            color: #f5f5f7;
-        }
-    }
-}
-
-.testBtn {
-    background-color: #000000;
-    color: #fff;
-    padding: 10px 20px;
-    /* Adjust padding to make button appropriately sized */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    /* Ensures the text inside the button is bold */
-    transition: background-color 0.3s, transform 0.3s;
-    display: inline-block;
-    /* Prevents the button from stretching to full width */
-    text-align: center;
-    /* Centers the text inside the button */
-}
-
-.testBtn:hover {
-    background-color: #15b115;
-    transform: scale(1.05);
-    color: white;
-    /* Adds a slight zoom effect on hover */
-}
-
-.testBtn:active {
-    background-color: #15b115;
+    margin: 0 5px 0 15px
 }
