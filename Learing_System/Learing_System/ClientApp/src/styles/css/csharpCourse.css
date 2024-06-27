@@ -1,0 +1,191 @@
+.custom-section {
+    padding: 40px 10px 10px 10px;
+    background-color: #f9f9f9;
+}
+
+.custom-form-wrapper {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .custom-form-wrapper {
+        padding: 10px;
+    }
+
+    .custom-inputCourse,
+    .custom-navBtn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 769px) {
+    .custom-form-wrapper {
+        padding: 20px;
+    }
+
+    .custom-inputCourse,
+    .custom-navBtn {
+        width: auto;
+    }
+}
+
+.custom-formCourse {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-inputCourse {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.custom-inputCourse:focus {
+    border-color: #15b115;
+    outline: none;
+}
+
+.custom-labelCourse {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.custom-joinOurCourse {
+    margin-bottom: 20px;
+}
+
+.custom-iconsDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.custom-icon {
+    margin-right: 10px;
+}
+
+.custom-alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.custom-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.custom-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox {
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.custom-navBtn {
+    background-color: #15b115;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.custom-navBtn:hover {
+    background-color: #0e8e0e;
+    transform: scale(1.05);
+}
+
+.custom-navBtn:active {
+    background-color: #0b6d0b;
+}
+
+.custom-text-center {
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    outline: none;
+    position: relative;
+    height: 1.5rem;
+    width: 4.5rem;
+    border: 3px solid var(--body);
+    border-radius: 1.25rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(110, 110, 110, 0.6),
+        -5px -5px 10px rgba(82, 82, 82, 0.5), inset 6px 6px 8px -6px #c3c3c3,
+        inset -6px -6px 8px -6px #fff;
+    background-color: var(--body);
+    transition: background 0.15s, box-shadow 0.15s;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    height: 0.9375rem;
+    width: 0.9375rem;
+    background-color: var(--body);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0.625rem;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 4px 4px 7.5px #585858, 5px 5px 10px rgba(109, 109, 109, 0.6);
+    transition: left 0.15s, box-shadow 0.15s;
+}
+
+input[type="checkbox"]::after {
+    content: "НЕ";
+    position: absolute;
+    font-size: 0.8125rem;
+    top: 0.3125rem;
+    right: 0.625rem;
+    color: var(--text-secondary);
+    font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial",
+        sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.004em;
+}
+
+input[type="checkbox"]:checked {
+    background: #15b115;
+}
+
+input[type="checkbox"]:checked::before {
+    left: 1.5625rem;
+    box-shadow: none;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "ДА";
+    left: 0.625rem;
+    color: #f5f5f7;
+}
