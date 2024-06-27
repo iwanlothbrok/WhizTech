@@ -3,13 +3,32 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/css/productDetails.css';
+import video from '../../styles/videos/0625.mp4';
+
 import products from './data/products'; // Adjust the path if necessary
 import CourseDesciption from './CourseDesciption';
+import DiffCourse from './DiffCourse';
 
 export default function ProductDetails() {
     const { id } = useParams();
     const product = products.find(p => p.id === parseInt(id));
     const [isMobile, setIsMobile] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(86400); // Initial time for 24 hours in seconds
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(prevTime => prevTime > 0 ? prevTime - 1 : 0);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    const formatTime = (seconds) => {
+        const hrs = Math.floor(seconds / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    };
 
     useEffect(() => {
         function handleWindowSizeChange() {
@@ -32,7 +51,7 @@ export default function ProductDetails() {
     if (!product) {
         return (
             <div className='text-center p-5'>
-                <h1 className='text-- p-5 m-5'>Product Not Found!</h1>
+                <h1 className='text-white p-5 m-5'>Невалиден продукт !</h1>
             </div>
         );
     }
@@ -41,15 +60,20 @@ export default function ProductDetails() {
         <div className="container mt-5">
             <div className="row">
                 <div className="col-md-6 col-sm-12">
-                    <div className="video-container">
-                        <video controls className="video">
-                            <source src={product.videoSrc} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                    <div className="funnel-description text-white">
+
+                        <div className="video-container">
+                            <video controls className="video">
+                                <source src={video} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        {/* <DiffCourse /> */}
                     </div>
                 </div>
+
                 <div className="col-md-6 col-sm-12">
-                    <CourseDesciption />
+                    <DiffCourse />
                 </div>
             </div>
         </div>

@@ -488,6 +488,16 @@ a.btn-social {
     transition: background-color 0.3s ease;
 }
 
+.timer {
+    font-size: 28px;
+    /* Increased font size */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* Added bottom margin for spacing */
+    color: #fff;
+    text-align: center;
+}
+
 .signup-button:hover {
     background-color: #e68900;
     /* Slightly darker shade for hover effect */
@@ -557,4 +567,9 @@ a.btn-social {
     .video-container {
         text-align: center;
     }
+}
+
+.bonusesList {
+    list-style-type: circle;
+    font-weight: bold;
 }
