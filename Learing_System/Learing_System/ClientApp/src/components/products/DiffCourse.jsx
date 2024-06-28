@@ -31,13 +31,9 @@ export default function DiffCourse() {
 
 
     return (
-        <div className="funnel-description text-white">
-            <h1 className='header-main'>Усвояване на C# за 3 седмици - Стъпки към създаване на първия проекти</h1>
-
-            <div className="timer">{formatTime(timeLeft)}</div>
-
-            <div className="funnel-section">
-                <h3 className='header-secondary'>Защо да изберете нашия C# Bootcamp?</h3>
+        <div >
+            <div className="funnel-section mt-2">
+                <h3 className='header-secondary'>Защо да изберете нашия C# курс?</h3>
                 <p className='body-text'>
                     Искаш ли да се потопиш в програмирането и да усвоиш основите на C# само за 3 седмици?
                     Ако отговорът е “Да”, тогава този курс е идеалният старт за теб. С нашите интензивни сесии ще научиш как да създадеш своята първа разработка бързо и ефективно.
@@ -51,7 +47,7 @@ export default function DiffCourse() {
             </div>
 
             <div className="funnel-section">
-                <h3 className='header-secondary'>Какво ще научите</h3>
+                <h3 className='header-secondary'>Какво ще научите?</h3>
                 <p className='body-text'>
                     В курса ще научиш как да:
                 </p>
@@ -67,7 +63,7 @@ export default function DiffCourse() {
             </div>
 
             <div className="funnel-section">
-                <h3 className='header-secondary'>Бонуси</h3>
+                <h3 className='header-secondary'>Бонуси!</h3>
                 <ul className='bonuses-list'>
                     <li>Безплатна електронна книга на стойност 25 лв.</li>
                     <li>Достъп до записани лекции.</li>
@@ -76,7 +72,6 @@ export default function DiffCourse() {
                     <li>Отличен 6,00 - 30% отстъпка за следващия курс.</li>
                 </ul>
             </div>
-            <button className="signup-button">Регистрирайте се</button>
         </div>
     );
 }

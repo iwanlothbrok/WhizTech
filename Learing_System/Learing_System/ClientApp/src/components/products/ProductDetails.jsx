@@ -2,12 +2,13 @@
 // src/components/products/ProductDetails.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import '../../styles/css/productDetails.css';
-import video from '../../styles/videos/0625.mp4';
-
+import '../../styles/css/productsDescriptionFunnel.css';
+// import video from '../../styles/videos/0625.mp4';
+import video from '../../styles/videos/0625 - 16х9.mp4';
 import products from './data/products'; // Adjust the path if necessary
 import CourseDesciption from './CourseDesciption';
 import DiffCourse from './DiffCourse';
+import StickyBuyNowCard from './StickyBuyNowCard';
 
 export default function ProductDetails() {
     const { id } = useParams();
@@ -58,9 +59,11 @@ export default function ProductDetails() {
 
     return (
         <div className="container mt-5">
+
             <div className="row">
-                <div className="col-md-6 col-sm-12">
-                    <div className="funnel-description text-white">
+                <h1 className='header-main fw-bold'>Първи стъпки в програмирането - Създаване на първия проекти</h1>
+                <div className="col-md-8 col-sm-12" style={{ paddingRight: '0px' }}>
+                    <div className="funnel-description text-white pr-0">
 
                         <div className="video-container">
                             <video controls className="video">
@@ -68,12 +71,13 @@ export default function ProductDetails() {
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        {/* <DiffCourse /> */}
+                        <DiffCourse />
                     </div>
                 </div>
 
-                <div className="col-md-6 col-sm-12">
-                    <DiffCourse />
+                <div className="col-md-4 col-sm-12" style={{ paddingLeft: '0px' }}>
+                    {/* here */}
+                    <StickyBuyNowCard />
                 </div>
             </div>
         </div>
