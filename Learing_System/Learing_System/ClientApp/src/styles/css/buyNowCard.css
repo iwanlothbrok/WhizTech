@@ -1,0 +1,141 @@
+/* productDetails.css */
+.sticky-course {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    /* Adjust as needed */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.course-thumb img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-info {
+    text-align: center;
+}
+
+.price-section {
+    margin-bottom: 15px;
+}
+
+.compare-price {
+    text-decoration: line-through;
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 10px;
+    opacity: .4;
+    position: relative;
+}
+
+.current-price {
+    /* font-size: 24px; */
+    font-weight: bold;
+
+    flex-wrap: wrap;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.price-section .save {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btn.main-btn {
+    background-color: #ff5c5c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn.main-btn:hover {
+    background-color: #e04b4b;
+    transform: scale(1.05);
+}
+
+.last-update {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.includes .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.includes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.includes ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.includes ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    margin-right: 5px;
+}
+
+.registration-timer {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #1c1e21;
+    text-align: center;
+}
+
+.registration-timer h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.registration-timer p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.time-box {
+    width: 40px;
+    height: 60px;
+    background-color:#4CAF50;
+    color: #ffffff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0px 3px;
+}
+
+.colon {
+    font-size: 32px;
+    color: #4CAF50;
+}

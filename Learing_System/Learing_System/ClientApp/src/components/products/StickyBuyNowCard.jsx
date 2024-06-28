@@ -1,0 +1,84 @@
+// src/components/StickyBuyNowCard.js
+import React, { useState, useEffect } from 'react';
+import productImage from '../../styles/photos/course-banner.png';
+import '../.././styles/css/buyNowCard.css'
+import '../../styles/css/productsDescriptionFunnel.css';
+
+const calculateTimeLeft = () => {
+    const endDate = new Date('2024-07-07T23:59:59'); // End date and time
+    const now = new Date();
+    const timeLeft = Math.max(endDate - now, 0); // Time left in milliseconds
+    return timeLeft;
+};
+
+const formatTime = (milliseconds) => {
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const hrs = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const mins = Math.floor((totalSeconds % 3600) / 60);
+    const secs = totalSeconds % 60;
+    return {
+        hrs: hrs.toString().padStart(2, '0'),
+        mins: mins.toString().padStart(2, '0'),
+        secs: secs.toString().padStart(2, '0'),
+    };
+};
+
+export default function StickyBuyNowCard() {
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    const timeParts = formatTime(timeLeft);
+
+
+    return (
+        <div className="funnel-description sticky-course text-white">
+            <div className="course-thumb">
+                <img src={productImage} alt="Course Thumbnail" />
+            </div>
+            <div className="course-info">
+                <div className="price-section">
+                    <div className="save justify-content-center align-items-center" style={{ background: '#4CAF50', borderRadius: '10px', padding: '5px' }}>
+                        <p className='text-white m-0' style={{ fontSize: '14px' }}>Спести 300лв</p>
+                    </div>
+                    {/* <div className="compare-price mt-2">599лв</div> */}
+                    <div ><strong className='compare-price'> 597 лв.</strong> <strong className="current-price">297 лв.</strong></div>
+                </div>
+
+                <a href='https://buy.stripe.com/4gw6r18xC5Pebf2aEF' class="btn main-btn">Купи</a>
+                <div className="last-update">Обновен на: <span>27 юни, 2024</span></div>
+                <div className="includes">
+                    <div className="label">Този курс включва:</div>
+                    <ul>
+                        <li><b>1</b> Модул</li>
+                        <li><b>9</b> Онлайн Лекции</li>
+                        <li><b>20+</b> Мини Проекти</li>
+                        <li><b>50+</b> Задачи За Решаване</li>
+                        <li><b>1000+</b> Придобити Умения</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="registration-timer">
+                <h2>ЗАПИШИ СЕ СЕГА</h2>
+                <div className="timer">
+                    <div className="time-box">{timeParts.hrs[0]}</div>
+                    <div className="time-box">{timeParts.hrs[1]}</div>
+                    <div className="colon">:</div>
+                    <div className="time-box">{timeParts.mins[0]}</div>
+                    <div className="time-box">{timeParts.mins[1]}</div>
+                    <div className="colon">:</div>
+                    <div className="time-box">{timeParts.secs[0]}</div>
+                    <div className="time-box">{timeParts.secs[1]}</div>
+                </div>
+                <p>ДО КРАЯ НА ЗАПИСВАНИЯТА</p>
+            </div>
+        </div>
+    );
+}
