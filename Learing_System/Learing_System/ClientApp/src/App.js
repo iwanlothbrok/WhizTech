@@ -7,9 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
 import About from './components/about/About'
 import ErrorPage from './components/ErrorPage';
-import Exercise from './components/exercises/Exercises';
 import Calendar from './components/calendar/Calendar';
-import BlogList from './components/blog/BlogList';
 import Language from './components/languages/Language';
 import ContactWithInformation from './components/ContactWithInformation'
 import SelectedBlog from './components/blog/SelectedBlog';
@@ -21,10 +19,8 @@ import DownloadFile from './components/downloading/DownloadFile';
 import ProductList from './components/products/ProductList';
 import ProductDetails from './components/products/ProductDetails';
 
-import Checkout from './components/Checkout';
-import { Elements } from '@stripe/react-stripe-js';
-import stripePromise from './Stripe';
 import CsharpCourseForm from './components/contact/CsharpCourse';
+import SuccessfulPayment from './components/products/SuccessfulPayment'
 
 export default function App() {
   return (
@@ -47,16 +43,11 @@ export default function App() {
         <Route path="/file-js" element={<DownloadFile />} />
         <Route path='/products' element={<ProductList />} />
         <Route path='/product/:id' element={<ProductDetails />} />
+        <Route path='/successfulPaying' element={<SuccessfulPayment />} />
 
-        <Route
-          path='/checkout'
-          element={
-            <Elements stripe={stripePromise}>
-              <Checkout priceId="57.99" /> {/* Replace with your Stripe price ID */}
-            </Elements>
-          }
-        />
       </Routes>
+
+      {/* Define other routes here */}
 
     </div >
   );
