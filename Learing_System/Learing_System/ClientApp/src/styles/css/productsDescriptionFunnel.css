@@ -41,7 +41,7 @@
 
 
 .header-main {
-    color: #4CAF50;
+    color: #ffffff;
     /* Green */
     margin-bottom: 20px;
     font-size: 36px;
@@ -138,3 +138,5 @@ li {
     list-style-type: circle;
     font-weight: bold;
 }
+
+
