@@ -108,6 +108,12 @@ function NavMenu() {
             style={{ whiteSpace: 'nowrap' }}>
             За Нас
           </Link>
+          <Link to="/products"
+            className="nav-item nav-link"
+            onClick={onClickHandle}
+            style={{ whiteSpace: 'nowrap' }}>
+            Обучения
+          </Link>
           <div className="nav-item dropdown">
             <Link
               to="#"
