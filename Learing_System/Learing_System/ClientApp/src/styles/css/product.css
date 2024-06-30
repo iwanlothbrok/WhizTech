@@ -1,0 +1,91 @@
+/* src/styles/css/product.css */
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.card-img-top-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 76.25%;
+}
+
+.card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.text-center h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.product-title:hover {
+    color: #05aa0d;
+
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.card-footer {
+    padding: 10px 15px;
+}
+
+.learnBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.learnBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.09);
+    color: #fff;
+}
