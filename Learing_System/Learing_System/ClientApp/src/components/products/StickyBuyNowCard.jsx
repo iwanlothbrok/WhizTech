@@ -13,10 +13,13 @@ const calculateTimeLeft = () => {
 
 const formatTime = (milliseconds) => {
     const totalSeconds = Math.floor(milliseconds / 1000);
+    const days = Math.floor(totalSeconds / (3600 * 24));
+
     const hrs = Math.floor((totalSeconds % (3600 * 24)) / 3600);
     const mins = Math.floor((totalSeconds % 3600) / 60);
     const secs = totalSeconds % 60;
     return {
+        days: days.toString().padStart(2, '0'),
         hrs: hrs.toString().padStart(2, '0'),
         mins: mins.toString().padStart(2, '0'),
         secs: secs.toString().padStart(2, '0'),
@@ -44,7 +47,7 @@ export default function StickyBuyNowCard() {
             </div>
             <div className="course-info">
                 <div className="price-section">
-                    <div className="save justify-content-center align-items-center" style={{ background: '#4CAF50', borderRadius: '10px', padding: '5px' }}>
+                    <div className="save justify-content-center align-items-center" style={{ background: '#ff5c5c', borderRadius: '5px', padding: '5px' }}>
                         <p className='text-white m-0' style={{ fontSize: '14px' }}>Спести 300лв</p>
                     </div>
                     {/* <div className="compare-price mt-2">599лв</div> */}
@@ -68,6 +71,9 @@ export default function StickyBuyNowCard() {
             <div className="registration-timer">
                 <h2>ЗАПИШИ СЕ СЕГА</h2>
                 <div className="timer">
+                    <div className="time-box">{timeParts.days[0]}</div>
+                    <div className="time-box">{timeParts.days[1]}</div>
+                    <div className="colon">:</div>
                     <div className="time-box">{timeParts.hrs[0]}</div>
                     <div className="time-box">{timeParts.hrs[1]}</div>
                     <div className="colon">:</div>
