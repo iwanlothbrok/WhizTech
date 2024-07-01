@@ -57,7 +57,7 @@
 
 .body-text {
     line-height: 1.8;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
     color: #fff;
     /* White */
@@ -85,7 +85,6 @@
 
 .bonuses-list {
     list-style-type: circle;
-    font-weight: bold;
     padding-left: 20px;
 }
 
@@ -138,5 +137,3 @@ li {
     list-style-type: circle;
     font-weight: bold;
 }
-
-

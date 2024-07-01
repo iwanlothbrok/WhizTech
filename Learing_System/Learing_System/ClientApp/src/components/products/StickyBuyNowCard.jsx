@@ -54,7 +54,7 @@ export default function StickyBuyNowCard() {
                     <div ><strong className='compare-price'> 597 лв.</strong> <strong className="current-price">197 лв.</strong></div>
                 </div>
 
-                <a href='https://buy.stripe.com/14kdTt4hm4Lacj67ss' class="btn main-btn">Купи</a>
+                <a href='https://buy.stripe.com/14kdTt4hm4Lacj67ss' class="btn main-btn fw-bold">ЗАПИШИ СЕ</a>
                 <div className="last-update">Обновен на: <span>27 юни, 2024</span></div>
                 <div className="includes">
                     <div className="label">Този курс включва:</div>
