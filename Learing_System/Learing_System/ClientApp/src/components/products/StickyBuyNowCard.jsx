@@ -1,6 +1,6 @@
 // src/components/StickyBuyNowCard.js
 import React, { useState, useEffect } from 'react';
-import productImage from '../../styles/photos/course-banner.png';
+import productImage from '../../styles/photos/banner.png';
 import '../.././styles/css/buyNowCard.css'
 import '../../styles/css/productsDescriptionFunnel.css';
 
@@ -48,13 +48,13 @@ export default function StickyBuyNowCard() {
             <div className="course-info">
                 <div className="price-section">
                     <div className="save justify-content-center align-items-center" style={{ background: '#ff5c5c', borderRadius: '5px', padding: '5px' }}>
-                        <p className='text-white m-0' style={{ fontSize: '14px' }}>Спести 300лв</p>
+                        <p className='text-white m-0' style={{ fontSize: '14px' }}>Спести 400лв</p>
                     </div>
                     {/* <div className="compare-price mt-2">599лв</div> */}
-                    <div ><strong className='compare-price'> 597 лв.</strong> <strong className="current-price">297 лв.</strong></div>
+                    <div ><strong className='compare-price'> 597 лв.</strong> <strong className="current-price">197 лв.</strong></div>
                 </div>
 
-                <a href='https://buy.stripe.com/4gw6r18xC5Pebf2aEF' class="btn main-btn">Купи</a>
+                <a href='https://buy.stripe.com/14kdTt4hm4Lacj67ss' class="btn main-btn">Купи</a>
                 <div className="last-update">Обновен на: <span>27 юни, 2024</span></div>
                 <div className="includes">
                     <div className="label">Този курс включва:</div>
@@ -63,7 +63,7 @@ export default function StickyBuyNowCard() {
                         <li><b>9</b> Онлайн Лекции</li>
                         <li><b>20+</b> Мини Проекти</li>
                         <li><b>50+</b> Задачи За Решаване</li>
-                        <li><b>1000+</b> Придобити Умения</li>
+                        <li><b>100+</b> Придобити Умения</li>
                     </ul>
                 </div>
             </div>
@@ -79,11 +79,11 @@ export default function StickyBuyNowCard() {
                     <div className="colon">:</div>
                     <div className="time-box">{timeParts.mins[0]}</div>
                     <div className="time-box">{timeParts.mins[1]}</div>
-                    <div className="colon">:</div>
+                    {/* <div className="colon">:</div>
                     <div className="time-box">{timeParts.secs[0]}</div>
-                    <div className="time-box">{timeParts.secs[1]}</div>
+                    <div className="time-box">{timeParts.secs[1]}</div> */}
                 </div>
-                <p>ДО КРАЯ НА ЗАПИСВАНИЯТА</p>
+                <p className='mb-0 mt-1'>ДНИ ДО КРАЯ НА ЗАПИСВАНИЯТА</p>
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 // data.js
-import bookCover from '../../../styles/photos/bookCover.png'
-import courseCover from '../../../styles/photos/banner-course-01.png'
-import video from '../../../styles/videos/0625 - 16х9.mp4';
+import courseCover from '../../../styles/photos/big-banner.png'
+import video from '../../../styles/videos/prati.mp4';
 
 const products = [
     // {
