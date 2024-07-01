@@ -4,8 +4,8 @@ import React from 'react';
 
 const ThankYouPayment = () => {
     return (
-        <div style={styles.container}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Checkmark_green.svg/1200px-Checkmark_green.svg.png" alt="Checkmark" style={styles.image} />
+        <div className='text-center' style={styles.container}>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/checkmark-cross/success-green-check-mark-icon.png" alt="Checkmark" style={styles.image} />
             <h1 className='fw-bold' style={styles.header}>Успешно записване!</h1>
             <p style={styles.text}>
                 Благодарим Ви за вашето записване за курса "Първи стъпки в програмирането". Плащането премина успешно.
@@ -28,7 +28,7 @@ const styles = {
         justifyContent: 'center',
         height: '100vh',
         padding: '20px',
-        backgroundColor: '#1d3557', // Dark blue background for better contrast
+        backgroundColor: 'rgb(35, 35, 35)', // Dark blue background for better contrast
         color: '#fff', // White text color
     },
     image: {
@@ -38,7 +38,7 @@ const styles = {
     },
     header: {
         fontSize: '2.5em',
-        color: '#f4a261', // Accent color for the header
+        color: '#01a501', // Accent color for the header
         marginBottom: '20px',
     },
     text: {
