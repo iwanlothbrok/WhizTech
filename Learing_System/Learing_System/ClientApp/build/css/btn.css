@@ -1,0 +1,14 @@
+/* Button styles */
+/* Button styles */
+.custom-button {
+    background-color: #fdfdfd !important; /* Use !important to override default styles */
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+
+  }
+  
+  /* Hover effect */
+  .custom-button:hover {
+    background-color: #71F483 !important; /* Use !important to override default styles */
+    color: black
+  }

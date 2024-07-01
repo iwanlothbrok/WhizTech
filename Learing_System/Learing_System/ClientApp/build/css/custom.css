@@ -1,0 +1,27 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #000000;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #000000;
+  border-color: #1861ac;
+}
+
+.sticky-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* HERE IS THE WAVE  */
+.wave-background {
+  background: rgb(35,35,35);
+  background: linear-gradient(90deg, rgba(35,35,35,1) 0%, rgba(54,231,78,1) 30%);
+}
