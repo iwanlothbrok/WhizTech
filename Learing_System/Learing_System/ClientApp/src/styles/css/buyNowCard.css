@@ -100,6 +100,7 @@
 .registration-timer {
     margin-top: 20px;
     padding: 10px;
+
     border: 2px solid #4CAF50;
     border-radius: 5px;
     background-color: #1c1e21;
@@ -120,13 +121,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0 15px; 
+    margin-left: 0 15px;
     /* margin-bottom: 10px; */
 }
 
 .time-box {
     width: 60px;
-    padding: 4px;
+    padding: 2.5px;
     height: 60px;
     background-color: #4CAF50;
     color: #ffffff;

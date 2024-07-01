@@ -1,6 +1,6 @@
 
 // src/components/products/ProductDetails.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/css/productsDescriptionFunnel.css';
 // import video from '../../styles/videos/0625.mp4';
@@ -13,6 +13,14 @@ export default function ProductDetails() {
     const { id } = useParams();
     const product = products.find(p => p.id === parseInt(id));
     const [isMobile, setIsMobile] = useState(false);
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.load();
+            videoRef.current.play();
+        }
+    }, [product.video]);
 
     useEffect(() => {
         function handleWindowSizeChange() {
@@ -49,7 +57,7 @@ export default function ProductDetails() {
                     <div className="funnel-description text-white pr-0">
 
                         <div className="video-container">
-                            <video controls className="video">
+                            <video controls className="video" ref={videoRef}>
                                 <source src={product.video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
