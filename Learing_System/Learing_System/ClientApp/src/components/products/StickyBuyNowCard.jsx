@@ -65,7 +65,7 @@ export default function StickyBuyNowCard() {
                 </div>
             </div>
 
-            <div className="registration-timer">
+            {/* <div className="registration-timer">
                 <h2>ЗАПИШИ СЕ СЕГА</h2>
                 <div className="timer">
                     <div className="time-box">{timeParts.days[0]}</div>
@@ -81,7 +81,7 @@ export default function StickyBuyNowCard() {
                     <div className="time-box">{timeParts.secs[1]}</div>
                 </div>
                 <p className='mb-0 mt-1'>ДНИ ДО КРАЯ НА ЗАПИСВАНИЯТА</p>
-            </div>
+            </div> */}
         </div>
     );
 }
