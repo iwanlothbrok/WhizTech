@@ -1,26 +1,120 @@
+/* homePage.css */
+
 .signBtn {
-    /* float: right; */
     padding: 24px 30px;
     margin: 8px 0 0;
     font-family: 'Montserrat', sans-serif;
     border: 2px solid #78788c;
-    background: 0;
-    color: #71F483;
+    background: transparent;
+    color: rgb(34, 202, 124);
+    /* Brighter green */
     cursor: pointer;
-    transition: all .1s
+    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    font-size: 1.5rem;
 }
 
 .signBtn:hover {
-    background: rgba(21, 183, 18, 0.711);
-    color: #ffffff
-}
-
-.navBtn:hover {
-    background: rgba(21, 183, 18, 0.711);
-    color: black;
+    background: rgb(34, 202, 124);
+    /* Matching brighter green */
+    color: #ffffff;
+    border-color: rgb(34, 202, 124);
+    transform: scale(1.15);
 }
 
 .navBtn {
     background-color: black;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.navBtn:hover {
+    background: rgb(34, 202, 124);
+    /* Matching brighter green */
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Brighter green for text-success class */
+.text-bright-green {
+    color: rgb(13, 173, 98) !important;
+}
+
+/* Additional CSS for better overall page styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.centered-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 992px) {
+    .centered-text h2 {
+        font-size: 4rem;
+    }
+
+    .centered-text h4 {
+        font-size: 2rem;
+    }
+
+
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+    .signBtn {
+        padding: 16px 20px;
+        font-size: 2rem;
+    }
+
+    .navBtn {
+        padding: 8px 16px;
+        font-size: 1.5rem;
+    }
+
+    .centered-text h2 {
+        font-size: 4rem;
+    }
+
+    .centered-text h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .signBtn {
+        padding: 12px 18px;
+        font-size: 1.6rem;
+    }
+
+    .navBtn {
+        padding: 6px 12px;
+        font-size: 1.8rem;
+    }
+
+    .centered-text h2 {
+        font-size: 2rem;
+    }
+
+    .centered-text h4 {
+        font-size: 1.2rem;
+    }
 }
