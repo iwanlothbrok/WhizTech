@@ -1,47 +1,55 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import 'animate.css/animate.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function ServiceSection() {
+  useEffect(() => {
+    const wow = require('wowjs');
+    new wow.WOW({ live: false, offset: 100, mobile: true, duration: 0.5 }).init();
+  }, []);
+
   return (
-    <div className='hidden' style={{ backgroundColor: '#232323' }}>
+    <div className="service-section" style={{ backgroundColor: '#232323' }}>
       <div className="container-xxl py-5">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h2 className="mb-5 text-white">За кого са предназначени уроците</h2>
+        <div className="text-center wow animate__fadeInUp" data-wow-delay="0.1s">
+          <h2 className="mb-5 text-white">ЗАЩО ДА ИЗБЕРЕТЕ WHIZ ACADEMY?</h2>
         </div>
         <div className="container">
           <div className="row g-4">
-            <div className="col-lg-3 col-sm-6 wow fadeInUp logo hidden" data-wow-delay="0.1s">
-              <div className="service-item text-center pt-3">
-                <div className="p-4">
-                  <i className="fa fa-3x fa-graduation-cap text-alert mb-4"></i>
-                  <h5 className="mb-3">Студенти</h5>
-                  <p>имащи нужда от помощ с материала изучаван в университета, подготовка за изпити или курсови работи</p>
-                </div>
+            <div className="col-lg-3 col-sm-6 wow animate__fadeInUp fadeInUp logo hidden" data-wow-delay="0.2s">
+              <div className="service-item text-center p-4 bg-dark rounded">
+                <i className="fa fa-3x fa-user-cog text-success mb-4"></i>
+                <h5 className="mb-3 text-white">🎓 Персонализирано обучение</h5>
+                <p className="text-light">
+                  Нашите програми са създадени да отговарят на вашите индивидуални нужди и цели.
+                </p>
               </div>
             </div>
-            <div className="col-lg-3 col-sm-6 wow fadeInUp logo hidden" data-wow-delay="0.3s">
-              <div className="service-item text-center pt-3">
-                <div className="p-4">
-                  <i className="fa fa-3x fa-globe text-alert mb-4"></i>
-                  <h5 className="mb-3">Самообучаващи</h5>
-                  <p>амбициозни и целеустремини, искайки да научат важните концпеции на програмирането самостоятелно</p>
-                </div>
+            <div className="col-lg-3 col-sm-6 wow animate__fadeInUp fadeInUp logo hidden" data-wow-delay="0.5s">
+              <div className="service-item text-center p-4 bg-dark rounded">
+                <i className="fa fa-3x fa-clock text-success mb-4"></i>
+                <h5 className="mb-3 text-white">⏰ Гъвкав график</h5>
+                <p className="text-light">
+                  Учете в удобно за вас време, без да жертвате текущите си ангажименти.
+                </p>
               </div>
             </div>
-            <div className="col-lg-3 col-sm-6 wow fadeInUp logo hidden" data-wow-delay="0.5s">
-              <div className="service-item text-center pt-3">
-                <div className="p-4">
-                  <i className="fa fa-3x fa-home text-alert mb-4"></i>
-                  <h5 className="mb-3">Ученици</h5>
-                  <p>които имат нужда от помощ с учебния материал, или искат да се развиват в сферата на програмирането и технологиите</p>
-                </div>
+            <div className="col-lg-3 col-sm-6 wow animate__fadeInUp fadeInUp logo hidden" data-wow-delay="0.8s">
+              <div className="service-item text-center p-4 bg-dark rounded">
+                <i className="fa fa-3x fa-chalkboard-teacher text-success mb-4"></i>
+                <h5 className="mb-3 text-white">👩‍🏫 Експертни ментори</h5>
+                <p className="text-light">
+                  Получете насоки от опитни професионалисти, които ще ви помогнат да се развиете бързо.
+                </p>
               </div>
             </div>
-            <div className="col-lg-3 col-sm-6 wow fadeInUp logo hidden" data-wow-delay="0.7s">
-              <div className="service-item text-center pt-3">
-                <div className="p-4">
-                  <i className="fa fa-3x fa-book-open text-alert mb-4"></i>
-                  <h5 className="mb-3">Ентусиасти</h5>
-                  <p>които обичат предизвикателствата и искат да разширят своите знания и умения в програмирането.</p>
-                </div>
+            <div className="col-lg-3 col-sm-6 wow animate__fadeInUp fadeInUp logo hidden" data-wow-delay="1.1s">
+              <div className="service-item text-center p-4 bg-dark rounded">
+                <i className="fa fa-3x fa-briefcase text-success mb-4"></i>
+                <h5 className="mb-3 text-white">💼 Реални проекти</h5>
+                <p className="text-light">
+                  Работете по проекти, които Ви подготвят за реални работни ситуации.
+                </p>
               </div>
             </div>
           </div>
