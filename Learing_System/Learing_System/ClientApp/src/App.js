@@ -19,7 +19,7 @@ import DownloadFile from './components/downloading/DownloadFile';
 import ProductList from './components/products/ProductList';
 import ProductDetails from './components/products/ProductDetails';
 
-import CsharpCourseForm from './components/contact/CsharpCourse'; 
+import CsharpCourseForm from './components/contact/CsharpCourse';
 import SuccessfulPayment from './components/products/SuccessfulPayment'
 
 export default function App() {
