@@ -1,91 +1,81 @@
-
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faList, faMoneyCheck, faCoins, faRocket, faHome, faBookOpen, faClock, faComputer } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faList, faCoins, faRocket, faBookOpen, faClock } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 export default function AskedQuestions() {
-
     const questionStyle = {
         color: '#71F483',
-        fontSize: '25px',
+        fontSize: '28px', // Increased font size for better readability
+    };
 
-    }
-
-    const divStyle = {
-        margin: '10px'
-    }
     const answerStyle = {
         color: 'white',
-        fontSize: '20px'
-    }
+        fontSize: '20px',
+    };
 
     return (
-        <section className='m-5'>
-            <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h2 className="mb-5 text-white">Често задавани въпроси</h2>
+        <section className="m-5">
+            <div className="text-center wow animate__fadeInUp" data-wow-delay="0.1s">
+                <h2 className="mb-5 text-white">ЧЕСТО ЗАДАВАНИ ВЪПРОСИ</h2>
             </div>
 
             <div className="row mt-2">
-                <div className="col-md-6 col-lg-4 mb-5 question photo hidden">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faBookOpen} style={questionStyle} className="pe-2" />Как се провеждат уроците?</h6>
+                <div className="col-md-6 col-lg-4 mb-5 question photo hidden wow animate__fadeInLeft" data-wow-delay="0.1s">
+                    <h4 className="mb-3" style={questionStyle}>
+                        <FontAwesomeIcon icon={faBookOpen} className="pe-2" />
+                        Как се провеждат уроците?
+                    </h4>
                     <p style={answerStyle}>
-                        Уроците се провеждат изцяло онлайн. Лекторът и ученикът се свързват чрез интернет, обикновено чрез виртуална
-                        платформа за срещи. Лекторът може да сподели своя екран и дори да вземе дистанционен достъп до компютъра на
-                        ученика, което позволява на тях да работят заедно по учебния материал. Този подход прави учебния процес
-                        достъпен и удобен.
+                        Уроците се провеждат изцяло онлайн чрез виртуална платформа. Лекторът може да сподели екран и да вземе дистанционен достъп до компютъра на ученика.
                     </p>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-5 question hidden">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faClock} className="pe-2" style={questionStyle} /> Колко време е един урок?</h6>
+                <div className="col-md-6 col-lg-4 mb-5 question hidden wow animate__fadeInRight" data-wow-delay="0.2s">
+                    <h4 className="mb-3" style={questionStyle}>
+                        <FontAwesomeIcon icon={faClock} className="pe-2" />
+                        Колко време е един урок?
+                    </h4>
                     <p style={answerStyle}>
-                        Един урок продължава 60 минути, което е оптималното време, което сме установили
-                        чрез нашия опит с ученици и студенти.
-                        Този период от време ни позволява да представим материала ефективно и да поддържаме вниманието на обучаемия.
+                        Един урок продължава 60 минути – оптималното време за ефективно представяне на материала.
                     </p>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-5 question hidden">
-                    <h6 className="mb-3" style={questionStyle} ><FontAwesomeIcon style={questionStyle} icon={faRocket} className="pe-2" />Kакви технологии преподавате?</h6>
+                <div className="col-md-6 col-lg-4 mb-5 question hidden wow animate__fadeInLeft" data-wow-delay="0.3s">
+                    <h4 className="mb-3" style={questionStyle}>
+                        <FontAwesomeIcon icon={faRocket} className="pe-2" />
+                        Какви технологии преподавате?
+                    </h4>
                     <p style={answerStyle}>
-                        Преподаваме разнообразни технологии в две основни области: front-end и back-end. <br />
-
-                        Front-End технологии: <br />
-
-                        React,
-                        HTML (HyperText Markup Language),
-                        CSS (Cascading Style Sheets),
-                        JavaScript,
-                        Bootstrap<br />
-
-                        Back-end технологии: <br />
-                        C#,
-                        Java,
-                        C++,
-                        C,
-                        SQL,
-                        Node.js
+                        Нашите ментори за специализирани в C#, Java и JavaScript.
                     </p>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-4 question hidden">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faPaperPlane} style={questionStyle} className="pe-2" /> Как да се свържем с Вас?</h6>
+                <div className="col-md-6 col-lg-4 mb-4 question hidden wow animate__fadeInRight" data-wow-delay="0.4s">
+                    <h4 className="mb-3" style={questionStyle}>
+                        <FontAwesomeIcon icon={faPaperPlane} className="pe-2" />
+                        Как да се свържем с вас?
+                    </h4>
                     <p style={answerStyle}>
-                        Можете да се свържете с нас чрез изпращане на имейл в секция "Контакти" в сайта, да ни се обадите на <strong>+359 88 904 4614</strong>. <br />Или запазете час за урок на момента {' '}
-                        <Link to="/calendar" className="link" style={{ color: '#71F483' }}>ТУК</Link>.
+                        Можете да ни изпратите имейл или да ни се обадите на +359 88 904 4614. Запазете час за урок <Link to="/calendar" className="link" style={{ color: '#71F483' }}>ТУК</Link>.
                     </p>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-4 question hidden">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faList} style={questionStyle} className="pe-2" /> Какви са изискванията за участие в уроците?</h6>
+                <div className="col-md-6 col-lg-4 mb-4 question hidden wow animate__fadeInLeft" data-wow-delay="0.5s">
+                    <h4 className="mb-3" style={questionStyle}>
+                        <FontAwesomeIcon icon={faList} className="pe-2" />
+                        Какви са изискванията за участие в уроците?
+                    </h4>
                     <p style={answerStyle}>
-                        За участие в уроците ви е необходим компютър или лаптоп с интернет връзка. Определени уроци може да изискват инсталиране на специфичен софтуер, който ще бъде предоставен предварително.                    </p>
+                        Нужен ви е компютър или лаптоп с интернет връзка. Някои уроци може да изискват специфичен софтуер.
+                    </p>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-4 question hidden">
-                    <h6 className="mb-3" style={questionStyle}><FontAwesomeIcon icon={faCoins} style={questionStyle} className="pe-2" /> Какви са начините на плащане?</h6>
+                <div className="col-md-6 col-lg-4 mb-4 question hidden wow animate__fadeInRight" data-wow-delay="0.6s">
+                    <h4 className="mb-3" style={questionStyle}>
+                        <FontAwesomeIcon icon={faCoins} className="pe-2" />
+                        Какви са начините на плащане?
+                    </h4>
                     <p style={answerStyle}>
-                        Приемаме плащания чрез PayPal, EasyPay, ePay и Банков превод.
-
+                        Приемаме плащания чрез PayPal, EasyPay, ePay и банков превод.
                     </p>
                 </div>
             </div>
-        </section >
+        </section>
     );
 }
