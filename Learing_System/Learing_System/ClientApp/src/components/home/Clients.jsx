@@ -43,7 +43,7 @@ const Clients = () => {
     ];
 
     const carouselStyle = {
-        background: '#22CA7C', // Darker background for better contrast
+        background: '#0a864c', // Darker background for better contrast
         borderRadius: '10px', // Rounded corners for a softer look
         padding: '20px'
     };
