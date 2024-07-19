@@ -1,12 +1,28 @@
+:root {
+  --primary-color:rgb(13, 173, 98) !important;
+  --dark-color: #232323;
+  --white-color: #ffffff;
+  --border-radius-medium: 10px;
+  --h4-font-size: 1.25rem;
+}
+
+.hero {
+  background-color: var(--dark-color);
+  padding: 50px 0;
+}
+
 .hero-title,
 .email-link {
-  background: var(--dark-color);
-  border-radius: var(--border-radius-medium);
   color: var(--white-color);
   display: inline-block;
   margin: 0.5rem 0;
-  padding: 0.5rem 2rem 1.5rem 2rem;
   font-size: 2.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .email-link {
@@ -14,6 +30,7 @@
   color: var(--dark-color);
   font-size: var(--h4-font-size);
   padding: 0.5rem 2rem 1rem 2rem;
+  border-radius: var(--border-radius-medium);
 }
 
 .email-link:hover {
@@ -21,48 +38,92 @@
   color: var(--white-color);
 }
 
+.hero-img {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0;
+  border-radius: var(--border-radius-medium);
 
-
-@media screen and (max-width: 768px) {
-
-  .hero-text {
-    position: relative;
-    top: 1.5rem;
-  }
+  /* Remove the rounded image */
 }
 
-@media screen and (max-width: 480px) {
+.hero-img:hover {
+  transform: scale(1.05);
+}
 
-  .hero-title {
-    font-size: 26px;
-  }
+.consultationBtn {
+  background-color: rgb(13, 173, 98) !important;
+  color: var(--white-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: var(--border-radius-medium);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
-  .email-link {
-    font-size: 20px;
-    padding: 0.3rem 2rem 0.6rem 2rem;
-  }
+.consultationBtn:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.hero-text-container {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  border-radius: var(--border-radius-medium);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  /* Changed from center to left */
+}
+
+.hero-text {
+  margin: 0;
+}
+
+.hero-title p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 992px) {
-
   .hero-title {
-    font-size: 1.8em;
+    font-size: 2rem;
     padding-bottom: 1rem;
   }
 
   .email-link {
-    font-size: 22px;
+    font-size: 1.2rem;
     padding: 0.5rem 2rem 0.7rem 2rem;
   }
 }
 
-.consultationBtn {
-  background-color: white;
-  color: black;
+@media screen and (max-width: 768px) {
+  .hero-text {
+    position: relative;
+    top: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .email-link {
+    font-size: 1rem;
+    padding: 0.3rem 2rem 0.6rem 2rem;
+  }
 }
 
-.consultationBtn:hover {
-  color: black;
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
 
-  background-color: #71F483;
+  .email-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 2rem 0.6rem 2rem;
+  }
 }
