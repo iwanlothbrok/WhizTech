@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import { FaCheck } from 'react-icons/fa'; // Import the FontAwesome checkmark icon
 
 const LanguageInformation = ({ lang }) => {
@@ -12,14 +11,18 @@ const LanguageInformation = ({ lang }) => {
         }
 
         handleWindowSizeChange();
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => window.removeEventListener('resize', handleWindowSizeChange);
     }, []);
+
     const computerStyle = {
         marginTop: '20px',
         marginBottom: '20px'
-    }
+    };
     const mobileStyle = {
-        marginRight: '20px', marginTop: '20px'
-    }
+        marginRight: '20px',
+        marginTop: '20px'
+    };
 
     return (
         <div className="container mt-2 mb-0">
@@ -31,13 +34,13 @@ const LanguageInformation = ({ lang }) => {
                         className="img-fluid w-75"
                     />
                 </div>
-                <div className="col-md-7 text-black mt-5  ">
+                <div className="col-md-7 text-black mt-5">
                     <h2>Частните уроци по {lang.langName} се провеждат според Вашите нужди и изисквания.</h2>
                     <ul className="list-unstyled">
                         {lang.information.map((info, index) => (
-                            <li key={index} style={{ fontSize: '22px' }}> {/* Apply the custom class "larger-text" */}
+                            <li key={index} style={{ fontSize: '22px' }}>
                                 <FaCheck className="text-alert mr-5" />
-                                {info}
+                                <span dangerouslySetInnerHTML={{ __html: info }}></span>
                             </li>
                         ))}
                     </ul>

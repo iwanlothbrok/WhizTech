@@ -59,7 +59,7 @@ export default function Language() {
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-12 hidden" style={{ backgroundColor: '#71F483' }}>
+                    <div className="col-xl-12 hidden" style={{ background: 'rgb(13, 173, 98)' }}>
                         <LanguageInformation lang={languageParams} />
                     </div>
                 </div>
@@ -67,14 +67,6 @@ export default function Language() {
                     <div className="col-lg-12 mt-3 mb-2">
                         <QAList lang={lang} />
                     </div>
-                    {/* <div className="col-lg-12 mt-5">
-                        <h1 className='text-center m-4' style={{ color: '#71F483' }}>Примерни задачи</h1>
-                        <Exercise />
-                        <h1 className="text-center mb-4 text-white">
-                            Можете да намерите още задачи {' '}
-                            <Link to={pathExercises} onClick={onClickHandle} className="link" style={{ color: '#71F483' }}>ТУК</Link>
-                        </h1>
-                    </div> */}
                 </div>
             </div>
             <BasicContact />
