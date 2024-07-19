@@ -13,27 +13,18 @@ function Technologies() {
         <div className="container mt-5 hidden">
             <div className="row justify-content-center align-items-center">
                 <div className="col-md-8 text-center text-white">
-                    <h1>Индивидуални уроци за <span class="greenText">начинаещи</span></h1>
-                    <p style={{ fontSize: '20px' }}>
-
-                        В Whiz Academy сме специализирани в предоставянето на висококачествено обучение за начинаещи,
-                        което отговаря на съвременните изисквания на ИТ пазара. Нашата учебна програма е предназначена за начинаещи
-                        и обхваща основите на програмирането, като включва най-новите технологии и тенденции в областта.
-                        С <strong>опитен екип </strong>от
-                        програмисти ние предлагаме персонализирани уроци,
-                        които Ви позволяват да се съсредоточите върху конкретните си интереси и цели.
-                        <strong> Ние вярваме</strong>, че всеки може да научи програмирането
-                        и да изгради успешна кариера в софтуерната индустрия. Не се колебайте повече,
-                        а започнете пътя си към успешна кариера в програмирането.
-                        <br />Свържете се с нас и се запишете на<strong> индивидуални
-                            уроци по програмиране</strong>, които ще Ви дадат необходимите знания и увереност.
-                        <p style={{ fontSize: '30px' }} className="text-center mt-4 mb-4 text-white">
-                            Запиши се за първи урок {' '}
-                            <Link to="/calendar" className="link clickLink fw-bold"> ТУК</Link>
-                        </p>
+                    <h1 className="wow animate__fadeInDown">Индивидуални менторски уроци за <span className="text-bright-green">начинаещи</span></h1>
+                    <p style={{ fontSize: '20px' }} className="wow animate__fadeInUp" data-wow-delay="0.2s">
+                        В <span className="text-bright-green">Whiz Academy</span> предлагаме <strong>висококачествено менторство</strong> за начинаещи, съобразено с нуждите на съвременния ИТ пазар. Нашата програма обхваща основите на програмирането и включва най-новите технологии и тенденции. С <strong className='text-bright-green'>опитен екип от ментори-програмисти</strong>, ние предлагаме персонализирани уроци, които ви позволяват да се фокусирате върху конкретните си интереси и цели. Вярваме, че <strong>всеки може да научи програмиране</strong> и да изгради успешна кариера в софтуерната индустрия.
+                        <br /><br />Започнете своя път към успешна кариера с нашите индивидуални менторски уроци. Свържете се с нас и се запишете за първи урок, който ще ви даде необходимите знания и увереност.
+                    </p>
+                    <p style={{ fontSize: '30px' }} className="text-center mt-4 mb-4 text-white wow animate__fadeInUp" data-wow-delay="0.4s">
+                        Запиши се за първи урок{' '}
+                        <Link to="/calendar" className="link clickLink fw-bold text-success">ТУК</Link>
                     </p>
                 </div>
             </div>
+
 
             <div className="row justify-content-center align-items-center">
 
