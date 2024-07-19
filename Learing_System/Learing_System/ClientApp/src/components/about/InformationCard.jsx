@@ -1,21 +1,19 @@
 import React, { useEffect } from 'react';
 import fadeInAnimation from '../../animation/fadeInAnimation';
-function InformationCard({ quest: quesiton }) {
-    useEffect(() => {
-        // Define the elements you want to animate
-        const elementsToAnimate = document.querySelectorAll('.hidden');
 
-        // Call the fadeInAnimation function with the elements
+function InformationCard({ quest: question }) {
+    useEffect(() => {
+        const elementsToAnimate = document.querySelectorAll('.hidden');
         fadeInAnimation(elementsToAnimate);
     }, []);
 
     return (
         <div className="col-md-4 col-12">
-            <div className="card mb-4 icon hidden" style={{ backgroundColor: '#71F483' }}   >
+            <div className="card-bg card mb-4 icon hidden" style={{ background: 'rgb(13, 173, 98) !important', borderRadius: '10px', transition: 'transform 0.3s ease-in-out' }} >
                 <div className="card-body">
-                    <h2 className="card-title">{quesiton.title}</h2>
-                    <p className="card-text">
-                        {quesiton.description}
+                    <h2 className="card-title text-dark">{question.title}</h2>
+                    <p className="card-text text-dark">
+                        {question.description}
                     </p>
                 </div>
             </div>

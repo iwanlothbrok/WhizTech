@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import InformationCard from './InformationCard';
 import questionsDb from './questionsDb/questionsDb';
-import fadeInAnimation from '../../animation/fadeInAnimation';
+
 const Information = () => {
     const [questions, setQuestions] = useState([]);
 
-    useEffect(() => { setQuestions(questionsDb) }, questions)
+    useEffect(() => { setQuestions(questionsDb); }, []);
 
     return (
         <div className="container mt-5 justify-content-center align-items-center text-white">
@@ -14,8 +14,6 @@ const Information = () => {
             </div>
         </div>
     );
-
 }
-
 
 export default Information;
