@@ -1,23 +1,23 @@
 import img from '../../../styles/43.png';
+
 const reasonsToChooseJavaScript = {
-    versatility: " JavaScript е универсален език, използван за уеб разработка, програмиране на сървърната страна и разработка на мобилни приложения.",
-    richFrameworks: " Има богат набор от библиотеки и рамки като React, Angular и Vue.js, които опростяват уеб разработката.",
-    modernLanguage: " Съвременните функции на JavaScript (ES6+) подобряват четливостта на кода и поддръжката му.",
-    jobOpportunities: " Високото търсене на разработчици на JavaScript предлага множество възможности за кариера.",
-    integration: " Интегрирайте JavaScript с бази данни, API и други технологии.",
+    versatility: "<b> Многостранност: </b> Подходящ за уеб, сървърно програмиране и мобилни приложения.",
+    richFrameworks: "<b> Библиотеки и рамки: </b> Инструменти като React, Angular и Vue.js опростяват уеб разработката.",
+    modernLanguage: "<b> Съвременни функции: </b> ES6+ подобрява четливостта и поддръжката на кода.",
+    jobOpportunities: "<b> Кариера: </b> Високото търсене на JavaScript разработчици предлага много кариерни възможности.",
+    integration: "<b> Интеграция: </b> Лесно се интегрира с бази данни, API и други технологии."
 };
 
 const JavaScript = {
     image: img,
-    langName: 'Java Script',
+    langName: 'JavaScript',
     information: [
         reasonsToChooseJavaScript.versatility,
         reasonsToChooseJavaScript.richFrameworks,
         reasonsToChooseJavaScript.modernLanguage,
         reasonsToChooseJavaScript.jobOpportunities,
-        reasonsToChooseJavaScript.integration,
+        reasonsToChooseJavaScript.integration
     ],
-  
-}
+};
 
 export default JavaScript;
