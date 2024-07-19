@@ -129,18 +129,18 @@ function NavMenu() {
               <Link to="/study/csharp" className="dropdown-item" onClick={onClickHandle}>
                 C#
               </Link>
-              <Link to="/study/cplus" className="dropdown-item" onClick={onClickHandle}>
+              {/* <Link to="/study/cplus" className="dropdown-item" onClick={onClickHandle}>
                 C++
-              </Link>
+              </Link> */}
               <Link to="/study/javascript" className="dropdown-item" onClick={onClickHandle}>
                 JavaScript
               </Link>
-              <Link to="/study/java" className="dropdown-item" onClick={onClickHandle}>
+              {/* <Link to="/study/java" className="dropdown-item" onClick={onClickHandle}>
                 Java
               </Link>
               <Link to="/study/sql" className="dropdown-item" onClick={onClickHandle}>
                 SQL
-              </Link>
+              </Link> */}
             </div>
           </div>
 

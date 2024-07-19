@@ -1,5 +1,4 @@
-/* homePage.css */
-
+/* Styling for buttons */
 .signBtn {
     padding: 24px 30px;
     margin: 8px 0 0;
@@ -7,7 +6,6 @@
     border: 2px solid #78788c;
     background: transparent;
     color: rgb(34, 202, 124);
-    /* Brighter green */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-radius: 25px;
@@ -16,7 +14,6 @@
 
 .signBtn:hover {
     background: rgb(34, 202, 124);
-    /* Matching brighter green */
     color: #ffffff;
     border-color: rgb(34, 202, 124);
     transform: scale(1.15);
@@ -36,7 +33,6 @@
 
 .navBtn:hover {
     background: rgb(34, 202, 124);
-    /* Matching brighter green */
     color: black;
     transform: scale(1.05);
 }
@@ -54,7 +50,6 @@ body {
     box-sizing: border-box;
 }
 
-
 .centered-text {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -64,18 +59,6 @@ h2,
 h4 {
     margin: 0;
     padding: 0;
-}
-
-@media (min-width: 992px) {
-    .centered-text h2 {
-        font-size: 4rem;
-    }
-
-    .centered-text h4 {
-        font-size: 2rem;
-    }
-
-
 }
 
 /* Responsive text adjustments */
