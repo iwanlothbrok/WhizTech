@@ -39,7 +39,7 @@ export default function HomePage() {
                 <div className="centered-text text-center p-4">
                     <h2 className={`display-2 mb-0 text-white ${isMobile ? 'mt-0' : 'mt-5'} animate__animated animate__fadeInDown`}>
                         <strong>
-                            СТАНЕТЕ ПРОГРАМИСТ ЗА 6-12 МЕСЕЦА С НАШАТА <span className="text-bright-green">МЕНТОРСКА ПРОГРАМА</span>
+                            ПЕРСОНАЛИЗИРАНО ОБУЧЕНИЕ ЗА ТРАНСФОРМИРАНЕ НА <span className="text-bright-green">НАЧИНАЕЩИ В ЕКСПЕРТНИ ПРОГРАМИСТИ</span>
                         </strong>
                     </h2>
                     <h4 className={`mb-0 text-white ${isMobile ? 'mt-4' : 'mt-1'} animate__animated animate__fadeInUp animate__delay-1s`}>
