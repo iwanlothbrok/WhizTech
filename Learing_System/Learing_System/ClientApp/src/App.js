@@ -21,6 +21,7 @@ import ProductDetails from './components/products/ProductDetails';
 
 import CsharpCourseForm from './components/contact/CsharpCourse';
 import SuccessfulPayment from './components/products/SuccessfulPayment'
+import MentorshipDescription from './components/products/MentorshipDescription';
 
 export default function App() {
   return (
@@ -44,6 +45,8 @@ export default function App() {
         <Route path='/products' element={<ProductList />} />
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/successfulPaying' element={<SuccessfulPayment />} />
+
+        <Route path='/mentorship' element={<MentorshipDescription />} />
 
       </Routes>
 
