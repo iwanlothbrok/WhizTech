@@ -8,6 +8,7 @@ import products from './data/products'; // Adjust the path if necessary
 import CourseDesciption from './CourseDesciption';
 import DiffCourse from './DiffCourse';
 import StickyBuyNowCard from './StickyBuyNowCard';
+import MentorshipDescription from './MentorshipDescription';
 
 export default function ProductDetails() {
     const { id } = useParams();
@@ -62,7 +63,8 @@ export default function ProductDetails() {
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <DiffCourse />
+                        {/* <DiffCourse /> */}
+                        <MentorshipDescription />
                     </div>
                 </div>
 
