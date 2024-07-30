@@ -8,7 +8,7 @@ const ThankYouPayment = () => {
             <img src="https://uxwing.com/wp-content/themes/uxwing/download/checkmark-cross/success-green-check-mark-icon.png" alt="Checkmark" style={styles.image} />
             <h1 className='fw-bold' style={styles.header}>Успешно записване!</h1>
             <p style={styles.text}>
-                Благодарим Ви за вашето записване за курса "Първи стъпки в програмирането". Плащането премина успешно.
+                Благодарим Ви за записването в нашето менторство. Плащането премина успешно.
             </p>
             <p style={styles.text}>
                 Ще получите допълнителна информация и следващи стъпки в рамките на следващите 24 часа.

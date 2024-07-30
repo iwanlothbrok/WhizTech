@@ -1,0 +1,54 @@
+
+  .countdown__container {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .countdown__headline {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  
+  .countdown__list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .countdown__item {
+    display: inline-block;
+    font-size: 1.2em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  .countdown__item span {
+    display: block;
+    font-size: 2.6rem;
+  }
+  
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+  
+  @media all and (max-width: 768px) {
+    .countdown__headline {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    .countdown__item {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    .countdown__item span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+  
