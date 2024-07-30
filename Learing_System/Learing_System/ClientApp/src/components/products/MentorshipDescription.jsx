@@ -85,7 +85,7 @@ export default function MentorshipDescription() {
                 </ul>
             </div>
             <Countdown targetDate={targetDate} headlineText="The event has started!" />
-            <button className="signup-button">Регистрирай се сега</button>
+           
         </div>
     );
 }

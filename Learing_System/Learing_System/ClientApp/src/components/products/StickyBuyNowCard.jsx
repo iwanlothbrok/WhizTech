@@ -44,7 +44,7 @@ export default function StickyBuyNowCard() {
     return (
         <div className="funnel-description sticky-course text-white">
             <div className="course-thumb">
-                <img src={productImage} alt="Course Thumbnail" />
+                <img className="productImage" src={productImage} alt="Course Thumbnail" />
             </div>
             <div className="course-info">
                 <div className="price-section">

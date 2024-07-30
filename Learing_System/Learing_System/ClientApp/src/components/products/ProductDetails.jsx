@@ -54,6 +54,7 @@ export default function ProductDetails() {
 
             <div className="row">
                 <h1 className='header-main fw-bold'>{product.title}</h1>
+
                 <div className="col-md-8 col-sm-12" style={{ paddingRight: '0px' }}>
                     <div className="funnel-description text-white pr-0">
 
@@ -63,8 +64,12 @@ export default function ProductDetails() {
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                        <div className="signup-button-container">
+                            <a href='https://buy.stripe.com/3cs6r14hm7XmdnaeUX' className="btn main-btn fw-bold">ЗАПИШИ СЕ</a>
+                        </div>
                         {/* <DiffCourse /> */}
                         <MentorshipDescription />
+
                     </div>
                 </div>
 
