@@ -48,16 +48,19 @@
 }
 
 .header-main {
-    color: #ffeb3b;
+    color: #4CAF50;
     margin-bottom: 20px;
     font-size: 36px;
     text-align: center;
+    text-transform: uppercase;
+
 }
 
 .header-secondary {
     color: #4CAF50;
     margin-bottom: 12px;
     font-size: 24px;
+    text-transform: uppercase;
 }
 
 .body-text {
@@ -70,7 +73,8 @@
 .highlight {
     color: rgb(255, 255, 255);
     font-weight: bold;
-    background-color: rgba(204, 6, 6, 0.726); /* Light green background for emphasis */
+    background-color: rgba(204, 6, 6, 0.726);
+    /* Light green background for emphasis */
     padding: 0 5px;
     border-radius: 3px;
 }
@@ -105,7 +109,7 @@
     border-radius: 5px;
     background-color: #2b2e33;
     text-align: center;
-    color: #ffeb3b;
+    color: #4CAF50;
 }
 
 .registration-timer h2 {
@@ -133,17 +137,21 @@
     list-style-type: none;
     padding-left: 0;
     font-size: 16px;
-    color: #f1f1f1; /* Lighter color for contrast */
+    color: #f1f1f1;
+    /* Lighter color for contrast */
 }
 
 .funnel-section .highlight-list li {
     margin-bottom: 15px;
     line-height: 1.6;
     position: relative;
-    padding-left: 40px; /* Space for the custom icon */
+    padding-left: 40px;
+    /* Space for the custom icon */
     font-weight: bold;
-    color: #ffffff; /* White text for better visibility */
-    background-color: rgba(76, 175, 80, 0.1); /* Light green background for emphasis */
+    color: #ffffff;
+    /* White text for better visibility */
+    background-color: rgba(76, 175, 80, 0.1);
+    /* Light green background for emphasis */
     border-radius: 5px;
     padding: 15px 5px 15px 50px;
     transition: transform 0.2s ease-in-out, background-color 0.3s;
@@ -151,15 +159,17 @@
 }
 
 .funnel-section .highlight-list li::before {
-    content: '✔'; /* Use a check mark as the icon */
+    content: '✔';
+    /* Use a check mark as the icon */
     width: 35px;
     height: 35px;
     position: absolute;
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #4CAF50; /* Green color for icon background */
-    
+    background-color: #4CAF50;
+    /* Green color for icon background */
+
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -171,13 +181,17 @@
 }
 
 .funnel-section .highlight-list.negative li::before {
-    content: '✘'; /* Use a cross for negative items */
-    background-color: #e53935; /* Red for negative list items */
+    content: '✘';
+    /* Use a cross for negative items */
+    background-color: #e53935;
+    /* Red for negative list items */
 }
 
 .funnel-section .highlight-list li:hover {
-    background-color: rgba(39, 92, 41, 0.2); /* Darker green on hover */
-    transform: translateX(5px); /* Slightly move the item to the right on hover */
+    background-color: rgba(39, 92, 41, 0.2);
+    /* Darker green on hover */
+    transform: translateX(5px);
+    /* Slightly move the item to the right on hover */
 }
 
 .pointLi {
@@ -194,11 +208,13 @@
 @media (max-width: 768px) {
     .funnel-section .highlight-list li {
         font-size: 14px;
-        padding-left: 50px; /* Reduce padding for smaller screens */
+        padding-left: 50px;
+        /* Reduce padding for smaller screens */
     }
 
     .funnel-section .highlight-list li::before {
-        width: 30px; /* Smaller icon size */
+        width: 30px;
+        /* Smaller icon size */
         height: 30px;
         left: 10px;
         font-size: 14px;
@@ -209,12 +225,15 @@
     }
 
     .header-secondary {
-        font-size: 20px; /* Slightly smaller headers for better fit */
+        font-size: 22px;
+        font-weight: 800;
+        /* Slightly smaller headers for better fit */
     }
 
     .body-text {
         font-size: 14px;
-        line-height: 1.6; /* Adjust line height for better readability */
+        line-height: 1.6;
+        /* Adjust line height for better readability */
     }
 
     .highlight {
