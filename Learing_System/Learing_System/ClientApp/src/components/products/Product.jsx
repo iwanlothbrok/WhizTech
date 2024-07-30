@@ -29,7 +29,7 @@ const Product = ({ product }) => {
                         <p className="product-description">
                             {product.description.length > 120 ? `${product.description.substring(0, 120)}...` : product.description}
                         </p>
-                        <p><span className='compare-price' style={{ fontSize: '20px', color: 'red' }}> 597 лв.</span> <span style={{ fontSize: '28px' }} className="current-price">{product.price}</span></p>
+                        <p><span className='compare-price' style={{ fontSize: '20px', color: 'red' }}> 297 лв.</span> <span style={{ fontSize: '28px' }} className="current-price">{product.price}</span></p>
                     </div>
                 </div>
                 <div className="card-footer mb-0 p-0 border-top-0 bg-transparent">

@@ -1,6 +1,7 @@
 // src/components/MentorshipDescription.js
 import React, { useState, useEffect } from 'react';
 import '../../styles/css/productsDescriptionFunnel.css';
+import Countdown from './Countdown';
 
 export default function MentorshipDescription() {
     const calculateTimeLeft = () => {
@@ -9,6 +10,7 @@ export default function MentorshipDescription() {
         const timeLeft = Math.max(Math.floor((endDate - now) / 1000), 0); // Time left in seconds, rounded down
         return timeLeft;
     };
+    const targetDate = new Date(new Date().getFullYear(), 7, 15); // Month is 0-indexed
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
 
@@ -29,13 +31,9 @@ export default function MentorshipDescription() {
     };
 
     return (
-        <div className="funnel-description">
-            <div className="registration-timer">
-                <h2>ЗАПИШИ СЕ СЕГА</h2>
-                <div className="timer">{formatTime(timeLeft)}</div>
-                <p className='mb-0 mt-1'>ДНИ ДО КРАЯ НА ЗАПИСВАНИЯТА</p>
-            </div>
-            <div className="funnel-section mt-4">
+        <div >
+
+            <div className="funnel-section mt-2">
                 <h3 className='header-secondary'>Персонализирано обучение:</h3>
                 <p className='body-text'>
                     Тази програма е първата по рода си в България и предлага несравнимо учебно преживяване за всеки в програмата.
@@ -56,7 +54,7 @@ export default function MentorshipDescription() {
                     <li><strong>Изградиш впечатляващо портфолио</strong>, което показва реални умения, а не само теории.</li>
                     <li><strong>Влезеш в IT индустрията с увереност и реален опит.</strong></li>
                 </ul>
-                <h3 className="mt-4">И всичко това без да:</h3>
+                <h3 className="header-secondary mt-4">И всичко това без да:</h3>
                 <ul className="highlight-list negative">
                     <li><strong style={{ fontSize: '16px' }}>Се записваш в пренаселени и безлични курсове</strong>, където си просто още едно число.</li>
                     <li><strong style={{ fontSize: '16px' }}>Прекарваш години в университети</strong>, учейки маловажни неща.</li>
@@ -86,6 +84,7 @@ export default function MentorshipDescription() {
                     <li><strong className='pointLi'>БОНУС #5: Сертификати за постижения</strong> Получаваш сертификат за всеки успешно завършен етап от програмата, като мотивираща награда и доказателство за напредъка ти.</li>
                 </ul>
             </div>
+            <Countdown targetDate={targetDate} headlineText="The event has started!" />
             <button className="signup-button">Регистрирай се сега</button>
         </div>
     );
