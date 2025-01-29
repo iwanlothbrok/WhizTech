@@ -22,6 +22,7 @@ import ProductDetails from './components/products/ProductDetails';
 import CsharpCourseForm from './components/contact/CsharpCourse';
 import SuccessfulPayment from './components/products/SuccessfulPayment'
 import MentorshipDescription from './components/products/MentorshipDescription';
+import ContactsPage from './components/contactsVladi/ContactsPage';
 
 export default function App() {
   return (
@@ -47,6 +48,7 @@ export default function App() {
         <Route path='/successfulPaying' element={<SuccessfulPayment />} />
 
         <Route path='/mentorship' element={<MentorshipDescription />} />
+        <Route path='/contactVladi' element={<ContactsPage />} />
 
       </Routes>
 
