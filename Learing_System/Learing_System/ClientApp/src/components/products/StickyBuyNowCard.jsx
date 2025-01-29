@@ -51,7 +51,7 @@ export default function StickyBuyNowCard() {
                     <div className="save justify-content-center align-items-center" style={{ background: '#ff5c5c', borderRadius: '5px', padding: '5px' }}>
                         <p className='text-white m-0' style={{ fontSize: '14px' }}>Спести 270лв.</p>
                     </div>
-                    <div><strong className='compare-price'> 297 лв.</strong> <strong className="current-price">27 лв.</strong></div>
+                    <div><strong className='compare-price'>397 лв.</strong> <strong className="current-price">27 лв.</strong></div>
                 </div>
 
                 <a href='https://buy.stripe.com/3cs6r14hm7XmdnaeUX' className="btn main-btn fw-bold">ЗАПИШИ СЕ</a>
